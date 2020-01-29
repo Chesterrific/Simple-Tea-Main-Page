@@ -1,0 +1,20 @@
+#background{
+    background-image: url("../assets/backgrounds/Simple Tea Home Page.jpg");
+    background-position: center bottom;
+    height: 100vh;
+}
+
+.parallax{
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+article{
+    float: left;
+    max-width: 25vw;
+}
+
+aside{
+    float: right;
+    max-width: 25vw;
+}
