@@ -1,8 +1,10 @@
 /* General styling */
 
 .center{
+    position: absolute;
     text-align: center;
-    vertical-align: middle;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 body {
@@ -37,20 +39,29 @@ body {
 /* Content Section css */
 
 #content {
-    height: 100vh;
-    padding-top: 100px;
+    height: 200vh;
 }
 
-#content article {
-    padding: 100px 70px 0px 70px;
+.first-showcase{
+    height: 100vh;
+}
+
+.showcase-item{
+    position: relative;
+}
+
+.showcase-item article {
+    padding: 0px 70px 0px 70px;
 }
 
 @media only screen and (max-width: 800px) {
-    #content aside {
-        margin-top: 200px;
+
+    .showcase-item{
+        height: 50vh;
     }
+    
 }
 
-#content aside img {
+.showcase-item aside img {
     width: 100%;
 }
