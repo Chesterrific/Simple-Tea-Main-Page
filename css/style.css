@@ -1,6 +1,6 @@
 /* General styling */
 
-.center{
+.center {
     position: absolute;
     text-align: center;
     top: 50%;
@@ -42,11 +42,15 @@ body {
     height: 200vh;
 }
 
-.first-showcase{
+.first-showcase {
     height: 100vh;
 }
 
-.showcase-item{
+.second-showcase {
+    /* for later styling  */
+}
+
+.showcase-item {
     position: relative;
 }
 
@@ -56,12 +60,39 @@ body {
 
 @media only screen and (max-width: 800px) {
 
-    .showcase-item{
+    .showcase-item {
         height: 50vh;
     }
-    
+
 }
 
 .showcase-item aside img {
     width: 100%;
+}
+
+/* Navbar Styling */
+
+#openNavbtn{
+    position: fixed;
+    right: 4%;
+    top: 5%;
+    z-index: 1;
+}
+
+#myNav{
+    /* display: none; */
+    background-color: #111;
+    height: 100%;
+    /* opacity: 50%; */
+    overflow-x: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: 0.5s;
+    width: 0%; /* change with js later */
+    z-index: 2;
+}
+
+#menuItems{
+    color: white;
 }

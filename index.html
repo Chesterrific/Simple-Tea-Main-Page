@@ -13,28 +13,46 @@
 </head>
 
 <body>
+    <!-- Navbar -->
+    <button id="openNavbtn" onclick="openNav()">test holder</button>
+
+    <div id="myNav">
+        <button id="closeNavbtn" onclick="closeNav()">&times</button>
+        <div class="menu">
+            <ul id="menuItems">
+                <li>test</li>
+                <li>test2</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Welcome -->
     <section id="welcome">
         <div id="background" class="parallax"></div>
     </section>
 
+    <!-- Content -->
     <section id="content">
         <div class="container-fluid">
             <div class="row first-showcase">
                 <div class="col-lg-6 col-sm-12 showcase-item">
-                    <article class="center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Sunt dignissimos quidem adipisci
-                        consequuntur explicabo, id eius officiis ducimus molestias dolorum neque eveniet cumque saepe
-                        vitae ex tempore, itaque possimus illo!</article>
+                    <article class="center">Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Sunt dignissimos quidem adipisci consequuntur explicabo, id eius officiis ducimus
+                        molestias dolorum neque eveniet cumque saepe
+                        vitae ex tempore, itaque possimus illo!
+                    </article>
                 </div>
                 <div class="col-lg-6 col-sm-12 showcase-item">
                     <aside class="center"><img src="assets/content/Simple Tea tins.jpg" alt=""></aside>
                 </div>
             </div>
+            <div class="row second-showcase"></div>
         </div>
     </section>
     <!-- <footer>
         <p>&copy; 2020 Simple tea</p>
     </footer> -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
