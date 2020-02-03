@@ -2,57 +2,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Simple Tea Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Tea Website</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- Navbar -->
+  <!-- Navbar -->
+  <nav>
     <button id="openNavbtn" onclick="openNav()">test holder</button>
 
     <div id="myNav">
-        <button id="closeNavbtn" onclick="closeNav()">&times</button>
-        <div class="menu">
-            <ul id="menuItems">
-                <li>test</li>
-                <li>test2</li>
-            </ul>
-        </div>
+      <button id="closeNavbtn" onclick="closeNav()">&times</button>
+      <div class="menu">
+        <ul id="menuItems">
+          <li>test</li>
+          <li>test2</li>
+        </ul>
+      </div>
     </div>
+  </nav>
+  
+  <!-- Welcome -->
+  <section id="welcome">
+    <div id="background" class="parallax">
+      <p class="center">We are a purveyor of custom branded tea, coffee, and accessories of superior quality and value that inspires and motivates our customers to be more successful.</h2>
+    </div>
+  </section>
 
-    <!-- Welcome -->
-    <section id="welcome">
-        <div id="background" class="parallax"></div>
-    </section>
-
-    <!-- Content -->
-    <section id="content">
-        <div class="container-fluid">
-            <div class="row first-showcase">
-                <div class="col-lg-6 col-sm-12 showcase-item">
-                    <article class="center">Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Sunt dignissimos quidem adipisci consequuntur explicabo, id eius officiis ducimus
-                        molestias dolorum neque eveniet cumque saepe
-                        vitae ex tempore, itaque possimus illo!
-                    </article>
-                </div>
-                <div class="col-lg-6 col-sm-12 showcase-item">
-                    <aside class="center"><img src="assets/content/Simple Tea tins.jpg" alt=""></aside>
-                </div>
-            </div>
-            <div class="row second-showcase"></div>
+  <!-- Content -->
+  <section id="content">
+    <div class="container-fluid">
+      <div class="row first-showcase">
+        <div class="col-lg-6 col-sm-12 showcase-item">
+          <article class="center">Our goal is to create, design, manufacture an elegant and graceful custom branded tea and coffee products with thoughtful and artisanal care. We tailor our products with our customer's needs and create high impact products that offer meaningful experiences and add value to their business. 
+          </article>
         </div>
-    </section>
-    <!-- <footer>
-        <p>&copy; 2020 Simple tea</p>
-    </footer> -->
-    <script src="js/main.js"></script>
+        <div class="col-lg-6 col-sm-12 showcase-item">
+          <aside class="center"><img src="assets/content/Simple Tea tins.jpg" alt=""></aside>
+        </div>
+      </div>
+      <div class="row second-showcase"></div>
+    </div>
+  </section>
+  <!-- <footer>
+      <p>&copy; 2020 Simple tea</p>
+  </footer> -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>

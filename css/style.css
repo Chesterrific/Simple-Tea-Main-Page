@@ -1,98 +1,102 @@
 /* General styling */
 
 .center {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 body {
-    overflow-x: hidden;
-}
-
-/* Welcome Section css */
-
-#background {
-    background-image: url("../assets/backgrounds/Simple Tea Home Page.jpg");
-    background-position: center bottom;
-    height: 100vh;
-}
-
-#welcome {
-    border-bottom: 6px solid #009933;
-}
-
-.parallax {
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-@media only screen and (max-height: 899px),
-(max-width: 800px) {
-
-    .parallax {
-        background-attachment: scroll;
-    }
-}
-
-/* Content Section css */
-
-#content {
-    height: 200vh;
-}
-
-.first-showcase {
-    height: 100vh;
-}
-
-.second-showcase {
-    /* for later styling  */
-}
-
-.showcase-item {
-    position: relative;
-}
-
-.showcase-item article {
-    padding: 0px 70px 0px 70px;
-}
-
-@media only screen and (max-width: 800px) {
-
-    .showcase-item {
-        height: 50vh;
-    }
-
-}
-
-.showcase-item aside img {
-    width: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+	overflow-x: hidden;	
 }
 
 /* Navbar Styling */
 
 #openNavbtn{
-    position: fixed;
-    right: 4%;
-    top: 5%;
-    z-index: 1;
+	position: fixed;
+	right: 4%;
+	top: 5%;
+	z-index: 1;
 }
 
 #myNav{
-    /* display: none; */
-    background-color: #111;
-    height: 100%;
-    /* opacity: 50%; */
-    overflow-x: hidden;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transition: 0.5s;
-    width: 0%; /* change with js later */
-    z-index: 2;
+	/* display: none; */
+	background-color: #111;
+	height: 100%;
+	/* opacity: 50%; */
+	overflow-x: hidden;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: 0.5s;
+	width: 0%; /* change with js later */
+	z-index: 2;
 }
 
 #menuItems{
-    color: white;
+	color: white;
 }
+
+/* Welcome Section css */
+#background {
+	background-image: url("../assets/backgrounds/Simple Tea Home Page.jpg");
+	background-position: center bottom;
+	height: 100vh;
+}
+
+#welcome {
+	border-bottom: 6px solid #009933;
+}
+
+p {
+	color: white;
+	font-size: 2.5em;
+	text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -2px black;
+}
+
+.parallax {
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+@media only screen and (max-height: 899px),
+(max-width: 800px) {
+	.parallax {
+			background-attachment: scroll;
+	}
+}
+
+/* Content Section css */
+#content {
+	height: 200vh;
+}
+
+.first-showcase {
+	height: 100vh;
+}
+
+.second-showcase {
+	/* for later styling  */
+}
+
+.showcase-item {
+	position: relative;
+}
+
+.showcase-item article {
+	padding: 0px 70px 0px 70px;
+}
+
+@media only screen and (max-width: 800px) {
+	.showcase-item {
+			height: 50vh;
+	}
+
+}
+
+.showcase-item aside img {
+	width: 100%;
+}
+
