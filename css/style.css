@@ -73,6 +73,10 @@ body {
 /* Navbar Styling */
 
 #openNavbtn{
+    background-color: transparent;
+    border: none;
+    /* color:  #009933;  */
+    cursor: pointer;
     position: fixed;
     right: 4%;
     top: 5%;
@@ -81,9 +85,8 @@ body {
 
 #myNav{
     /* display: none; */
-    background-color: #111;
+    background-color: rgb(17, 17, 17);
     height: 100%;
-    /* opacity: 50%; */
     overflow-x: hidden;
     position: fixed;
     right: 0;
