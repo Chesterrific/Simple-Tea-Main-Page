@@ -30,7 +30,7 @@ body {
 
 .nav-menu li {
     float: left;
-    padding-left: 15px;
+    padding-left: 20px;
 }
 
 .nav-menu li a {
@@ -99,4 +99,8 @@ span {
 
 .showcase-item aside img {
 	width: 100%;
+}
+
+footer {
+    text-align: center;
 }
