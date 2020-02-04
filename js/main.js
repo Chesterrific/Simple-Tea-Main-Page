@@ -1,9 +1,9 @@
-function openNav() {
-    var sidebar = document.getElementById("myNav");
-    sidebar.style.width = "10%";
-}
+// function openNav() {
+//     let sidebar = document.getElementById("myNav");
+//     sidebar.style.width = "10%";
+// }
 
-function closeNav() {
-    var sidebar = document.getElementById("myNav");
-    sidebar.style.width = "0%";
-}
+// function closeNav() {
+//     let sidebar = document.getElementById("myNav");
+//     sidebar.style.width = "0%";
+// }
