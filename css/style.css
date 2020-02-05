@@ -9,19 +9,23 @@
 
 body {
 	font-family: 'Source Sans Pro', sans-serif;
-	overflow-x: hidden;	
+	overflow-x: hidden;
+}
+
+.bold {
+	font-weight: bold;
 }
 
 /* Navbar Styling */
 
-#openNavbtn{
+#openNavbtn {
 	position: fixed;
 	right: 4%;
 	top: 5%;
 	z-index: 1;
 }
 
-#myNav{
+#myNav {
 	/* display: none; */
 	background-color: #111;
 	height: 100%;
@@ -31,11 +35,12 @@ body {
 	right: 0;
 	top: 0;
 	transition: 0.5s;
-	width: 0%; /* change with js later */
+	width: 0%;
+	/* change with js later */
 	z-index: 2;
 }
 
-#menuItems{
+#menuItems {
 	color: white;
 }
 
@@ -55,6 +60,7 @@ span {
 	color: white;
 	font-size: 2.5em;
 	text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -2px black;
+
 }
 
 .parallax {
@@ -65,11 +71,12 @@ span {
 @media only screen and (max-height: 899px),
 (max-width: 800px) {
 	.parallax {
-			background-attachment: scroll;
+		background-attachment: scroll;
 	}
 }
 
 /* Content Section css */
+/* 1st row */
 #content {
 	height: 200vh;
 }
@@ -78,57 +85,88 @@ span {
 	height: 100vh;
 }
 
-/*
-.second-showcase {
-	 for later styling  
-}
-*/
-
 .showcase-item {
 	position: relative;
 }
 
-.showcase-item article {
-	padding: 0px 70px 0px 70px;
-}
-
 @media only screen and (max-width: 800px) {
 	.showcase-item {
-			height: 50vh;
+		height: 50vh;
 	}
+}
 
+.showcase-item article {
+	font-size: 1.5em;
+	padding: 0px 70px 0px 70px;
 }
 
 .showcase-item aside img {
 	width: 100%;
 }
 
+/* 2nd row */
+.second-showcase {
+	height: 100vh;
+	margin: 70px 0px 70px 0px;
+}
+
+.second-showcase img {
+	margin-top: 50px;
+	object-fit: cover;
+	padding: 0px 50px 0px 50px;
+}
+
+/* .second-showcase img:hover {
+} */
+
+.second-showcase img:nth-child(even) {
+	margin-top: 100px;
+}
+
+@media only screen and (max-width: 800px) {
+	.second-showcase {
+		height: 100vh;
+	}
+
+	.second-showcase img {
+		margin-top: 0;
+		object-fit: cover;
+		padding: 0 5px 0 5px;
+	}
+
+	.second-showcase img:nth-child(even) {
+		margin-top: 0;
+	}
+
+	.second-showcase .showcase-item {
+		width: 25%;
+	}
+}
+
 /* Navbar Styling */
-
-#openNavbtn{
-    background-color: transparent;
-    border: none;
-    /* color:  #009933;  */
-    cursor: pointer;
-    position: fixed;
-    right: 4%;
-    top: 5%;
-    z-index: 1;
+#openNavbtn {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	position: fixed;
+	right: 4%;
+	top: 5%;
+	z-index: 1;
 }
 
-#myNav{
-    /* display: none; */
-    background-color: rgb(17, 17, 17);
-    height: 100%;
-    overflow-x: hidden;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transition: 0.5s;
-    width: 0%; /* change with js later */
-    z-index: 2;
+#myNav {
+	background-color: rgb(17, 17, 17);
+	height: 100%;
+	overflow-x: hidden;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: 0.5s;
+	width: 0%;
+	/* change with js later */
+	z-index: 2;
 }
 
-#menuItems{
-    color: white;
+#menuItems {
+	color: white;
 }
