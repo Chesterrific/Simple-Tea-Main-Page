@@ -17,6 +17,11 @@ body {
 }
 
 /* Navbar Styling */
+.logo {
+    color: #ebdede;
+    padding: 15px;
+    position: fixed;
+}
 
 #openNavbtn {
 	position: fixed;
