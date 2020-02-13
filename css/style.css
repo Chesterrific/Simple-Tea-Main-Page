@@ -4,13 +4,6 @@ body {
 	overflow-x: hidden;
 }
 
-.center {
-	position: absolute;
-	text-align: center;
-	top: 50%;
-	transform: translateY(-50%);
-}
-
 .bold {
 	font-weight: bold;
 }
@@ -18,6 +11,7 @@ body {
 /* Navbar Styling */
 .logo {
 	color: #ebdede;
+	font-size: 1.25em;
 	padding: 15px 20px 15px 20px;
 	position: fixed;
 }
@@ -52,13 +46,6 @@ body {
 	height: 100vh;
 }
 
-.welcome-text {
-	color: white;
-	font-size: 2.5em;
-	padding: 0 20px 0 20px;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
 .parallax {
 	background-attachment: fixed;
 	background-size: cover;
@@ -71,37 +58,66 @@ body {
 	}
 }
 
-/* Content Section css */
-/* 1st row */
-#content {
-	height: 200vh;
+.welcome-text {
+	color: white;
+	font-size: 2.5em;
+	padding: 0 20px 0 20px;
+	position: absolute;
+	text-align: center;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
-.first-showcase {
+/* Showcase Content */
+/* First Showcase */
+.showcase {
+	align-items: center;
+	padding: 0 15px 0 15px;
 	height: 100vh;
-}
-
-.showcase-item {
-	position: relative;
-}
-
-@media only screen and (max-width: 800px) {
-	.showcase-item {
-		height: 50vh;
-	}
-}
-
-.showcase-item article {
-	font-size: 1.5em;
-	padding: 0px 70px 0px 70px;
-}
-
-.showcase-item aside img {
 	width: 100%;
 }
 
+.showcase-text {
+	font-size: 1.5em;
+	padding: 0 70px 0 70px;
+	text-align: center;
+}
+
+.showcase-image img {
+	max-width: 100%;
+	height: auto;
+	width: auto;
+}
+
+@media only screen and (min-width: 992px) {
+	.showcase {
+		display: flex;
+	}
+
+	.showcase-text {
+		display: block;
+		max-width: 50%;
+	}
+
+	.showcase-image {
+		max-width: 50%;
+	}
+}
+
+@media only screen and (min-width: 576px) {
+	.showcase-text {
+		padding: 100px 70px 100px 70px;
+		max-width: 100%;
+	}
+
+	.showcase-image {
+		max-width: 100%;
+	}
+}
+
 /* 2nd row */
-.second-showcase {
+/* .second-showcase {
 	height: 100vh;
 	margin: 70px 0px 70px 0px;
 }
@@ -112,8 +128,8 @@ body {
 	padding: 0px 50px 0px 50px;
 }
 
-/* .second-showcase img:hover {
-} */
+.second-showcase img:hover {
+}
 
 .second-showcase img:nth-child(even) {
 	margin-top: 100px;
@@ -137,28 +153,4 @@ body {
 	.second-showcase .showcase-item {
 		width: 25%;
 	}
-}
-
-/* Navbar Styling */
-#openNavbtn {
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	position: fixed;
-	right: 4%;
-	top: 5%;
-	z-index: 1;
-}
-
-#myNav {
-	background-color: rgb(17, 17, 17);
-	height: 100%;
-	overflow-x: hidden;
-	position: fixed;
-	right: 0;
-	top: 0;
-	transition: 0.5s;
-	width: 0%;
-	/* change with js later */
-	z-index: 2;
-}
+} */
