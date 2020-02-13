@@ -1,15 +1,14 @@
 /* General styling */
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	overflow-x: hidden;
+}
 
 .center {
 	position: absolute;
 	text-align: center;
 	top: 50%;
 	transform: translateY(-50%);
-}
-
-body {
-	font-family: 'Source Sans Pro', sans-serif;
-	overflow-x: hidden;
 }
 
 .bold {
