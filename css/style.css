@@ -18,35 +18,32 @@ body {
 
 /* Navbar Styling */
 .logo {
-    color: #ebdede;
-    padding: 15px;
-    position: fixed;
-}
-
-#openNavbtn {
+	color: #ebdede;
+	padding: 15px 20px 15px 20px;
 	position: fixed;
-	right: 4%;
-	top: 5%;
-	z-index: 1;
 }
 
-#myNav {
-	/* display: none; */
-	background-color: #111;
-	height: 100%;
-	/* opacity: 50%; */
-	overflow-x: hidden;
+.menu {
+	background: transparent;
+	display: block;
+	list-style-type: none;
+	margin: 0;
+	padding: 15px;
 	position: fixed;
 	right: 0;
-	top: 0;
-	transition: 0.5s;
-	width: 0%;
-	/* change with js later */
-	z-index: 2;
 }
 
-#menuItems {
-	color: white;
+.menu li {
+	float: left;
+	padding: 0 20px 0 20px;
+}
+
+.menu li a {
+	color: #ebdede;
+	font-size: 1.25em;
+	display: block;
+	text-align: center;
+	text-decoration: none;
 }
 
 /* Welcome Section css */
@@ -170,8 +167,4 @@ span {
 	width: 0%;
 	/* change with js later */
 	z-index: 2;
-}
-
-#menuItems {
-	color: white;
 }

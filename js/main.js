@@ -8,9 +8,9 @@
 //     sidebar.style.width = "0%";
 // }
 
-let navBtn = document.getElementById("openNavbtn")
+// let navBtn = document.getElementById("openNavbtn")
 
-navBtn.addEventListener('click', function() {
-    let 
-});
+// navBtn.addEventListener('click', function() {
+//     let 
+// });
 
