@@ -70,49 +70,60 @@ body {
 
 /* Showcase Content */
 /* First Showcase */
-.showcase {
+#showcase {
 	align-items: center;
-	padding: 0 15px 0 15px;
+	padding: 0 15px;
 	height: 100vh;
 	width: 100%;
 }
 
-.showcase-text {
+#showcase-mission {
 	font-size: 1.5em;
-	padding: 0 70px 0 70px;
+	padding: 0 70px;
 	text-align: center;
 }
 
-.showcase-image img {
+#showcase-mission-image img {
 	max-width: 100%;
 	height: auto;
 	width: auto;
 }
 
 @media only screen and (min-width: 992px) {
-	.showcase {
+	#showcase {
 		display: flex;
 	}
 
-	.showcase-text {
+	#showcase-mission {
 		display: block;
 		max-width: 50%;
 	}
 
-	.showcase-image {
+	#showcase-mission-image {
 		max-width: 50%;
 	}
 }
 
 @media only screen and (min-width: 576px) {
-	.showcase-text {
-		padding: 100px 70px 100px 70px;
+	#showcase-mission {
+		padding: 100px 70px;
 		max-width: 100%;
 	}
 
-	.showcase-image {
+	#showcase-mission-image {
 		max-width: 100%;
 	}
+}
+
+#showcase-product-carousel {
+	padding-top: 70px;
+}
+
+#showcase-product-carousel img {
+	height: 100vh;
+	max-width: 24%;
+	object-fit: cover;
+	padding: 0px 50px 0px 50px;
 }
 
 /* 2nd row */
