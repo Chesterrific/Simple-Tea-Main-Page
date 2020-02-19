@@ -69,7 +69,6 @@ body {
 }
 
 /* Showcase Content */
-/* First Showcase */
 #showcase {
 	align-items: center;
 	padding: 0 15px;
@@ -77,6 +76,7 @@ body {
 	width: 100%;
 }
 
+/* Showcase Mission */
 #showcase-mission {
 	font-size: 1.5em;
 	padding: 0 70px;
@@ -95,7 +95,6 @@ body {
 	}
 
 	#showcase-mission {
-		display: block;
 		max-width: 50%;
 	}
 
@@ -115,8 +114,10 @@ body {
 	}
 }
 
+/* Showcase Product Carousel */
 #showcase-product-carousel {
 	padding-top: 70px;
+	width: 100%;
 }
 
 #showcase-product-carousel img {
