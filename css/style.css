@@ -1,6 +1,7 @@
 /* General styling */
 body {
 	font-family: 'Source Sans Pro', sans-serif;
+	margin: 0;
 	overflow-x: hidden;
 }
 
