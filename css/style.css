@@ -17,11 +17,20 @@ body {
   position: fixed;
 }
 
-.menu{
-  display: none;
+.menu {
+  background-color: #111;
+  height: 100%;
+  overflow-x: hidden;
+  padding: 0px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: 0.5s;
+  width: 0%;
+  z-index: 2;
 }
 
-#hamburger{
+#hamburger {
   color: white;
   position: fixed;
   right: 30px;
@@ -31,15 +40,19 @@ body {
 }
 
 @media only screen and (min-width: 850px) {
+  .revert {
+    all: initial;
+  }
+
   .menu {
     background: transparent;
     display: block;
+    font-family: 'Source Sans Pro', sans-serif;
     list-style-type: none;
     margin: 0;
     padding: 15px;
     position: fixed;
     right: 0;
-    
   }
 
   .menu li {
@@ -55,7 +68,7 @@ body {
     text-decoration: none;
   }
 
-  #hamburger{
+  #hamburger {
     display: none
   }
 }
