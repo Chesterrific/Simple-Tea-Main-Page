@@ -1,170 +1,227 @@
 /* General styling */
 body {
-	font-family: 'Source Sans Pro', sans-serif;
-	margin: 0;
-	overflow-x: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 /* Navbar Styling */
 .logo {
-	color: #ebdede;
-	font-size: 1.25em;
-	padding: 15px 20px 15px 20px;
-	position: fixed;
+  color: #ebdede;
+  font-size: 1.25em;
+  padding: 15px 20px 15px 20px;
+  position: fixed;
 }
 
 .menu {
-	background: transparent;
-	display: block;
-	list-style-type: none;
-	margin: 0;
-	padding: 15px;
-	position: fixed;
-	right: 0;
+  background: transparent;
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 15px;
+  position: fixed;
+  right: 0;
 }
 
 .menu li {
-	float: left;
-	padding: 0 20px 0 20px;
+  float: left;
+  padding: 0 20px 0 20px;
 }
 
 .menu li a {
-	color: #ebdede;
-	font-size: 1.25em;
-	display: block;
-	text-align: center;
-	text-decoration: none;
+  color: #ebdede;
+  font-size: 1.25em;
+  display: block;
+  text-align: center;
+  text-decoration: none;
 }
 
 /* Welcome Section Styling */
 #background {
-	background-image: url("../assets/backgrounds/Simple Tea Home Page.jpg");
-	background-position: center bottom;
-	height: 100vh;
+  background-image: url("../assets/backgrounds/Simple Tea Home Page.jpg");
+  background-position: center bottom;
+  height: 100vh;
 }
 
 .parallax {
-	background-attachment: fixed;
-	background-size: cover;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 @media only screen and (max-height: 899px),
 (max-width: 800px) {
-	.parallax {
-		background-attachment: scroll;
-	}
+  .parallax {
+    background-attachment: scroll;
+  }
 }
 
 .welcome-text {
-	color: white;
-	font-size: 2.5em;
-	padding: 0 20px 0 20px;
-	position: absolute;
-	text-align: center;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	top: 50%;
-	transform: translateY(-50%);
+  color: white;
+  font-size: 2.5em;
+  padding: 0 20px 0 20px;
+  position: absolute;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* Showcase Content */
 #showcase {
-	align-items: center;
-	padding: 0 15px;
-	height: 100vh;
-	width: 100%;
+  align-items: center;
+  padding-top: 50px;
+  height: 150vh;
+  width: 100%;
 }
 
 /* Showcase Mission */
 #showcase-mission {
-	font-size: 1.5em;
-	padding: 0 70px;
-	text-align: center;
+  font-size: 1.5em;
+  padding: 0 70px;
+  text-align: center;
 }
 
 #showcase-mission-image img {
-	max-width: 100%;
-	height: auto;
-	width: auto;
+  padding-top: 35px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+/*showcase Width Media Queries */
+@media only screen and (min-width: 576px) {
+  #showcase {
+    padding-bottom: 20%;
+  }
+
+  #showcase-mission {
+    padding: 100px 70px;
+    max-width: 100%;
+  }
+
+  #showcase-mission-image {
+    max-width: 100%;
+  }
 }
 
 @media only screen and (min-width: 992px) {
-	#showcase {
-		display: flex;
-	}
+  #showcase {
+    display: flex;
+    margin: 0;
+    padding-bottom: 0;
+  }
 
-	#showcase-mission {
-		max-width: 50%;
-	}
+  #showcase-mission {
+    max-width: 50%;
+  }
 
-	#showcase-mission-image {
-		max-width: 50%;
-	}
+  #showcase-mission-image {
+    max-width: 50%;
+  }
 }
 
-@media only screen and (min-width: 576px) {
-	#showcase-mission {
-		padding: 100px 70px;
-		max-width: 100%;
-	}
+/* showcase Height Media Queries*/
+@media only screen and (min-height: 400px) {
+  #showcase {
+    height: 140vh;
+  }
+}
 
-	#showcase-mission-image {
-		max-width: 100%;
-	}
+@media only screen and (min-height: 500px) {
+  #showcase {
+    height: 120vh;
+  }
+}
+
+@media only screen and (min-height: 600px) {
+  #showcase {
+    height: 110vh;
+  }
+}
+
+@media only screen and (min-height: 800px) {
+  #showcase {
+    height: 100vh;
+  }
 }
 
 /* Showcase Product Carousel */
 #showcase-product-carousel {
-	display: flex;
-	padding-top: 70px;
-	max-width: 100vw;
+  display: flex;
+  max-width: 100vw;
 }
 
-#showcase-product-carousel img {
-	height: 100vh;
-	max-width: 23%;
-	object-fit: cover;
-	padding: 0px 1% 0px 1%;
+@media only screen and (max-width: 991px) {
+  #showcase-product-carousel {
+    padding-top: 250px;
+    position: relative;
+  }
+
+  #showcase-product-carousel img {
+    animation: imageAnimation 24s linear infinite;
+    left: 50%;
+    max-width: 80%;
+    padding: 0px;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  /* Animation Settings */
+  @keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      animation-timing-function: ease-in;
+    }
+
+    8% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+
+    17% {
+      opacity: 1;
+    }
+
+    25% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0
+    }
+  }
+
+  #showcase-product-carousel img:nth-child(2) {
+    animation-delay: 6s;
+    opacity: 0%;
+  }
+
+  #showcase-product-carousel img:nth-child(3) {
+    animation-delay: 12s;
+    opacity: 0%;
+  }
+
+  #showcase-product-carousel img:nth-child(4) {
+    animation-delay: 18s;
+    opacity: 0%;
+  }
 }
 
-/* 2nd row */
-/* .second-showcase {
-	height: 100vh;
-	margin: 70px 0px 70px 0px;
+@media only screen and (min-width: 992px) {
+  #showcase-product-carousel img {
+    height: 100vh;
+    max-width: 23%;
+    object-fit: cover;
+    padding: 0px 1% 0px 1%;
+  }
 }
 
-.second-showcase img {
-	margin-top: 50px;
-	object-fit: cover;
-	padding: 0px 50px 0px 50px;
+@media only screen and (min-height: 700px) {
+  #showcase-product-carousel {
+    padding-top: 50px;
+  }
 }
-
-.second-showcase img:hover {
-}
-
-.second-showcase img:nth-child(even) {
-	margin-top: 100px;
-}
-
-@media only screen and (max-width: 800px) {
-	.second-showcase {
-		height: 100vh;
-	}
-
-	.second-showcase img {
-		margin-top: 0;
-		object-fit: cover;
-		padding: 0 5px 0 5px;
-	}
-
-	.second-showcase img:nth-child(even) {
-		margin-top: 0;
-	}
-
-	.second-showcase .showcase-item {
-		width: 25%;
-	}
-} */
