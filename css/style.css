@@ -1,4 +1,4 @@
-/* General styling */
+/* ----------------General Styling---------------- */
 body {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
@@ -9,30 +9,38 @@ body {
   font-weight: bold;
 }
 
-.shadow{
+.shadow {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-/* Navbar Styling */
+/* ----------------Navbar Styling---------------- */
 .logo {
   color: #ebdede;
   font-size: 1.25em;
   padding: 15px 20px 15px 20px;
   position: fixed;
+  z-index: 3;
 }
 
 #menu {
   background-color: #111;
+  color: white;
+  font-size: 1.5em;
   height: 100%;
+  list-style-type: none;
   margin: 0;
   overflow-x: hidden;
   padding: 0px;
   position: fixed;
   right: 0;
+  text-align: center;
   top: 0;
   transition: 0.5s;
   width: 0%;
   z-index: 3;
+}
+
+#menu li h2{
 }
 
 #hamburger {
@@ -88,10 +96,16 @@ body {
   }
 } */
 
-/* Welcome Section Styling */
-#background {
+/* ----------------Welcome Section Styling---------------- */
+#main-page {
   background-image: url("../assets/backgrounds/Simple Tea Home Page.jpg");
   background-position: center bottom;
+  height: 100vh;
+}
+
+#corpgifttea {
+  background-image: url("../assets/backgrounds/Simple Tea Corporate Gift 2.jpg");
+  background-position: top;
   height: 100vh;
 }
 
@@ -117,10 +131,9 @@ body {
   transform: translateY(-50%);
 }
 
-/* Showcase Content */
+/* ----------------Showcase Styling---------------- */
 #showcase {
   align-items: center;
-  height: 50vh;
   width: 100%;
 }
 
@@ -131,20 +144,33 @@ body {
   text-align: center;
 }
 
-/* showcase Width Media Queries */
-@media only screen and (max-width: 575px){
-  #showcase-mission-image img {
-    display: none;
+#showcase-mission-image img {
+  display: none;
+}
+
+/* Width Media Queries */
+@media only screen and (max-width: 373px) {
+  #showcase {
+    height: 100vh;
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width: 374px) {
+  #showcase {
+    height: 75vh;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  #showcase {
+    height: 60vh;
   }
 }
 
 @media only screen and (min-width: 576px) {
   #showcase {
     height: 50vh;
-  }
-
-  #showcase-mission-image {
-    display: none;
   }
 }
 
@@ -160,46 +186,24 @@ body {
     max-width: 50%;
   }
 
-  #showcase-mission-image {
-    display: flex;
-    max-width: 50%;
-    padding-top: 100px;
+  #showcase-mission-image img{
+    display: unset;
+    max-width: 100%;
+    padding-top: 75px;
   }
 }
 
-/* showcase Height Media Queries */
-/* @media only screen and (min-height: 400px) {
-  #showcase {
-    height: 100vh;
-  }
-}
+/* Height Media Queries */
 
-@media only screen and (min-height: 500px) {
-  #showcase {
-    height: 100vh;
-  }
-}
 
-@media only screen and (min-height: 600px) {
-  #showcase {
-    height: 100vh;
-  }
-}
-
-@media only screen and (min-height: 800px) {
-  #showcase {
-    height: 100vh;
-  }
-} */
-
-/* Showcase Product Carousel */
+/* ----------------Showcase Product Carousel Styling---------------- */
 #showcase-product-carousel {
   display: flex;
   max-width: 100vw;
   padding-top: 50px;
 }
 
-/* showcase-product-carousel Width Media Queries */
+/* Width Media Queries */
 @media only screen and (max-width: 991px) {
   #showcase-product-carousel {
     padding-top: 0;
@@ -265,7 +269,7 @@ body {
   }
 }
 
-/* showcase-product-carousel Height Media Queries */
+/* Height Media Queries */
 @media only screen and (min-height: 700px) {
   /* #showcase-product-carousel {
     padding-top: 50px;
