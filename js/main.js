@@ -1,6 +1,6 @@
 // Variables
 var body = document.body;
-var navOpenBtn = document.getElementById("hamburger");
+var navOpenBtn = document.getElementById("openBtn");
 var navCloseBtn = document.getElementById("closeBtn");
 var menu = document.getElementById("menu");
 
