@@ -55,6 +55,10 @@ body {
 }
 
 /* ----------------Welcome Section Styling---------------- */
+#welcome {
+  border-bottom: 5px green solid;
+}
+
 #main-page {
   background-image: url("../assets/backgrounds/Simple Tea Home Page.jpg");
   background-position: center bottom;
@@ -71,7 +75,6 @@ body {
 #private-label {
   background-image: url("../assets/backgrounds/Private Label.jpg");
   background-position: top;
-  border-bottom: 5px green solid;
   height: 100vh;
 }
 
