@@ -1,7 +1,0 @@
-- [ ] Style side nav
-- [ ] Put logo on top-left
-- [ ] Fix welcome text styling on corporate gift tea page
-- [ ] Add Contact info to Contact-us Page
-- [ ] Change individual page titles
-- [ ] Link each page to their respective sites (i.e. corpgift => corpgifttea.com)
-- [ ] Fix images to make backgrounds truly transparent rather than white (Showcase items specifically)
