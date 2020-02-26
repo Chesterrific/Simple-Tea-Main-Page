@@ -69,8 +69,9 @@ body {
 }
 
 #private-label {
-  background-image: url("../assets/backgrounds/Simple Tea Page 3 (Private Label).jpg");
+  background-image: url("../assets/backgrounds/Private Label.jpg");
   background-position: top;
+  border-bottom: 5px green solid;
   height: 100vh;
 }
 
@@ -78,6 +79,11 @@ body {
   background-image: url("../assets/backgrounds/Simple\ Tea\ objects\ of\ desire.jpg");
   background-position: top;
   height: 100vh;
+}
+
+#contact-page {
+  background-image: url("../assets/backgrounds/Simple\ Tea\ Contact\ us.jpg");
+  background-size: cover;
 }
 
 .parallax {
@@ -88,11 +94,13 @@ body {
 .welcome-text {
   color: white;
   font-size: 2.2em;
+  /* left: 50%; */
   padding: 0 20px 0 20px;
   position: absolute;
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
+  /* transform: translateX(-50%); */
 }
 
 @media only screen and (max-height: 899px),
@@ -156,6 +164,23 @@ body {
     display: unset;
     max-width: 100%;
     padding-top: 75px;
+  }
+}
+
+/* ----------------Middle Break Styling---------------- */
+#middle-break {
+  display: none;
+}
+
+
+@media only screen and (min-width: 992px) {
+  #middle-break {
+    background-image: url("../assets/backgrounds/Simple\ Tea\ objects\ of\ desire.jpg");
+    background-size: cover;
+    border-bottom: 5px green solid;
+    border-top: 5px green solid;
+    display: flex;
+    height: 25vh;
   }
 }
 
@@ -226,6 +251,10 @@ body {
     animation-delay: 24s;
     opacity: 0%;
   }
+
+  #showcase-product-carousel img:nth-child(6) {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -234,60 +263,37 @@ body {
     height: 100vh;
     overflow-x: auto;
     overflow-y: hidden;
-    transform: translateY(-10%);
   }
 
   #showcase-product-carousel img:nth-child(n) {
     all: initial;
     object-fit: contain;
     max-width: 25%;
-    padding: 0px 1%;
+    margin-bottom: 3%;
+    padding: 0px 2%;
   }
 
   #showcase-product-carousel img:nth-child(even) {
-    transform: translateY(30%);
+    transform: translateY(35%);
   }
-
-  /* #showcase-product-carousel {
-    display: flex;
-  }
-
-  #showcase-product-carousel img {
-    all: initial;
-    height: 100vh;
-    max-width: 23%;
-    object-fit: cover;
-    padding: 0px 1% 0px 1%;
-  }
-
-  #showcase-product-carousel img:nth-child(2) {
-    all: initial;
-    height: 100vh;
-    max-width: 23%;
-    object-fit: cover;
-    padding: 0px 1% 0px 1%;
-  }
-
-  #showcase-product-carousel img:nth-child(3) {
-    all: initial;
-    height: 100vh;
-    max-width: 23%;
-    object-fit: cover;
-    padding: 0px 1% 0px 1%;
-  }
-
-  #showcase-product-carousel img:nth-child(4) {
-    all: initial;
-    height: 100vh;
-    max-width: 23%;
-    object-fit: cover;
-    padding: 0px 1% 0px 1%;
-  } */
 }
 
 /* Height Media Queries */
 @media only screen and (max-height: 650px) {
   #showcase-product-carousel {
     display: none;
+  }
+}
+
+/* ----------------Link Section Styling---------------- */
+#private-label-link {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  #private-label-link {
+    background-image: url("../assets/backgrounds/Simple\ Tea\ Page\ 3\ \(Private\ Label\).jpg");
+    display: flex;
+    height: 100vh;
   }
 }
