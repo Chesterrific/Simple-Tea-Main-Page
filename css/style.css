@@ -197,19 +197,21 @@ body {
 
 #showcase-text {
   font-size: 1.5em;
-  margin-bottom: 30vh;
+  margin-bottom: 15vh;
   padding-top: 15vh;
   text-align: center;
 }
 
 #showcase-images {
+  align-items: center;
   display: flex;
+  justify-content: space-evenly;
   width: 100vw;
 }
 
 #showcase-images img {
   object-fit: contain;
-  width: 25%;
+  width: 20%;
 }
 
 /* Width Media Queries */
