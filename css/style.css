@@ -10,6 +10,10 @@ body {
   text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
 }
 
+.second {
+  background-color: #e8e8e3;
+}
+
 /* ----------------Navbar Styling---------------- */
 
 #logo {
@@ -17,7 +21,6 @@ body {
   font-size: 1.5em;
   margin: 60px 50px;
   position: fixed;
-  z-index: 3;
 }
 
 #menu {
@@ -35,7 +38,7 @@ body {
   top: 0;
   transition: 0.5s;
   width: 0%;
-  z-index: 3;
+  z-index: 1;
 }
 
 #openBtn {
@@ -44,7 +47,6 @@ body {
   position: fixed;
   right: 30px;
   top: 15px;
-  z-index: 2;
 }
 
 #closeBtn {
@@ -58,36 +60,36 @@ body {
 
 /* ----------------Welcome Section Styling---------------- */
 
-#welcome {
-  border-bottom: 5px green solid;
-}
-
-#main-page {
+#mainPage {
   background-image: url("../assets/backgrounds/Simple Tea Home Page.jpg");
   background-position: center;
   background-size: cover;
+  border-bottom: 5px green solid;
   height: 100vh;
 }
 
-#corpgifttea {
-  background-image: url("../assets/backgrounds/Simple Tea Corporate Gift 2.jpg");
+#corpGiftTea {
+  background-image: url("../assets/backgrounds/Simple Tea Tea offering.jpg");
   background-position: top;
+  border-bottom: 5px green solid;
   height: 100vh;
 }
 
-#private-label {
-  background-image: url("../assets/backgrounds/Private Label.jpg");
+#customLabel {
+  background-image: url("../assets/backgrounds/customlabelteabg.jpg");
   background-position: top;
+  border-bottom: 5px orangered solid;
   height: 100vh;
 }
 
-#obj-of-desire {
+#objOfDesire {
   background-image: url("../assets/backgrounds/Simple\ Tea\ objects\ of\ desire.jpg");
   background-position: top;
+  border-bottom: 5px orangered solid;
   height: 100vh;
 }
 
-#contact-page {
+#contactPage {
   background-image: url("../assets/backgrounds/Simple\ Tea\ Contact\ us.jpg");
   background-size: cover;
 }
@@ -97,12 +99,27 @@ body {
   background-size: cover;
 }
 
-.welcome-text {
+/* Welcome text positioning */
+
+.welcomeText {
   color: white;
   font-size: 3.5em;
   position: absolute;
+}
+
+.about {
   right: 15%;
   top: 25%;
+}
+
+.tea {
+  right: 15%;
+  top: 80%;
+}
+
+.customLabelTea {
+  bottom: 40%;
+  left: 5%;
 }
 
 @media only screen and (max-height: 899px), (max-width: 800px) {
@@ -117,195 +134,56 @@ body {
   align-items: center;
   display: flex;
   height: 100vh;
+  width: 100vw;
 }
 
-#mission-text {
+#missionText {
   font-size: 1.5em;
   padding: 175px;
-  text-align: center;
   width: 50%;
 }
 
-#mission-image {
+#missionText h1 {
+  font-size: 3em;
+}
+
+#missionImage {
   width: 50%;
 }
 
-#mission-image img {
+#missionImage img {
+  flex: max-content;
   width: 80%;
 }
 
-/* Width Media Queries */
-/* @media only screen and (min-width: 374px) {
-  #showcase {
-    height: 80vh;
-  }
+.imageRow {
+  display: flex;
+  margin-top: 50px;
 }
-
-@media only screen and (min-width: 450px) {
-  #showcase {
-    height: 60vh;
-  }
-}
-
-@media only screen and (min-width: 576px) {
-  #showcase {
-    height: 40vh;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  #showcase {
-    display: flex;
-    height: 100vh;
-    margin: 0;
-    padding-bottom: 0;
-  }
-  #showcase-mission {
-    max-width: 50%;
-  }
-  #showcase-mission-image img {
-    display: unset;
-    max-width: 50%;
-    padding-top: 75px;
-  }
-} */
-
-/* ----------------Middle Break Styling---------------- */
-/* #middle-break {
-  display: none;
-}
-
-@media only screen and (min-width: 992px) {
-  #middle-break {
-    background-image: url("../assets/backgrounds/Simple\ Tea\ objects\ of\ desire.jpg");
-    background-size: cover;
-    border-bottom: 5px green solid;
-    border-top: 5px green solid;
-    display: flex;
-    height: 25vh;
-  }
-} */
 
 /* ----------------Showcase Product Carousel Styling---------------- */
 
 #showcase {
-  background-color: #e8e8e3;
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
-#showcase-text {
+#showcaseText {
   font-size: 1.5em;
   margin-bottom: 15vh;
   padding-top: 15vh;
   text-align: center;
 }
 
-#showcase-images {
+#showcaseImages {
   align-items: center;
   display: flex;
   justify-content: space-evenly;
   width: 100vw;
 }
 
-#showcase-images img {
+#showcaseImages img {
   object-fit: contain;
   width: 20%;
 }
-
-/* Width Media Queries */
-/* @media only screen and (min-width: 301px) {
-  #showcase-product-carousel {
-    display: flex;
-    padding-top: 0;
-    position: relative;
-  }
-  #showcase-product-carousel img {
-    animation: imageAnimation 30s linear infinite;
-    left: 50%;
-    max-width: 80%;
-    padding: 0px;
-    position: absolute;
-    transform: translateX(-50%);
-  } */
-
-/* Animation Settings */
-/* @keyframes imageAnimation {
-    0% {
-      opacity: 0;
-      animation-timing-function: ease-in;
-    }
-    8% {
-      opacity: 1;
-      animation-timing-function: ease-out;
-    }
-    17% {
-      opacity: 1;
-    }
-    25% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0
-    }
-  }
-  #showcase-product-carousel img:nth-child(2) {
-    animation-delay: 6s;
-    opacity: 0%;
-  }
-  #showcase-product-carousel img:nth-child(3) {
-    animation-delay: 12s;
-    opacity: 0%;
-  }
-  #showcase-product-carousel img:nth-child(4) {
-    animation-delay: 18s;
-    opacity: 0%;
-  }
-  #showcase-product-carousel img:nth-child(5) {
-    animation-delay: 24s;
-    opacity: 0%;
-  }
-  #showcase-product-carousel img:nth-child(6) {
-    display: none;
-  }
-} 
-
-@media only screen and (min-width: 992px) {
-  #showcase-product-carousel {
-    display: flex;
-    height: 100vh;
-    overflow-x: auto;
-    overflow-y: hidden;
-  }
-  #showcase-product-carousel img:nth-child(n) {
-    all: initial;
-    object-fit: contain;
-    max-width: 25%;
-    margin-bottom: 3%;
-    padding: 0px 2%;
-  }
-  #showcase-product-carousel img:nth-child(even) {
-    transform: translateY(35%);
-  }
-} */
-
-/* Height Media Queries */
-/* @media only screen and (max-height: 650px) {
-  #showcase-product-carousel {
-    display: none;
-  }
-} */
-
-/* ----------------Link Section Styling---------------- */
-/* #private-label-link {
-  display: none;
-}
-
-@media only screen and (min-width: 992px) {
-  #private-label-link {
-    background-image: url("../assets/backgrounds/Simple\ Tea\ Page\ 3\ \(Private\ Label\).jpg");
-    display: flex;
-    height: 100vh;
-  }
-} */

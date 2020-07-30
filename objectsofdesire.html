@@ -2,73 +2,83 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Simple Tea Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Tea Website</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
-	<script src="https://kit.fontawesome.com/c20c495387.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c20c495387.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<header>
-		<!-- Add a11y changes (i.e. screen readers, alts, aria, etc.) -->
-	</header>
+  <header>
+    <!-- Add a11y changes (i.e. screen readers, alts, aria, etc.) -->
+  </header>
 
-	<!-- Navbar -->
-	<nav>
-		<a class="logo" href="/">simpletea logo</a>
-		<ul id="menu">
-			<a class="shadow" id="closeBtn">&times</a>
-			<li><a href="index.html">About</a></li>
-			<li><a href="corpgifttea.html">Corp Gift Tea</a></li>
-			<li><a href="privatelabel.html">Private Label</a></li>
-			<li><a href="objectsofdesire.html">Object of Desire</a></li>
-			<li><a href="contact-us.html">Contact Us</a></li>
-		</ul>
-		<a class="fas fa-bars fa-3x shadow" id="openBtn"></a>
-	</nav>
+  <!-- Navbar -->
+  <nav>
+    <div id="logo">simple tea</div>
+    <ul id="menu">
+      <a class="shadow" id="closeBtn">&times</a>
+      <li><a href="index.html">About</a></li>
+      <li><a href="corpgifttea.html">Tea</a></li>
+      <li><a href="customlabel.html">Custom Label</a></li>
+      <li><a href="objectsofdesire.html">Objects of Desire</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+    <a class="fas fa-bars fa-3x shadow" id="openBtn"></a>
+  </nav>
 
-	<!-- Main -->
-	<main>
-		<section id="welcome">
-			<div id="obj-of-desire" class="parallax"></div>
-			<div class="welcome-text shadow">
-				<span>We are a purveyor of custom branded tea, coffee, and accessories of superior quality and value that
-					inspires and motivates our customers to be more successful.</span>
-			</div>
-		</section>
+  <!-- Main -->
+  <main>
+    <section id="welcome">
+      <div id="main-page" class="parallax"></div>
+      <div class="welcome-text about">
+        <span>really good tea</span>
+      </div>
+    </section>
 
-		<section id="showcase">
-			<div id="showcase-mission">
-				<span>Our goal is to create, design, manufacture an elegant and graceful custom branded tea and coffee products
-					with thoughtful and artisanal care. We tailor our products with our customer's needs and create high impact
-					products that offer meaningful experiences and add value to their business.</span>
-			</div>
-			<div id="showcase-mission-image">
-				<img src="assets/content/Simple Tea tins.jpg" alt="">
-			</div>
-		</section>
+    <section id="mission">
+      <div id="mission-text">
+        <p><strong>Simple tea is a tea and lifestyle company for people who want to add effortless grace, elegance, and
+            creativity to their everyday living.</strong></p>
+        <p>Our products are carefully sourced and personally curated and made with thoughtfulness and quality that
+          provide a meaningful experience.</p>
+        <p>Simple Tea is based in the San Francisco Bay Area.</p>
+      </div>
 
-		<section id="showcase-product-carousel">
-			<img src="assets/content/tea2.jpg" alt="">
-			<img src="assets/content/tea4.jpg" alt="">
-			<img src="assets/content/tea6.jpg" alt="">
-			<img src="assets/content/tea3.jpg" alt="">
-			<img src="assets/content/tea5.jpg" alt="">
-		</section>
-	</main>
+      <div id="mission-image">
+        <img src="assets/content/Simple Tea tins.jpg" alt="">
+      </div>
+    </section>
 
-	<!-- Footer -->
-	<!-- <footer>
+
+
+    <section id="showcase">
+      <p id="showcase-text">We pride ourselves on timeless, memorable, and superior tea products.</p>
+
+      <div id="showcase-images">
+        <img src="assets/content/tea2.jpg" alt="">
+        <img src="assets/content/tea1.jpg" alt="">
+        <img src="assets/content/tea6.jpg" alt="">
+        <img src="assets/content/tea3.jpg" alt="">
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <!-- <footer>
 		<p>&copy; 2020 Simple tea</p>
 	</footer> -->
 
-	<!-- JavaScript -->
-	<script src="js/main.js"></script>
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/nav.js"></script>
 </body>
 
 </html>

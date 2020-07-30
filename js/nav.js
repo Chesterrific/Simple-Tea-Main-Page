@@ -3,9 +3,7 @@ $(document).ready(function () {
   // Variables
   var isWhite = true,
     logo = document.getElementById('logo'),
-    welcomeEl = document.getElementById('welcome'),
-    missionEl = document.getElementById('mission'),
-    showcaseEl = document.getElementById('showcase');
+    missionEl = document.getElementById('mission');
 
   $(window).bind('scroll', function () {
     // Mission section's distance from top of window starting from its top.
