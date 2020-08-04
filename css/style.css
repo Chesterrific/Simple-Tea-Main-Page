@@ -38,7 +38,7 @@ body {
   top: 0;
   transition: 0.5s;
   width: 0%;
-  z-index: 1;
+  z-index: 2;
 }
 
 #openBtn {
@@ -47,6 +47,7 @@ body {
   position: fixed;
   right: 30px;
   top: 15px;
+  z-index: 1;
 }
 
 #closeBtn {
@@ -64,28 +65,24 @@ body {
   background-image: url("../assets/backgrounds/Simple Tea Home Page.jpg");
   background-position: center;
   background-size: cover;
-  border-bottom: 5px green solid;
   height: 100vh;
 }
 
 #corpGiftTea {
   background-image: url("../assets/backgrounds/Simple Tea Tea offering.jpg");
   background-position: top;
-  border-bottom: 5px green solid;
   height: 100vh;
 }
 
 #customLabel {
   background-image: url("../assets/backgrounds/customlabelteabg.jpg");
-  background-position: top;
-  border-bottom: 5px orangered solid;
+  background-position: center;
   height: 100vh;
 }
 
 #objOfDesire {
   background-image: url("../assets/backgrounds/Simple\ Tea\ objects\ of\ desire.jpg");
   background-position: top;
-  border-bottom: 5px orangered solid;
   height: 100vh;
 }
 
@@ -107,17 +104,17 @@ body {
   position: absolute;
 }
 
-.about {
+.aboutWelcome {
   right: 15%;
   top: 25%;
 }
 
-.tea {
+.teaWelcome {
   right: 15%;
   top: 80%;
 }
 
-.customLabelTea {
+.customLabelTeaWelcome {
   bottom: 40%;
   left: 5%;
 }
@@ -128,7 +125,7 @@ body {
   }
 }
 
-/* ----------------Showcase Styling---------------- */
+/* ----------------Mission Styling---------------- */
 
 #mission {
   align-items: center;
@@ -137,9 +134,11 @@ body {
   width: 100vw;
 }
 
+/* Text styling */
+
 #missionText {
   font-size: 1.5em;
-  padding: 175px;
+  padding: 150px;
   width: 50%;
 }
 
@@ -147,18 +146,46 @@ body {
   font-size: 3em;
 }
 
+#missionText h1, h2, p {
+  margin-left: 125px;
+}
+
+.teaText {
+  padding: 0px 10px 20px 50px;
+}
+
+/* Image styling */
+
 #missionImage {
+  margin-right: 125px;
   width: 50%;
 }
 
 #missionImage img {
-  flex: max-content;
   width: 80%;
 }
 
 .imageRow {
   display: flex;
-  margin-top: 50px;
+}
+
+.rowImage {
+  margin: 20px;
+}
+
+.col {
+  display: flex;
+}
+
+.imageCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 20px
+}
+
+.fitImage {
+  flex: 1;
 }
 
 /* ----------------Showcase Product Carousel Styling---------------- */
