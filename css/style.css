@@ -1,7 +1,7 @@
 /* ----------------General Styling---------------- */
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Calibri', sans-serif;
   margin: 0;
   overflow-x: hidden;
 }
@@ -104,17 +104,17 @@ body {
   position: absolute;
 }
 
-.aboutWelcome {
+#aboutWelcome {
   right: 15%;
   top: 25%;
 }
 
-.teaWelcome {
+#teaWelcome {
   right: 15%;
   top: 80%;
 }
 
-.customLabelTeaWelcome {
+#customLabelTeaWelcome {
   bottom: 40%;
   left: 5%;
 }
@@ -127,41 +127,42 @@ body {
 
 /* ----------------Mission Styling---------------- */
 
-#mission {
+.mission {
   align-items: center;
   display: flex;
   height: 100vh;
   width: 100vw;
 }
 
-/* Text styling */
+/* Mission General Text styling */
 
-#missionText {
+.missionText {
   font-size: 1.5em;
   padding: 150px;
   width: 50%;
 }
 
-#missionText h1 {
+.missionText h1 {
   font-size: 3em;
 }
 
-#missionText h1, h2, p {
+.missionText h1, .missionText h2, .missionText p {
   margin-left: 125px;
 }
 
-.teaText {
-  padding: 0px 10px 20px 50px;
+.lightText {
+  color: #5a5b5c;
 }
 
-/* Image styling */
+/* Mission General Image styling */
 
-#missionImage {
+.missionImagesContainer {
   margin-right: 125px;
   width: 50%;
 }
 
-#missionImage img {
+.missionImagesContainer img {
+  position: relative;
   width: 80%;
 }
 
@@ -173,44 +174,88 @@ body {
   margin: 20px;
 }
 
-.col {
-  display: flex;
-}
-
 .imageCol {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  margin: 20px
+}
+
+.colImage {
+  margin: 20px;
 }
 
 .fitImage {
   flex: 1;
 }
 
+/* About Mission Items */
+
+
+/* Tea Mission Items */
+
+.teaText {
+  padding: 0px 10px 20px 50px;
+}
+
+#teaMissionItem1 {
+  bottom: 75px;
+}
+
+#teaMissionItem2 {
+  bottom: -50px;
+}
+
+#teaMissionItem3 {
+  padding-top: 75px;
+}
+
+/* CustomLabel Mission Items */
+
+#customMission1 {
+  display: flex;
+}
+
 /* ----------------Showcase Product Carousel Styling---------------- */
 
-#showcase {
+.showcase {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
-#showcaseText {
+.showcaseText {
   font-size: 1.5em;
-  margin-bottom: 15vh;
+  margin-bottom: 35vh;
   padding-top: 15vh;
   text-align: center;
 }
 
-#showcaseImages {
+.showcaseImagesContainer {
   align-items: center;
   display: flex;
   justify-content: space-evenly;
   width: 100vw;
 }
 
-#showcaseImages img {
+.showcaseImagesContainer img {
   object-fit: contain;
+  position: relative;
   width: 20%;
+}
+
+/* About Showcase Items */
+
+#aboutShowcaseItem1 {
+  bottom: 0px;
+}
+
+#aboutShowcaseItem2 {
+  bottom: 100px;
+}
+
+#aboutShowcaseItem3 {
+  bottom: -50px;
+}
+
+#aboutShowcaseItem4 {
+  bottom: 200px;
 }
