@@ -16,7 +16,7 @@ $(document).ready(function () {
     var topOfLogo = window.scrollY + (logo.offsetTop + logo.offsetHeight / 2);
 
     if (topOfLogo >= topOfMission && isWhite == true) {
-      $('#logo').css('color', 'black');
+      $('#logo').css('color', '#2c2c2b');
       isWhite = false;
     }
     else if (!(topOfLogo >= topOfMission) && isWhite == false){

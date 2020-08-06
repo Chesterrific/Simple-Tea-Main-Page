@@ -1,7 +1,9 @@
 /* ----------------General Styling---------------- */
 
 body {
-  font-family: 'Calibri', sans-serif;
+  color: #2c2c2b;
+  font-family: 'Calibri';
+  line-height: 1.6;
   margin: 0;
   overflow-x: hidden;
 }
@@ -11,15 +13,20 @@ body {
 }
 
 .second {
-  background-color: #e8e8e3;
+  background-color: #f3f3f3;
 }
+
+.lightText {
+  color: #7b7b7a;
+}
+
 
 /* ----------------Navbar Styling---------------- */
 
 #logo {
   color: white;
-  font-size: 1.5em;
-  margin: 60px 50px;
+  font-size: 2.6em;
+  margin: 55px;
   position: fixed;
 }
 
@@ -150,10 +157,6 @@ body {
   margin-left: 125px;
 }
 
-.lightText {
-  color: #5a5b5c;
-}
-
 /* Mission General Image styling */
 
 .missionImagesContainer {
@@ -162,12 +165,14 @@ body {
 }
 
 .missionImagesContainer img {
+  align-self: center;
   position: relative;
   width: 80%;
 }
 
 .imageRow {
   display: flex;
+  position: relative;
 }
 
 .rowImage {
@@ -187,9 +192,6 @@ body {
   flex: 1;
 }
 
-/* About Mission Items */
-
-
 /* Tea Mission Items */
 
 .teaText {
@@ -208,10 +210,59 @@ body {
   padding-top: 75px;
 }
 
-/* CustomLabel Mission Items */
+/* Custom Label Mission Items */
 
-#customMission1 {
+#customMissionImages {
   display: flex;
+}
+
+#customCol1 {
+  flex-basis: 300%;
+  justify-content: center;
+}
+
+#customMissionItem1 {
+  right: 50px;
+}
+
+#customMissionItem2 {
+  left: 50px;
+}
+
+#customMissionItem3 {
+  right: 50px;
+}
+
+#customMissionItem4 {
+  left: 100px
+}
+
+/* Private Label Mission Items */
+
+#privateMissionImages {
+  width: 70%;
+}
+
+#privateRow2 {
+  right: 100px;
+}
+
+#privateMissionItem1 {
+  width: 125%;
+}
+
+#privateMissionItem2 {
+  top: 40px;
+}
+
+#privateMissionItem3 {
+  margin: 100px;
+  width: 100%;
+}
+
+#privateMissionItem4 {
+  top: 25px;
+  width: 70%;
 }
 
 /* ----------------Showcase Product Carousel Styling---------------- */
