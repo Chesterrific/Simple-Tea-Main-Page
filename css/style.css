@@ -22,6 +22,30 @@ body {
 
 /* ----------------Navbar Styling---------------- */
 
+#test1{
+  left: 25px;
+  position: fixed;
+  top: 20px;
+}
+
+#test2{
+  left: 100px;
+  position: fixed;
+  top: 20px;
+}
+
+#test3{
+  left: 205px;
+  position: fixed;
+  top: 20px;
+}
+
+#test4{
+  left: 310px;
+  position: fixed;
+  top: 20px;
+}
+
 #logo {
   color: white;
   font-size: 2.6em;
@@ -95,6 +119,7 @@ body {
 #contactPage {
   background-image: url("../assets/backgrounds/Simple\ Tea\ Contact\ us.jpg");
   background-size: cover;
+  height: 100vh;
 }
 
 .parallax {
@@ -269,8 +294,6 @@ body {
 #privateMissionImages {
   left: 50px;
 }
-
-#privateRow1 {}
 
 #privateRow2 {
   top: 50px;
