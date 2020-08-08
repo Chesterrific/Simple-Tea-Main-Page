@@ -261,6 +261,12 @@ body {
   padding-right: 100px;
 }
 
+@media only screen and (min-width:1200px) {
+  #teaMissionText {
+    text-align: left;
+  }
+}
+
 .teaText {
   padding: 0px 10px 20px 50px;
 }
@@ -326,6 +332,12 @@ body {
 }
 
 /* Private Label Mission Items */
+
+@media only screen and (min-width: 1200px) {
+  #privateMissionText {
+    text-align: left;
+  }
+}
 
 #privateMissionImages {
   left: 50px;
