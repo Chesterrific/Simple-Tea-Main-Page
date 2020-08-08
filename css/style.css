@@ -22,25 +22,25 @@ body {
 
 /* ----------------Navbar Styling---------------- */
 
-#test1{
+#test1 {
   left: 25px;
   position: fixed;
   top: 20px;
 }
 
-#test2{
+#test2 {
   left: 100px;
   position: fixed;
   top: 20px;
 }
 
-#test3{
+#test3 {
   left: 205px;
   position: fixed;
   top: 20px;
 }
 
-#test4{
+#test4 {
   left: 310px;
   position: fixed;
   top: 20px;
@@ -48,9 +48,20 @@ body {
 
 #logo {
   color: white;
-  font-size: 2.6em;
-  margin: 55px;
+  font-size: 1.6em;
+  margin: 20px;
   position: fixed;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 1200px) {
+  #logo {
+    color: white;
+    font-size: 2.6em;
+    margin: 55px;
+    position: fixed;
+    z-index: 2;
+  }
 }
 
 #menu {
@@ -150,31 +161,43 @@ body {
   left: 5%;
 }
 
-@media only screen and (max-height: 899px), (max-width: 800px) {
-  .parallax {
-    background-attachment: scroll;
-  }
-}
-
 /* ----------------Mission Styling---------------- */
 
 .mission {
   display: flex;
+  flex-wrap: wrap;
   height: 100vh;
-  width: 75vw;
-  padding-left: 20vw;
-  padding-right: 5vw;
-  justify-content: space-between;
+  justify-content: center;
+  min-height: 1000px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .mission {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-left: 20vw;
+    padding-right: 5vw;
+    width: 75vw;
+  }
 }
 
 /* Mission General Text styling */
 
 .missionTextContainer {
   display: flex;
-  flex: 0 1 45%;
+  flex: 1 1 100%;
   flex-direction: column;
-  font-size: 1.5em;
+  font-size: 1.3em;
   justify-content: center;
+  padding: 0 50px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  .missionTextContainer {
+    flex: 1 1 45%;
+    font-size: 1.5em;
+  }
 }
 
 .missionTextContainer h1 {
@@ -186,7 +209,7 @@ body {
 .missionImagesContainer {
   align-items: center;
   display: flex;
-  flex: 0 1 55%;
+  flex: 1 1 55%;
   flex-direction: column;
   justify-content: center;
   position: relative;
@@ -218,12 +241,18 @@ body {
 
 /* About Mission Items */
 
-#aboutMissionText {
-  padding-right: 125px;
+#aboutMissionImage {
+  width: 100%;
 }
 
-#aboutMissionImage {
-  width: 80%;
+@media only screen and (min-width:1200px) {
+  #aboutMissionImage {
+    width: 80%;
+  }
+  #aboutMissionText {
+    padding-right: 125px;
+    text-align: left;
+  }
 }
 
 /* Tea Mission Items */
@@ -250,6 +279,13 @@ body {
 }
 
 /* Custom Label Mission Items */
+
+@media only screen and (min-width:1200px) {
+  #customText {
+    padding-right: 125px;
+    text-align: left;
+  }
+}
 
 #customMissionImages {
   flex-direction: row;
@@ -324,6 +360,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  min-height: 450px;
 }
 
 .showcaseText {
@@ -337,29 +374,58 @@ body {
   align-items: center;
   display: flex;
   justify-content: space-evenly;
+  position: relative;
   width: 100vw;
 }
 
 .showcaseImagesContainer img {
   object-fit: contain;
-  position: relative;
-  width: 20%;
+  position: absolute;
+  width: 40%;
+}
+
+@media only screen and (min-width: 1200px) {
+  .showcaseImagesContainer {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100vw;
+  }
+  .showcaseImagesContainer img {
+    object-fit: contain;
+    position: relative;
+    width: 20%;
+  }
 }
 
 /* About Showcase Items */
 
-#aboutShowcaseItem1 {
-  bottom: 0px;
+#aboutShowcaseSlideshow {
+  top: 50px;
 }
 
-#aboutShowcaseItem2 {
-  bottom: 100px;
+#aboutShowcaseImages {
+  display: none;
 }
 
-#aboutShowcaseItem3 {
-  bottom: -50px;
-}
-
-#aboutShowcaseItem4 {
-  bottom: 200px;
+@media only screen and (min-width:1200px) {
+  #aboutShowcaseSlideshow {
+    display: none;
+  }
+  #aboutShowcaseImages {
+    display: flex;
+  }
+  #aboutShowcaseItem1 {
+    bottom: 0px;
+  }
+  #aboutShowcaseItem2 {
+    bottom: 100px;
+  }
+  #aboutShowcaseItem3 {
+    bottom: -50px;
+  }
+  #aboutShowcaseItem4 {
+    bottom: 200px;
+  }
 }
