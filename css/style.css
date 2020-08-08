@@ -140,25 +140,39 @@ body {
 
 /* Welcome text positioning */
 
-.welcomeText {
-  color: white;
-  font-size: 3.5em;
-  position: absolute;
+@media only screen and (max-width: 1199px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+  .welcomeText {
+    color: white;
+    font-size: 2em;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    transform: translateX(-50%);
+  }
 }
 
-#aboutWelcome {
-  right: 15%;
-  top: 25%;
-}
-
-#teaWelcome {
-  right: 15%;
-  top: 80%;
-}
-
-#customLabelTeaWelcome {
-  bottom: 40%;
-  left: 5%;
+@media only screen and (min-width: 1200px) {
+  .welcomeText {
+    color: white;
+    font-size: 3.5em;
+    position: absolute;
+  }
+  #aboutWelcome {
+    right: 15%;
+    top: 25%;
+  }
+  #teaWelcome {
+    right: 15%;
+    top: 80%;
+  }
+  #customLabelTeaWelcome {
+    bottom: 40%;
+    left: 5%;
+  }
 }
 
 /* ----------------Mission Styling---------------- */
@@ -393,7 +407,7 @@ body {
 .showcaseImagesContainer img {
   object-fit: contain;
   position: absolute;
-  width: 40%;
+  width: 90%;
 }
 
 @media only screen and (min-width: 1200px) {

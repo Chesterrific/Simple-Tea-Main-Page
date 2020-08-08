@@ -4,21 +4,24 @@ $(document).ready(function () {
   var imgCounter = 0;
   var slideShow = $('#aboutShowcaseSlideshow');
 
-  slideShow.children().fadeOut("fast")
+  slideShow.children().fadeOut("fast");
+
+  fadeImageIn();
 
   setInterval(function () {
-
-   setTimeout(function () {
-    fadeImageIn()
-   }, 550);
-
-  }, timeBetweenImages);
-
-  function fadeImageIn(){
-    slideShow.children().eq(imgCounter).fadeIn('slow');
+    slideShow.children().eq(imgCounter).fadeOut('slow');
     imgCounter++;
 
-    if(imgCounter > slideShow.children().length)
-    imgCounter = 0;
+    setTimeout(function () {
+      fadeImageIn();
+    }, 550);
+  }, timeBetweenImages);
+
+  function fadeImageIn() {
+    if(imgCounter == slideShow.children().length){
+      imgCounter = 0;
+    }
+    
+    slideShow.children().eq(imgCounter).fadeIn('slow');
   }
 });
