@@ -1,28 +1,38 @@
-// Variables
-var body = document.body;
-var navOpenBtn = document.getElementById("openBtn");
-var navCloseBtn = document.getElementById("closeBtn");
-var menu = document.getElementById("menu");
+// Main jQuery
+$(document).ready(function () {
+  //* ----------------Navbar JS---------------- */
+  $(window).bind('scroll', function () {
+    
+  });
 
-//JS Media Queries
-var maxNavCond = window.matchMedia("(max-width: 991px)");
+  // Hamburger menu toggle open/close
+  $('#menu').click(function () {
+		$(this).toggleClass('open');
+  });
 
-// Navbar functions
-function openNav() {
-  body.style.overflow = "hidden";
+  // Showcase slideshow
+  var timeBetweenImages = 4500;
+  var imgCounter = 0;
+  var slideShow = $('#aboutShowcaseSlideshow');
 
-  if (maxNavCond.matches) {
-    menu.style.width = "100%";
-  } else {
-    menu.style.width = "20%";
+  slideShow.children().fadeOut("fast");
+
+  fadeImageIn();
+
+  setInterval(function () {
+    slideShow.children().eq(imgCounter).fadeOut('slow');
+    imgCounter++;
+
+    setTimeout(function () {
+      fadeImageIn();
+    }, 550);
+  }, timeBetweenImages);
+
+  function fadeImageIn() {
+    if(imgCounter == slideShow.children().length){
+      imgCounter = 0;
+    }
+    
+    slideShow.children().eq(imgCounter).fadeIn('slow');
   }
-}
-
-function closeNav() {
-  body.style.overflow = "visible";
-  menu.style.width = "0%";
-}
-
-// Event Listeners
-navOpenBtn.addEventListener('click', openNav);
-navCloseBtn.addEventListener('click', closeNav);
+});
