@@ -2,7 +2,7 @@
 
 body {
   color: #2c2c2b;
-  font-family: 'Calibri';
+  font-family: 'Nunito Sans', sans-serif;
   line-height: 1.6;
   margin: 0;
   overflow-x: hidden;
@@ -21,30 +21,6 @@ body {
 }
 
 /* ----------------Navbar Styling---------------- */
-
-#test1 {
-  left: 25px;
-  position: fixed;
-  top: 20px;
-}
-
-#test2 {
-  left: 100px;
-  position: fixed;
-  top: 20px;
-}
-
-#test3 {
-  left: 205px;
-  position: fixed;
-  top: 20px;
-}
-
-#test4 {
-  left: 310px;
-  position: fixed;
-  top: 20px;
-}
 
 #logo {
   color: white;
