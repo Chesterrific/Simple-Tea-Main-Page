@@ -23,6 +23,7 @@ body {
 /* ----------------Navbar Styling---------------- */
 
 #logo {
+  color: white;
   font-size: 1.6em;
   margin: 20px;
   position: fixed;
@@ -44,11 +45,12 @@ body {
 }
 
 #menu {
-  top: 80px;
-  right: 90px;
-  position: fixed;
-  width: 30px;
   height: 25px;
+  position: fixed;
+  right: 90px;
+  top: 80px;
+  width: 30px;
+  z-index: 2;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -61,13 +63,14 @@ body {
 }
 
 #menu span {
-  display: block;
-  position: absolute;
-  height: 5px;
-  width: 100%;
+  background-color: white;
   border-radius: 1px;
-  opacity: 1;
+  display: block;
+  height: 5px;
   left: 0;
+  opacity: 1;
+  position: absolute;
+  width: 100%;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -95,21 +98,54 @@ body {
 }
 
 #menu.open span:nth-child(1) {
+  left: 0px;
+  top: 0px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 0px;
-  left: 0px;
 }
 
 #menu.open span:nth-child(2) {
+  left: 0px;
+  top: 22px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 22px;
-  left: 0px;
+}
+
+#menu-nav {
+  background-color: #F3F3F3;
+  display: block;
+  height: 100%;
+  position: fixed;
+  right: -50%;
+  width: 50%;
+  z-index: 1;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+#menu-nav ul {
+  list-style: none;
+  padding: 390px 0 0 230px;
+}
+
+#menu-nav ul > li {
+  font-size: 3.5em;
+  padding: 20px 0 0 0;
+}
+
+#menu-nav ul li > a {
+  color: black;
+  text-decoration: none;
+}
+
+#menu-nav.open {
+  right: 0;
 }
 
 /* ----------------Welcome Section Styling---------------- */

@@ -7,13 +7,11 @@ $(document).ready(function () {
   let menu = document.getElementById('#menu span');
 
   $(window).bind('scroll', function () {
-    let topOfWelcome = $('#welcome').offset().top;
-    let scrollCounter = $(window).scrollTop() - topOfWelcome;
-    let topOfMission = $('#mission').offset().top;
+    let welcomeTop = $('#welcome').offset().top;
+    let missionTop = $('#mission').offset().top;
+    let scrollCounter = $(window).scrollTop() - welcomeTop;
 
-    console.log(scrollCounter);
-
-    if (scrollCounter < (topOfMission - 50)) {
+    if (scrollCounter < missionTop) {
       $('#logo').css('color', 'white');
       $('#menu span').css('background', 'white');
     } else {
@@ -24,7 +22,8 @@ $(document).ready(function () {
 
   // Hamburger menu toggle open/close
   $('#menu').click(function () {
-		$(this).toggleClass('open');
+    $(this).toggleClass('open');
+    $('#menu-nav').toggleClass('open');
   });
 
   /* ----------------Showcase JS---------------- */
