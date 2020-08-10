@@ -143,17 +143,9 @@ body {
   height: 100vh;
 }
 
-.parallax {
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 /* Welcome text positioning */
 
 @media only screen and (max-width: 1199px) {
-  .parallax {
-    background-attachment: scroll;
-  }
   .welcomeText {
     color: white;
     font-size: 2em;
