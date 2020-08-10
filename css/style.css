@@ -23,11 +23,14 @@ body {
 /* ----------------Navbar Styling---------------- */
 
 #logo {
-  color: white;
   font-size: 1.6em;
   margin: 20px;
   position: fixed;
   z-index: 2;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -62,7 +65,6 @@ body {
   position: absolute;
   height: 5px;
   width: 100%;
-  background: white;
   border-radius: 1px;
   opacity: 1;
   left: 0;
@@ -179,7 +181,7 @@ body {
 
 /* ----------------Mission Styling---------------- */
 
-.mission {
+#mission {
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
@@ -188,7 +190,7 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
-  .mission {
+  #mission {
     flex-wrap: nowrap;
     justify-content: space-between;
     padding-left: 20vw;

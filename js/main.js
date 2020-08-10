@@ -1,8 +1,25 @@
 // Main jQuery
+
 $(document).ready(function () {
-  //* ----------------Navbar JS---------------- */
+  /* ----------------Navbar JS---------------- */
+  // Scrolling changes for logo and menu
+  let logo = document.getElementById('#logo');
+  let menu = document.getElementById('#menu span');
+
   $(window).bind('scroll', function () {
-    
+    let topOfWelcome = $('#welcome').offset().top;
+    let scrollCounter = $(window).scrollTop() - topOfWelcome;
+    let topOfMission = $('#mission').offset().top;
+
+    console.log(scrollCounter);
+
+    if (scrollCounter < (topOfMission - 50)) {
+      $('#logo').css('color', 'white');
+      $('#menu span').css('background', 'white');
+    } else {
+      $('#logo').css('color', 'black');
+      $('#menu span').css('background', 'black');
+    }
   });
 
   // Hamburger menu toggle open/close
@@ -10,10 +27,11 @@ $(document).ready(function () {
 		$(this).toggleClass('open');
   });
 
+  /* ----------------Showcase JS---------------- */
   // Showcase slideshow
-  var timeBetweenImages = 4500;
-  var imgCounter = 0;
-  var slideShow = $('#aboutShowcaseSlideshow');
+  let timeBetweenImages = 4500;
+  let imgCounter = 0;
+  let slideShow = $('#aboutShowcaseSlideshow');
 
   slideShow.children().fadeOut("fast");
 
