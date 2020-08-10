@@ -1,58 +1,55 @@
-// Variables
-var body = document.body;
-var navOpenBtn = document.getElementById("openBtn");
-var navCloseBtn = document.getElementById("closeBtn");
-var menu = document.getElementById("menu");
+// Main jQuery
 
-//JS Media Queries
-var maxNavCond = window.matchMedia("(max-width: 991px)");
+$(document).ready(function () {
+  /* ----------------Navbar JS---------------- */
+  // Scrolling changes for logo and menu
+  let logo = document.getElementById('#logo');
+  let menu = document.getElementById('#menu span');
 
-// Navbar functions
-function openNav() {
-  body.style.overflow = "hidden";
+  $(window).bind('scroll', function () {
+    let welcomeTop = $('#welcome').offset().top;
+    let missionTop = $('#mission').offset().top;
+    let scrollCounter = $(window).scrollTop() - welcomeTop;
 
-  if (maxNavCond.matches) {
-    menu.style.width = "100%";
-  } else {
-    menu.style.width = "20%";
+    if (scrollCounter < missionTop) {
+      $('#logo').css('color', 'white');
+      $('#menu span').css('background', 'white');
+    } else {
+      $('#logo').css('color', 'black');
+      $('#menu span').css('background', 'black');
+    }
+  });
+
+  // Hamburger menu toggle open/close
+  $('#menu').click(function () {
+    $(this).toggleClass('open');
+    $('#menu-nav').toggleClass('open');
+  });
+
+  /* ----------------Showcase JS---------------- */
+  // Showcase slideshow
+  let timeBetweenImages = 4500;
+  let imgCounter = 0;
+  let slideShow = $('#aboutShowcaseSlideshow');
+
+  slideShow.children().fadeOut("fast");
+
+  fadeImageIn();
+
+  setInterval(function () {
+    slideShow.children().eq(imgCounter).fadeOut('slow');
+    imgCounter++;
+
+    setTimeout(function () {
+      fadeImageIn();
+    }, 550);
+  }, timeBetweenImages);
+
+  function fadeImageIn() {
+    if(imgCounter == slideShow.children().length){
+      imgCounter = 0;
+    }
+    
+    slideShow.children().eq(imgCounter).fadeIn('slow');
   }
-}
-
-function closeNav() {
-  body.style.overflow = "visible";
-  menu.style.width = "0%";
-}
-
-// Event Listeners
-navOpenBtn.addEventListener('click', openNav);
-navCloseBtn.addEventListener('click', closeNav);
-
-
-// Test for different fonts for Danny
-
-var main = document.getElementsByTagName('main')[0];
-
-// Roboto
-document.getElementById('test1').addEventListener('click', function() {
-  console.log('changing font to Roboto');
-  main.style.fontFamily = "Roboto, sans-serif";
-});
-
-// Nunito
-document.getElementById('test2').addEventListener('click', function() {
-  console.log('changing font to Nunito');
-  main.style.fontFamily = "Nunito Sans, sans-serif";
-});
-
-// Calibri Light
-document.getElementById('test3').addEventListener('click', function() {
-  console.log('changing font to Calibri Light');
-  main.style.fontFamily = "Calibri Light, sans-serif";
-});
-
-
-// Calibri
-document.getElementById('test4').addEventListener('click', function() {
-  console.log('changing font to Calibri');
-  main.style.fontFamily = "Calibri, sans-serif";
 });
