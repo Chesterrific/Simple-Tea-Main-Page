@@ -5,15 +5,21 @@ $(document).ready(function () {
   // Scrolling changes for logo and menu
   let logo = document.getElementById('#logo');
   let menu = document.getElementById('#menu span');
+  let welcomeTop = $('#welcome').offset().top;
+  let missionTop = $('#mission').offset().top;
+  let scrollCounter = $(window).scrollTop() - welcomeTop;
+  let navOpen = false;
 
   $(window).bind('scroll', function () {
-    let welcomeTop = $('#welcome').offset().top;
-    let missionTop = $('#mission').offset().top;
-    let scrollCounter = $(window).scrollTop() - welcomeTop;
+    welcomeTop = $('#welcome').offset().top;
+    missionTop = $('#mission').offset().top;
+    scrollCounter = $(window).scrollTop() - welcomeTop;
 
     if (scrollCounter < missionTop) {
       $('#logo').css('color', 'white');
-      $('#menu span').css('background', 'white');
+      if (!navOpen) {
+        $('#menu span').css('background', 'white');
+      }
     } else {
       $('#logo').css('color', 'black');
       $('#menu span').css('background', 'black');
@@ -24,6 +30,14 @@ $(document).ready(function () {
   $('#menu').click(function () {
     $(this).toggleClass('open');
     $('#menu-nav').toggleClass('open');
+
+    navOpen = !navOpen;
+
+    if (navOpen) {
+      $('#menu span').css('background', 'black');
+    } else if (!navOpen && scrollCounter < missionTop) {
+      $('#menu span').css('background', 'white');
+    }
   });
 
   /* ----------------Showcase JS---------------- */
@@ -46,10 +60,10 @@ $(document).ready(function () {
   }, timeBetweenImages);
 
   function fadeImageIn() {
-    if(imgCounter == slideShow.children().length){
+    if (imgCounter == slideShow.children().length) {
       imgCounter = 0;
     }
-    
+
     slideShow.children().eq(imgCounter).fadeIn('slow');
   }
 });
