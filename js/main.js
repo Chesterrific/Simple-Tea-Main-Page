@@ -16,13 +16,13 @@ $(document).ready(function () {
     scrollCounter = $(window).scrollTop() - welcomeTop;
 
     if (scrollCounter < missionTop) {
-      $('#logo').css('color', 'white');
       if (!navOpen) {
         $('#menu span').css('background', 'white');
+        $('#logo').css('color', 'white');
       }
     } else {
-      $('#logo').css('color', 'black');
       $('#menu span').css('background', 'black');
+      $('#logo').css('color', 'black');
     }
   });
 
@@ -35,8 +35,12 @@ $(document).ready(function () {
 
     if (navOpen) {
       $('#menu span').css('background', 'black');
+      $('#logo').css('color', 'black');
+      $('#overlay').css('opacity', '0.8');
     } else if (!navOpen && scrollCounter < missionTop) {
       $('#menu span').css('background', 'white');
+      $('#logo').css('color', 'white');
+      $('#overlay').css('opacity', '0');
     }
   });
 

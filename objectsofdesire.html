@@ -8,9 +8,10 @@
   <title>Simple Tea Website</title>
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
-  <script src="https://kit.fontawesome.com/c20c495387.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
 </head>
@@ -23,62 +24,41 @@
   <!-- Navbar -->
   <nav>
     <div id="logo">simple tea</div>
-    <ul id="menu">
-      <a class="shadow" id="closeBtn">&times</a>
-      <li><a href="index.html">About</a></li>
-      <li><a href="corpgifttea.html">Tea</a></li>
-      <li><a href="customlabel.html">Custom Label</a></li>
-      <li><a href="objectsofdesire.html">Objects of Desire</a></li>
-      <li><a href="contact-us.html">Contact Us</a></li>
-    </ul>
-    <a class="fas fa-bars fa-3x shadow" id="openBtn"></a>
+    <div id="menu">
+      <span></span>
+      <span></span>
+    </div>
+    <div id="menu-nav">
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="corpgifttea.html">Tea</a></li>
+        <li><a href="customlabel.html">Custom Label</a></li>
+        <li><a href="objectsofdesire.html">Objects of Desire</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
   </nav>
+  <div id="overlay"></div>
 
   <!-- Main -->
   <main>
     <section id="welcome">
-      <div id="main-page"></div>
-      <div class="welcome-text about">
-        <span>really good tea</span>
+      <div id="objOfDesire"></div>
+      <div id="objWelcome" class="welcomeText">
+        <span>objects of desire</span>
+        <p>Objects of Desire is a feature where we share our most coverted and well-loved pieces from the most
+          innovative and creative artists and artisanal purveyors that we follow. We hope this gives further insight
+          into the character of Simple Tea and a company we aspired to. </p>
       </div>
     </section>
 
-    <section id="mission">
-      <div id="mission-text">
-        <p><strong>Simple tea is a tea and lifestyle company for people who want to add effortless grace, elegance, and
-            creativity to their everyday living.</strong></p>
-        <p>Our products are carefully sourced and personally curated and made with thoughtfulness and quality that
-          provide a meaningful experience.</p>
-        <p>Simple Tea is based in the San Francisco Bay Area.</p>
-      </div>
+    <section id="mission" class="showcase">
 
-      <div id="mission-image">
-        <img src="assets/content/Simple Tea tins.jpg" alt="">
-      </div>
-    </section>
-
-
-
-    <section id="showcase">
-      <p id="showcase-text">We pride ourselves on timeless, memorable, and superior tea products.</p>
-
-      <div id="showcase-images">
-        <img src="assets/content/tea2.jpg" alt="">
-        <img src="assets/content/tea1.jpg" alt="">
-        <img src="assets/content/tea6.jpg" alt="">
-        <img src="assets/content/tea3.jpg" alt="">
-      </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <!-- <footer>
-		<p>&copy; 2020 Simple tea</p>
-	</footer> -->
-
   <!-- JavaScript -->
   <script src="js/main.js"></script>
-  <script src="js/nav.js"></script>
 </body>
 
 </html>
