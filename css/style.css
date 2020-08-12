@@ -153,24 +153,29 @@ body {
   right: 0;
 }
 
-#overlay{
+#overlay {
   background-attachment: fixed;
   background-color: white;
   background-size: cover;
   bottom: 0;
+  opacity: 0;
   left: 0;
   height: 100%;
   min-height: 100%;
   position: absolute;
-  opacity: 0;
   right: 0;
   top: 0;
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  width: 100%;
+  visibility: hidden;
   z-index: 1;
+}
+
+#overlay.open {
+  opacity: 0.8;
+  visibility: visible;
 }
 
 /* ----------------Welcome Section Styling---------------- */
@@ -263,7 +268,7 @@ body {
 
 /* ----------------Mission Styling---------------- */
 
-#mission, #privateMission {
+.mission{
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
@@ -272,7 +277,7 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
-  #mission, #privateMission {
+  .mission {
     flex-wrap: nowrap;
     justify-content: space-between;
     padding-left: 20vw;
@@ -466,6 +471,19 @@ body {
   width: 40%;
 }
 
+/* Objects of Desire Mission Items */
+#objItem4 .imageRow{
+  align-items: center;
+  justify-content: center;
+}
+
+#objImage5{
+  width: 100%;
+}
+
+#objImage6, #objImage7{
+  width: 80%;
+}
 /* ----------------Showcase Product Carousel Styling---------------- */
 
 .showcase {
