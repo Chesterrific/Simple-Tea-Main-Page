@@ -12,7 +12,7 @@ $(document).ready(function () {
   $('#overlay').css('height', $(document).height() + 'px',);
 
   $(window).bind('scroll', function () {
-    logoMid = $('#logo').offset().top + $('#logo').height() / 2;
+    let logoMid = $('#logo').offset().top + $('#logo').height() / 2;
 
     if (logoMid < missionTop) {
       if (!navOpen) {
