@@ -22,6 +22,8 @@ body {
 
 /* ----------------Navbar Styling---------------- */
 
+/* Mobile styling */
+
 #logo {
   color: white;
   font-size: 1.6em;
@@ -51,6 +53,8 @@ body {
   transition: .5s ease-in-out;
   cursor: pointer;
 }
+
+/* Desktop styling */
 
 @media only screen and (min-width: 1200px) {
   #logo {
@@ -205,6 +209,7 @@ body {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   visibility: hidden;
+  z-index: 1;
 }
 
 #overlay.open {
@@ -244,11 +249,14 @@ body {
 
 #contactPage {
   background-image: url("../assets/backgrounds/Simple\ Tea\ Contact\ us.jpg");
+  background-position: center top;
   background-size: cover;
   height: 100vh;
 }
 
 /* Welcome text positioning */
+
+/* Mobile design */
 
 @media only screen and (max-width: 1199px) {
   .welcomeText {
@@ -259,7 +267,11 @@ body {
     text-align: center;
     top: 30%;
     transform: translateX(-50%);
+    width: 80%;
   }
+  /* Tea page */
+  /* Custom label page */
+  /* Objects of desire */
   #objWelcome {
     color: black;
   }
@@ -269,7 +281,31 @@ body {
   #objWelcome p {
     font-size: .7em;
   }
+  /* Contact page */
+  #contactWelcome {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.8vmax;
+  }
+  #contactInfo p {
+    margin: 0;
+  }
+  #contactLinks {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #contactLinks li a {
+    color: white;
+    font-size: .8em;
+    margin: 10px;
+    text-decoration: none;
+  }
 }
+
+/* Desktop design */
 
 @media only screen and (min-width: 1200px) {
   .welcomeText {
@@ -277,18 +313,22 @@ body {
     font-size: 3.5em;
     position: absolute;
   }
+  /* About page */
   #aboutWelcome {
     right: 15%;
     top: 25%;
   }
+  /* Tea page */
   #teaWelcome {
     right: 15%;
     top: 80%;
   }
+  /* Custom label page */
   #customLabelTeaWelcome {
     bottom: 40%;
     left: 5%;
   }
+  /* Objects of Desire page */
   #objWelcome {
     color: black;
     bottom: 10%;
@@ -297,6 +337,45 @@ body {
   #objWelcome p {
     font-size: .3em;
     padding-right: 70%;
+  }
+  /* Contact page */
+  #contactWelcome {
+    bottom: 10%;
+    display: flex;
+    font-size: 2.5em;
+    justify-content: space-between;
+    left: 10%;
+  }
+  #contactWelcome .column {
+    flex: 0 1 40%;
+  }
+  #flavorText span {
+    font-size: .5em;
+    margin-bottom: 10px;
+  }
+  #flavorText p {
+    margin-top: 10px;
+  }
+  #contactInfo {
+    font-size: .4em;
+    margin-left: 20%;
+  }
+  #contactInfo div {
+    margin-left: 20%;
+  }
+  #contactInfo p {
+    margin: 20% 0 0 0;
+  }
+  #contactLinks {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #contactLinks li a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
   }
 }
 
@@ -534,6 +613,7 @@ body {
   flex-direction: column;
   height: 100vh;
   min-height: 450px;
+  overflow: hidden;
 }
 
 .showcaseText {
@@ -571,8 +651,6 @@ body {
     width: 20%;
   }
 }
-
-/* About Showcase Items */
 
 #aboutShowcaseSlideshow {
   top: 50px;

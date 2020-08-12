@@ -5,6 +5,7 @@ $(document).ready(function () {
   // Scrolling changes for logo and menu
   let logo = $('#logo');
   let menu = $('#menu span');
+  let logoMid = logo.offset().top + logo.height() / 2;
   let missionTop = $('#transition').offset().top;
   let navOpen = false;
 
@@ -12,7 +13,7 @@ $(document).ready(function () {
   $('#overlay').css('height', $(document).height() + 'px',);
 
   $(window).bind('scroll', function () {
-    let logoMid = $('#logo').offset().top + $('#logo').height() / 2;
+    logoMid = $('#logo').offset().top + $('#logo').height() / 2;
 
     if (logoMid < missionTop) {
       if (!navOpen) {
@@ -34,18 +35,18 @@ $(document).ready(function () {
     navOpen = !navOpen;
 
     if (navOpen) {
-      $('#menu span').css('background', 'black');
-      $('#logo').css('color', 'black');
+      menu.css('background', 'black');
+      logo.css('color', 'black');
       $('#overlay').toggleClass('open');
     } else {
       $('#overlay').toggleClass('open');
 
       if (logoMid < missionTop) {
-        $('#menu span').css('background', 'white');
-        $('#logo').css('color', 'white');
+        menu.css('background', 'white');
+        logo.css('color', 'white');
       } else {
-        $('#menu span').css('background', 'black');
-        $('#logo').css('color', 'black');
+        menu.css('background', 'black');
+        logo.css('color', 'black');
       }
     }
   });

@@ -23,30 +23,51 @@
   <!-- Navbar -->
   <nav>
     <div id="logo">simple tea</div>
-    <ul id="menu">
-      <a class="shadow" id="closeBtn">&times</a>
-      <li><a href="index.html">About</a></li>
-      <li><a href="corpgifttea.html">Tea</a></li>
-      <li><a href="customlabel.html">Custom Label</a></li>
-      <li><a href="objectsofdesire.html">Objects of Desire</a></li>
-      <li><a href="contact-us.html">Objects of Desire</a></li>
-    </ul>
-    <a class="fas fa-bars fa-3x shadow" id="openBtn"></a>
+    <div id="menu">
+      <span></span>
+      <span></span>
+    </div>
+    <div id="menu-nav">
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="corpgifttea.html">Tea</a></li>
+        <li><a href="customlabel.html">Custom Label</a></li>
+        <li><a href="objectsofdesire.html">Objects of Desire</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
   </nav>
+  <div id="overlay"></div>
 
   <!-- Main -->
   <main>
     <section id="welcome">
       <div id="contactPage"></div>
-      <div class="welcomeText" id="contactWelcome">
-        <p>You want to get in touch? Call us or drop a line and we will answer you as soon as possible.</p>
+      <div id="contactWelcome" class="welcomeText">
+        <div id="flavorText" class=column>
+          <span>Contact us</span>
+          <p>You want to get in touch? Call us or drop a line and we will answer you as soon as possible.</p>
+        </div>
+        <div id="contactInfo" class="column">
+          <div>
+            <p>
+              contact@simpletea.com<br>
+              +1 (510) 325 0375<br><br>
+            </p>
+            <ul id="contactLinks">
+              <li><a href="" target="_blank">Facebook</a></li>
+              <li><a href="" target="_blank">Instagram</a></li>
+              <li><a href="" target="_blank">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
+
     </section>
   </main>
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>
-  <script src="js/nav.js"></script>
 </body>
 
 </html>
