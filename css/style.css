@@ -27,11 +27,21 @@ body {
   font-size: 1.6em;
   margin: 20px;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
+}
+
+@media only screen and (min-width: 1200px) {
+  #logo {
+    color: white;
+    font-size: 2.6em;
+    margin: 55px;
+    position: fixed;
+    z-index: 3;
+  }
 }
 
 #menu {
@@ -40,7 +50,7 @@ body {
   right: 40px;
   top: 40px;
   width: 30px;
-  z-index: 2;
+  z-index: 3;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -139,13 +149,17 @@ body {
   display: flex;
   height: 100%;
   position: fixed;
-  right: -100%;
-  width: 100%;
-  z-index: 1;
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  right: -50%;
+  width: 50%;
+  z-index: 2;
+  -webkit-transition: .4s ease-in-out;
+  -moz-transition: .4s ease-in-out;
+  -o-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+  -webkit-transition-delay: .1s;
+  -moz-transition-delay: .1s;
+  -o-transition-delay: .1s;
+  transition-delay: .1s;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -184,6 +198,31 @@ body {
   right: 0;
 }
 
+#overlay {
+  background-attachment: fixed;
+  background-color: white;
+  background-size: cover;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  height: 100%;
+  min-height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  visibility: hidden;
+  z-index: 1;
+}
+
+#overlay.open {
+  opacity: 0.8;
+  visibility: visible;
+}
+
 /* ----------------Welcome Section Styling---------------- */
 
 #mainPage {
@@ -196,18 +235,21 @@ body {
 #corpGiftTea {
   background-image: url("../assets/backgrounds/Simple Tea Tea offering.jpg");
   background-position: center;
+  background-size: cover;
   height: 100vh;
 }
 
 #customLabel {
   background-image: url("../assets/backgrounds/customlabelteabg.jpg");
   background-position: center;
+  background-size: cover;
   height: 100vh;
 }
 
 #objOfDesire {
-  background-image: url("../assets/backgrounds/Simple\ Tea\ objects\ of\ desire.jpg");
-  background-position: top;
+  background-image: url("../assets/backgrounds/objbg.jpg");
+  background-position: center;
+  background-size: cover;
   height: 100vh;
 }
 
@@ -271,7 +313,7 @@ body {
 
 /* ----------------Mission Styling---------------- */
 
-#mission, #privateMission {
+.mission {
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
@@ -280,7 +322,7 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
-  #mission, #privateMission {
+  .mission {
     flex-wrap: nowrap;
     justify-content: space-between;
     padding-left: 20vw;
@@ -301,7 +343,7 @@ body {
   text-align: center;
 }
 
-.missionTextContainer h2{
+.missionTextContainer h2 {
   font-size: 1em;
 }
 
@@ -310,7 +352,7 @@ body {
     flex: 1 1 45%;
     font-size: 1.5em;
   }
-  .missionTextContainer h2{
+  .missionTextContainer h2 {
     font-size: 1.5em;
   }
 }
@@ -479,6 +521,21 @@ body {
 #privateMissionItem4 {
   top: 25px;
   width: 40%;
+}
+
+/* Objects of Desire Mission Items */
+
+#objItem4 .imageRow {
+  align-items: center;
+  justify-content: center;
+}
+
+#objImage5 {
+  width: 100%;
+}
+
+#objImage6, #objImage7 {
+  width: 80%;
 }
 
 /* ----------------Showcase Product Carousel Styling---------------- */
