@@ -231,7 +231,7 @@ body {
 }
 
 #customLabel {
-  background-image: url("../assets/backgrounds/customlabelteabg.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/backgrounds/customlabelteabg.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -316,7 +316,7 @@ body {
   /* Tea page */
   #teaWelcome {
     right: 15%;
-    top: 80%;
+    bottom: 10%;
   }
   /* Custom label page */
   #customLabelTeaWelcome {
@@ -516,6 +516,7 @@ body {
 
 @media only screen and (min-width:1200px) {
   #customText {
+    font-size: 1.4em;
     padding-right: 125px;
     text-align: left;
   }
@@ -641,10 +642,9 @@ body {
     position: absolute;
     width: 55%;
   }
-  #aboutShowcaseItem2{
+  #aboutShowcaseItem2 {
     width: 40%;
   }
-
   #aboutShowcaseImages {
     display: none;
   }
