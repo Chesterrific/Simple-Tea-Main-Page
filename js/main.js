@@ -9,7 +9,7 @@ $(document).ready(function () {
   
   let missionTop = $(document).height();
   if ($('#transition').length) {
-    let missionTop = $('#transition').offset().top;
+    missionTop = $('#transition').offset().top;
   }
 
   let navOpen = false;
