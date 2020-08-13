@@ -29,7 +29,7 @@ body {
   font-size: 1.6em;
   margin: 20px;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;

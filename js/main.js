@@ -6,7 +6,12 @@ $(document).ready(function () {
   let logo = $('#logo');
   let menu = $('#menu span');
   let logoMid = logo.offset().top + logo.height() / 2;
-  let missionTop = $('#transition').offset().top;
+  
+  let missionTop = $(document).height();
+  if ($('#transition').length) {
+    let missionTop = $('#transition').offset().top;
+  }
+
   let navOpen = false;
 
   //Set overlay height to document height.
