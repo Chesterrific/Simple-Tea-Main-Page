@@ -59,28 +59,31 @@ $(document).ready(function () {
   /* ----------------Showcase JS---------------- */
   // Showcase slideshow
   let timeBetweenImages = 4500;
-  let imgCounter = 0;
   let slideShow = $('#aboutShowcaseSlideshow');
+  let imgCounter = slideShow.children().length - 1;
+  let slow = 600;
 
-  slideShow.children().fadeOut("fast");
-
-  fadeImageIn();
+  // Fade out every image behind the top most image
+  for (var i = 0; i < slideShow.children().length - 1; i++) {
+    slideShow.children().eq(i).fadeOut('fast');
+  }
 
   setInterval(function () {
-    slideShow.children().eq(imgCounter).fadeOut('slow');
+    slideShow.children().eq(imgCounter).fadeOut(slow);
     imgCounter++;
 
     setTimeout(function () {
       fadeImageIn();
-    }, 550);
+    }, slow);
   }, timeBetweenImages);
 
+
   function fadeImageIn() {
-    if (imgCounter == slideShow.children().length) {
+    if (imgCounter >= slideShow.children().length) {
       imgCounter = 0;
     }
 
-    slideShow.children().eq(imgCounter).fadeIn('slow');
+    slideShow.children().eq(imgCounter).fadeIn(slow);
   }
 
   /* ----------------Scroll JS---------------- */
