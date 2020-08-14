@@ -175,6 +175,10 @@ body {
   list-style: none;
 }
 
+#menu-nav ul .active {
+  color: white;
+}
+
 #menu-nav ul>li {
   font-size: 3.5em;
   padding: 20px 0 0 0;
@@ -265,12 +269,11 @@ body {
   transform: rotate(90deg);
 }
 
-#scroll:hover{
+#scroll:hover {
   cursor: pointer;
 }
 
 /* Mobile design */
-
 
 @media only screen and (max-width: 1199px) {
   .welcomeText {

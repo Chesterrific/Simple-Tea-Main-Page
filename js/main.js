@@ -86,9 +86,11 @@ $(document).ready(function () {
   /* ----------------Scroll JS---------------- */
   let scrollSpeed = 750;
 
-  $('#scroll').click(function () {
-    $('html, body').animate({
-      scrollTop: $('#transition').offset().top
-    }, scrollSpeed);
-  });
+  if ($('#scroll').length) {
+    $('#scroll').click(function () {
+      $('html, body').animate({
+        scrollTop: $('#transition').offset().top
+      }, scrollSpeed);
+    });
+  }
 });
