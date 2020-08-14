@@ -6,7 +6,7 @@ $(document).ready(function () {
   let logo = $('#logo');
   let menu = $('#menu span');
   let logoMid = logo.offset().top + logo.height() / 2;
-  
+
   let missionTop = $(document).height();
   if ($('#transition').length) {
     missionTop = $('#transition').offset().top;
@@ -82,4 +82,13 @@ $(document).ready(function () {
 
     slideShow.children().eq(imgCounter).fadeIn('slow');
   }
+
+  /* ----------------Scroll JS---------------- */
+  let scrollSpeed = 750;
+
+  $('#scroll').click(function () {
+    $('html, body').animate({
+      scrollTop: $('#transition').offset().top
+    }, scrollSpeed);
+  });
 });

@@ -265,6 +265,10 @@ body {
   transform: rotate(90deg);
 }
 
+#scroll:hover{
+  cursor: pointer;
+}
+
 /* Mobile design */
 
 
