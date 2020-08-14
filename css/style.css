@@ -273,7 +273,7 @@ body {
   cursor: pointer;
 }
 
-/* Mobile design */
+/* Mobile */
 
 @media only screen and (max-width: 1199px) {
   .welcomeText {
@@ -285,6 +285,10 @@ body {
     top: 30%;
     transform: translateX(-50%);
     width: 80%;
+  }
+  /* CorpGiftTea */
+  #teaWelcome {
+    top: 20%;
   }
   /* Objects of desire */
   #objWelcome {
@@ -320,7 +324,7 @@ body {
   }
 }
 
-/* Desktop design */
+/* Desktop */
 
 @media only screen and (min-width: 1200px) {
   .welcomeText {
@@ -416,7 +420,7 @@ body {
 
 /* Mission General Text styling */
 
-/* Mobile styling */
+/* Mobile */
 
 .missionTextContainer {
   display: flex;
@@ -485,13 +489,13 @@ body {
 
 /* About Mission Items */
 
-/* Mobile styling */
+/* Mobile */
 
 #aboutMissionImage {
   width: 100%;
 }
 
-/* Desktop styling */
+/* Desktop */
 
 @media only screen and (min-width:1200px) {
   #aboutMissionImage {
@@ -505,20 +509,6 @@ body {
 
 /* Tea Mission Items */
 
-#teaMissionText {
-  padding-right: 100px;
-}
-
-@media only screen and (min-width:1200px) {
-  #teaMissionText {
-    text-align: left;
-  }
-}
-
-.teaText {
-  padding: 0px 10px 20px 50px;
-}
-
 #teaMissionItem1 {
   top: -25px;
 }
@@ -530,6 +520,38 @@ body {
 #teaMissionItem3 {
   top: 100px;
   width: 100%;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 1199px) {
+  #teaImages {
+    margin-top: 50px;
+  }
+  #teaMissionItem1 {
+    top: -25px;
+    width: 40%;
+  }
+  #teaMissionItem2 {
+    top: 25px;
+    width: 40%;
+  }
+  #teaMissionItem3 {
+    top: 100px;
+    width: 90%;
+  }
+}
+
+/* Desktop */
+
+@media only screen and (min-width:1200px) {
+  #teaMissionText {
+    padding-right: 100px;
+    text-align: left;
+  }
+  .teaText {
+    padding: 0px 10px 20px 50px;
+  }
 }
 
 /* Custom Label Mission Items */
