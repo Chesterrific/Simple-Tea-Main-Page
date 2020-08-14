@@ -20,6 +20,7 @@ body {
   color: #7b7b7a;
 }
 
+
 /* ----------------Navbar Styling---------------- */
 
 /* Mobile styling */
@@ -525,6 +526,9 @@ body {
 /* Mobile */
 
 @media only screen and (max-width: 1199px) {
+  #teaMissionText h1 {
+    font-size: 2.2em;
+  }
   #teaImages {
     margin-top: 50px;
   }
