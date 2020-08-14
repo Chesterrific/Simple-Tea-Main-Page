@@ -253,7 +253,20 @@ body {
 
 /* Welcome text positioning */
 
+#scroll {
+  color: white;
+  bottom: 10%;
+  font-size: 1.1em;
+  position: absolute;
+  right: 5%;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 /* Mobile design */
+
 
 @media only screen and (max-width: 1199px) {
   .welcomeText {
