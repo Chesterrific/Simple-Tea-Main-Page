@@ -96,4 +96,21 @@ $(document).ready(function () {
       }, scrollSpeed);
     });
   }
+
+  /* ----------------Cursor JS---------------- */
+  let cursor = document.getElementById('cursor');
+  let x, y, yscroll = 0;
+
+  document.addEventListener('mousemove', function (mousePos) {
+    x = mousePos.clientX;
+    y = mousePos.clientY;
+    yscroll = $(document).scrollTop();
+    cursor.style.left = x + 'px';
+    cursor.style.top = (y + yscroll) +'px';
+  });
+
+  document.addEventListener('scroll', function(){
+    yscroll = $(document).scrollTop();
+    cursor.style.top =  (y + yscroll) +'px';
+  });
 });
