@@ -596,7 +596,8 @@ body {
 /* Mobile */
 
 @media only screen and (max-width: 1199px) {
-  .mission {
+  section.custom {
+    padding-top: 5vh;
     align-items: flex-start;
     min-height: 1300px;
   }
@@ -665,7 +666,11 @@ body {
 /* Mobile */
 
 @media only screen and (max-width: 1199px) {
-  #privateMissionText{
+  section.private {
+    padding-top: 5vh;
+    align-items: flex-start;
+  }
+  #privateMissionText {
     padding-top: 5vh;
   }
   #privateMissionImages {
@@ -674,9 +679,12 @@ body {
   #privateMissionSlideshow {
     display: flex;
   }
+  #privateSlideshowItem1, #privateSlideshowItem2, #privateSlideshowItem3{
+    width: 80%;
+  }
   #privateMissionSlideshow img {
     position: absolute;
-    width: 55%;
+    /* width: 55%; */
   }
 }
 
@@ -759,7 +767,7 @@ body {
     position: absolute;
     width: 55%;
   }
-  #aboutShowcaseItem2 {
+  #aboutSlideshowItem2 {
     width: 40%;
   }
   #aboutShowcaseImages {
