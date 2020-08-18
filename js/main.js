@@ -60,37 +60,41 @@ $(document).ready(function () {
   // Showcase slideshow
   let timeBetweenImages = 4500;
   let href = location.pathname.split('/').slice(-1)[0];
-  let slideShow = 'none';
-  if (href == 'index.html') {
-    slideShow = $('#aboutShowcaseSlideshow');
-  } else if (href == 'customlabel.html') {
-    slideShow = $('#customMissionSlideshow');
-  }
 
-  let imgCounter = slideShow.children().length - 1;
-  let slow = 600;
+  if ($('.slideshow').length) {
+    $('.slideshow').each(function (i) {
+      startShow($(this));
+    });
+  } 
 
-  // Fade out every image behind the top most image
-  for (var i = 0; i < slideShow.children().length - 1; i++) {
-    slideShow.children().eq(i).fadeOut('fast');
-  }
+  function startShow(slideShow) {
 
-  setInterval(function () {
-    slideShow.children().eq(imgCounter).fadeOut(slow);
-    imgCounter++;
+    let imgCounter = slideShow.children().length - 1;
+    let slow = 600;
 
-    setTimeout(function () {
-      fadeImageIn();
-    }, slow);
-  }, timeBetweenImages);
-
-  function fadeImageIn() {
-    if (imgCounter >= slideShow.children().length) {
-      imgCounter = 0;
+    // Fade out every image behind the top most image
+    for (var i = 0; i < slideShow.children().length - 1; i++) {
+      slideShow.children().eq(i).fadeOut('fast');
     }
 
-    slideShow.children().eq(imgCounter).fadeIn(slow);
+    setInterval(function () {
+      slideShow.children().eq(imgCounter).fadeOut(slow);
+      imgCounter++;
+
+      setTimeout(function () {
+        fadeImageIn();
+      }, slow);
+    }, timeBetweenImages);
+
+    function fadeImageIn() {
+      if (imgCounter >= slideShow.children().length) {
+        imgCounter = 0;
+      }
+
+      slideShow.children().eq(imgCounter).fadeIn(slow);
+    }
   }
+
 
   /* ----------------Scroll JS---------------- */
   let scrollSpeed = 750;
@@ -157,5 +161,4 @@ $(document).ready(function () {
       'width': width + 'px'
     });
   }
-
 });
