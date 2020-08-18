@@ -42,10 +42,6 @@ body {
   }
 }
 
-.shadow {
-  text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
-}
-
 .second {
   background-color: #f3f3f3;
 }
@@ -55,8 +51,6 @@ body {
 }
 
 /* ----------------Navbar Styling---------------- */
-
-/* Mobile styling */
 
 #logo {
   color: white;
@@ -331,12 +325,14 @@ body {
   /* Objects of desire */
   #objWelcome {
     color: black;
+    left: 35%;
+    top: 75%;
   }
   #objWelcome span {
-    font-size: 1.8em;
+     font-size: 1.5em;
   }
   #objWelcome p {
-    font-size: .7em;
+    display: none;
   }
   /* Contact page */
   #contactWelcome {
@@ -416,13 +412,12 @@ body {
   }
   #contactInfo {
     font-size: .4em;
-    margin-left: 20%;
   }
   #contactInfo div {
-    margin-left: 20%;
+    margin: 20% 0 0 20%;
   }
   #contactInfo p {
-    margin: 20% 0 0 0;
+    margin: 0;
   }
   #contactLinks {
     display: flex;
