@@ -5,8 +5,8 @@ $(document).ready(function () {
   // Scrolling changes for logo and menu
   let logo = $('#logo');
   let menu = $('#menu span');
-  let logoMid = logo.offset().top + logo.height() / 2;
 
+  let logoMid = logo.offset().top + logo.height() / 2;
   let missionTop = $(document).height();
   if ($('#transition').length) {
     missionTop = $('#transition').offset().top;
@@ -59,7 +59,14 @@ $(document).ready(function () {
   /* ----------------Showcase JS---------------- */
   // Showcase slideshow
   let timeBetweenImages = 4500;
-  let slideShow = $('#aboutShowcaseSlideshow');
+  let href = location.pathname.split('/').slice(-1)[0];
+  let slideShow = 'none';
+  if (href == 'index.html') {
+    slideShow = $('#aboutShowcaseSlideshow');
+  } else if (href == 'customlabel.html') {
+    slideShow = $('#customMissionSlideshow');
+  }
+
   let imgCounter = slideShow.children().length - 1;
   let slow = 600;
 
@@ -76,7 +83,6 @@ $(document).ready(function () {
       fadeImageIn();
     }, slow);
   }, timeBetweenImages);
-
 
   function fadeImageIn() {
     if (imgCounter >= slideShow.children().length) {
@@ -99,18 +105,57 @@ $(document).ready(function () {
 
   /* ----------------Cursor JS---------------- */
   let cursor = document.getElementById('cursor');
-  let x, y, yscroll = 0;
+  let x = 0;
+  let y = 0;
+  let yscroll = 0;
 
+  let height = 30
+  let width = 30;
+
+  // Cursor follow
   document.addEventListener('mousemove', function (mousePos) {
     x = mousePos.clientX;
     y = mousePos.clientY;
     yscroll = $(document).scrollTop();
     cursor.style.left = x + 'px';
-    cursor.style.top = (y + yscroll) +'px';
+    cursor.style.top = (y + yscroll) + 'px';
   });
 
-  document.addEventListener('scroll', function(){
+  document.addEventListener('scroll', function () {
     yscroll = $(document).scrollTop();
-    cursor.style.top =  (y + yscroll) +'px';
+    cursor.style.top = (y + yscroll) + 'px';
   });
+
+  // Cursor size changes
+  $('#menu, #menu-nav ul li a, #logo, #scroll').hover(function () {
+    expandMouse();
+
+  }, function () {
+    resetMouseSize();
+  });
+
+  function expandMouse() {
+    $('#cursor').css({
+      '-webkit-animation': 'spin 5s linear infinite',
+      '-moz-animation': 'spin 5s linear infinite',
+      '-o-animation': 'spin 5s linear infinite',
+      'animation': 'spin 5s linear infinite',
+      'border': '2px dashed #7b7b7f',
+      'height': '100px',
+      'width': '100px'
+    });
+  }
+
+  function resetMouseSize() {
+    $('#cursor').css({
+      '-webkit-animation': 'none',
+      '-moz-animation': 'none',
+      '-o-animation': 'none',
+      'animation': 'none',
+      'border': '2px solid #7b7b7f',
+      'height': height + 'px',
+      'width': width + 'px'
+    });
+  }
+
 });
