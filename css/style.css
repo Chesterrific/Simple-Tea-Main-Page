@@ -614,10 +614,14 @@ body {
   }
   #customMissionSlideshow {
     display: flex;
+    margin-bottom: 25px;
   }
   #customMissionSlideshow img {
     position: absolute;
-    width: 55%;
+    width: 50%;
+  }
+  #customSlideshowItem3 {
+    max-width: 35%;
   }
 }
 
