@@ -12,7 +12,6 @@ $(document).ready(function () {
     missionTop = $('#transition').offset().top;
   }
 
-  console.log(missionTop);
   let navOpen = false;
 
   //Set overlay height to document height.

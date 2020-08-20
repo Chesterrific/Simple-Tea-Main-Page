@@ -47,7 +47,7 @@ body {
 #logo {
   color: white;
   font-size: 1.6em;
-  margin: 20px;
+  margin: 40px;
   position: fixed;
   z-index: 3;
   -webkit-transition: .5s ease-in-out;
@@ -175,7 +175,7 @@ body {
   #logo {
     color: white;
     font-size: 2.6em;
-    margin: 55px;
+    margin: 70px 55px;
     position: fixed;
     z-index: 3;
   }
@@ -440,6 +440,7 @@ body {
     justify-content: space-between;
     padding-left: 20vw;
     padding-right: 5vw;
+    padding-top: 125px;
     width: 75vw;
   }
 }
@@ -615,9 +616,6 @@ body {
 /* Desktop */
 
 @media only screen and (min-width:1200px) {
-  .mission {
-    margin-top: 125px;
-  }
   #customText {
     padding-right: 125px;
     text-align: left;
