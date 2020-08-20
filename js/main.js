@@ -12,6 +12,7 @@ $(document).ready(function () {
     missionTop = $('#transition').offset().top;
   }
 
+  console.log(missionTop);
   let navOpen = false;
 
   //Set overlay height to document height.
@@ -113,8 +114,7 @@ $(document).ready(function () {
   let y = 0;
   let yscroll = 0;
 
-  let height = 30
-  let width = 30;
+  let radius = 30;
 
   // Cursor follow
   document.addEventListener('mousemove', function (mousePos) {
@@ -140,11 +140,6 @@ $(document).ready(function () {
 
   function expandMouse() {
     $('#cursor').css({
-      '-webkit-animation': 'spin 5s linear infinite',
-      '-moz-animation': 'spin 5s linear infinite',
-      '-o-animation': 'spin 5s linear infinite',
-      'animation': 'spin 5s linear infinite',
-      'border': '2px dashed #7b7b7f',
       'height': '100px',
       'width': '100px'
     });
@@ -152,13 +147,8 @@ $(document).ready(function () {
 
   function resetMouseSize() {
     $('#cursor').css({
-      '-webkit-animation': 'none',
-      '-moz-animation': 'none',
-      '-o-animation': 'none',
-      'animation': 'none',
-      'border': '2px solid #7b7b7f',
-      'height': height + 'px',
-      'width': width + 'px'
+      'height': radius + 'px',
+      'width': radius + 'px'
     });
   }
 });

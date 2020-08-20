@@ -15,7 +15,7 @@ body {
 
 @media only screen and (min-width: 1200px) {
   #cursor {
-    border: 2px solid #7b7b7f;
+    border: 2px solid #bfbfbf;
     border-radius: 50%;
     box-sizing: border-box;
     display: flex;
@@ -31,14 +31,6 @@ body {
     transition: .1s;
     width: 30px;
     z-index: 4;
-  }
-  @keyframes spin {
-    0% {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) rotate(360deg);
-    }
   }
 }
 
@@ -329,7 +321,7 @@ body {
     top: 75%;
   }
   #objWelcome span {
-     font-size: 1.5em;
+    font-size: 1.5em;
   }
   #objWelcome p {
     display: none;
@@ -683,12 +675,11 @@ body {
   #privateMissionSlideshow {
     display: flex;
   }
-  #privateSlideshowItem1, #privateSlideshowItem2, #privateSlideshowItem3 {
-    width: 80%;
-  }
   #privateMissionSlideshow img {
     position: absolute;
-    /* width: 55%; */
+  }
+  #privateSlideshowItem1, #privateSlideshowItem2, #privateSlideshowItem3 {
+    width: 80%;
   }
 }
 
@@ -726,17 +717,39 @@ body {
 
 /* Objects of Desire Mission Items */
 
-#objItem4 .imageRow {
-  align-items: center;
-  justify-content: center;
+/* Mobile */
+
+@media only screen and (max-width: 1199px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+    min-height: 1200px;
+  }
+  #objMissionSlideshowNames h5 {
+    position: absolute;
+  }
+  #objMissionSlideshow img {
+    width: 80%;
+    position: absolute;
+  }
 }
 
-#objImage5 {
-  width: 100%;
-}
-
-#objImage6, #objImage7 {
-  width: 80%;
+@media only screen and (min-width: 1200px) {
+  .mobile {
+    display: none;
+  }
+  #objItem4 .imageRow {
+    align-items: center;
+    justify-content: center;
+  }
+  #objImage5 {
+    width: 100%;
+  }
+  #objImage6, #objImage7 {
+    width: 80%;
+  }
 }
 
 /* ----------------Showcase Product Carousel Styling---------------- */
