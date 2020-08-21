@@ -6,16 +6,23 @@ $(document).ready(function () {
   let logo = $('#logo');
   let menu = $('#menu span');
 
+  let navOpen = false;
   let logoMid = logo.offset().top + logo.height() / 2;
   let missionTop = $(document).height();
   if ($('#transition').length) {
     missionTop = $('#transition').offset().top;
   }
 
-  let navOpen = false;
-
   //Set overlay height to document height.
   $('#overlay').css('height', $(document).height() + 'px',);
+
+  // Recalculate positions and sizes on window resize.
+  $(window).resize(function () {
+    if ($('#transition').length) {
+      missionTop = $('#transition').offset().top;
+    }
+    $('#overlay').css('height', $(document).height() + 'px',);
+  });
 
   $(window).bind('scroll', function () {
     logoMid = $('#logo').offset().top + $('#logo').height() / 2;
@@ -59,13 +66,13 @@ $(document).ready(function () {
   /* ----------------Showcase JS---------------- */
   // Showcase slideshow
   let timeBetweenImages = 4500;
-  let href = location.pathname.split('/').slice(-1)[0];
+  // let href = location.pathname.split('/').slice(-1)[0];
 
   if ($('.slideshow').length) {
     $('.slideshow').each(function (i) {
       startShow($(this));
     });
-  } 
+  }
 
   function startShow(slideShow) {
 
@@ -150,4 +157,17 @@ $(document).ready(function () {
       'width': radius + 'px'
     });
   }
+
+  $('#og').click(function () {
+    logo.css('margin', '70px 55px');
+  });
+  $('#high').click(function () {
+    logo.css('margin', '30px 55px');
+  });
+  $('#medium').click(function () {
+    logo.css('margin', '100px 55px');
+  });
+  $('#low').click(function () {
+    logo.css('margin', '130px 55px');
+  });
 });
