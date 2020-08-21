@@ -177,7 +177,7 @@ body {
   #logo {
     color: white;
     font-size: 2.6em;
-    margin: 70px 55px;
+    margin: 30px 55px;
     position: fixed;
     z-index: 3;
   }
@@ -363,8 +363,9 @@ body {
   }
   /* About page */
   #aboutWelcome {
-    right: 15%;
-    top: 25%;
+    font-size: 3em;
+    right: 10%;
+    top: 30%;
   }
   /* Tea page */
   #teaWelcome {
