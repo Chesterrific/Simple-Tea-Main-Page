@@ -137,7 +137,7 @@ $(document).ready(function () {
   });
 
   // Cursor size changes
-  $('#menu, #menu-nav ul li a, #logo, #scroll').hover(function () {
+  $('#menu, #menu-nav ul li a, #logo, #scroll, a').hover(function () {
     expandMouse();
 
   }, function () {
@@ -157,17 +157,4 @@ $(document).ready(function () {
       'width': radius + 'px'
     });
   }
-
-  $('#og').click(function () {
-    logo.css('margin', '70px 55px');
-  });
-  $('#high').click(function () {
-    logo.css('margin', '30px 55px');
-  });
-  $('#medium').click(function () {
-    logo.css('margin', '100px 55px');
-  });
-  $('#low').click(function () {
-    logo.css('margin', '130px 55px');
-  });
 });

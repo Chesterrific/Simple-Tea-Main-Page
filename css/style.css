@@ -364,6 +364,7 @@ body {
   /* About page */
   #aboutWelcome {
     font-size: 3em;
+    font-weight: 200;
     right: 10%;
     top: 30%;
   }
@@ -473,6 +474,7 @@ body {
   }
   .missionTextContainer h2 {
     font-size: 1.5em;
+    font-weight: 600;
   }
 }
 
