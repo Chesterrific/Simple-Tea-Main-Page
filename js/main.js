@@ -66,7 +66,6 @@ $(document).ready(function () {
   /* ----------------Showcase JS---------------- */
   // Showcase slideshow
   let timeBetweenImages = 4500;
-  // let href = location.pathname.split('/').slice(-1)[0];
 
   if ($('.slideshow').length) {
     $('.slideshow').each(function (i) {
@@ -79,13 +78,10 @@ $(document).ready(function () {
     let imgCounter = slideShow.children().length - 1;
     let slow = 600;
 
-    // Fade out every image behind the top most image
-    for (var i = 0; i < slideShow.children().length - 1; i++) {
-      slideShow.children().eq(i).fadeOut('fast');
-    }
+    slideShow.children().eq(imgCounter).css('opacity', '1');
 
     setInterval(function () {
-      slideShow.children().eq(imgCounter).fadeOut(slow);
+      slideShow.children().eq(imgCounter).css('opacity', '0');
       imgCounter++;
 
       setTimeout(function () {
@@ -98,7 +94,7 @@ $(document).ready(function () {
         imgCounter = 0;
       }
 
-      slideShow.children().eq(imgCounter).fadeIn(slow);
+      slideShow.children().eq(imgCounter).css('opacity', '1');
     }
   }
 
