@@ -64,9 +64,9 @@ $(document).ready(function () {
   });
 
   /* ----------------Showcase JS---------------- */
-  // Showcase slideshow
   let timeBetweenImages = 4500;
 
+  // If there's an element with class slideshow on the page.
   if ($('.slideshow').length) {
     $('.slideshow').each(function (i) {
       startShow($(this));
@@ -74,19 +74,23 @@ $(document).ready(function () {
   }
 
   function startShow(slideShow) {
-
     let imgCounter = slideShow.children().length - 1;
     let slow = 600;
 
+    // Fade in initial image.
     slideShow.children().eq(imgCounter).css('opacity', '1');
 
     setInterval(function () {
+      // Fade out image.
       slideShow.children().eq(imgCounter).css('opacity', '0');
       imgCounter++;
 
+      //Set timeout before fading next image in.
       setTimeout(function () {
         fadeImageIn();
       }, slow);
+
+      // Time before current image fades out. i.e. how long current image stays on screen.
     }, timeBetweenImages);
 
     function fadeImageIn() {
@@ -97,7 +101,6 @@ $(document).ready(function () {
       slideShow.children().eq(imgCounter).css('opacity', '1');
     }
   }
-
 
   /* ----------------Scroll JS---------------- */
   let scrollSpeed = 750;
