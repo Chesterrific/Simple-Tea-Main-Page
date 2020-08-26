@@ -329,9 +329,9 @@ body {
   #objWelcome {
     color: black;
     left: 30%;
-    top: 80%;
+    top: 75%;
   }
-  #objWelcome div{
+  #objWelcome div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -749,6 +749,9 @@ body {
   }
   #objMissionSlideshow img {
     width: 80%;
+  }
+  #objMissionSlideshow #objSlideshowItem3 {
+    width: 50%;
   }
 }
 
