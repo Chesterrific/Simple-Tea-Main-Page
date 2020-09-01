@@ -745,7 +745,6 @@ body {
   }
   .mobile {
     display: flex;
-    min-height: 1200px;
   }
   #objMissionSlideshow img {
     width: 80%;
@@ -870,10 +869,12 @@ body {
 
 /* Slideshow settings */
 
-.slideshow img, .slideshow h5 {
+.slideshow div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   opacity: 0;
   position: absolute;
-  -webkit-transition: .7s ease-in-out;
   -moz-transition: .7s ease-in-out;
   -o-transition: .7s ease-in-out;
   transition: .7s ease-in-out;
