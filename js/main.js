@@ -115,6 +115,7 @@ $(document).ready(function () {
 
   /* ----------------Cursor JS---------------- */
   let cursor = document.getElementById('cursor');
+
   let x = 0;
   let y = 0;
   let yscroll = 0;
@@ -133,6 +134,10 @@ $(document).ready(function () {
   document.addEventListener('scroll', function () {
     yscroll = $(document).scrollTop();
     cursor.style.top = (y + yscroll) + 'px';
+  });
+
+  $('.items').hover(function (mousePos) {
+    console.log(mousePos.clientX);
   });
 
   // Cursor size changes

@@ -25,6 +25,29 @@
   <!-- NOTE: Following industry guidelines, this is usually how you'd
              write a typical element. For style points, you can 
              follow this.-->
+
+  <style>
+    .test {
+      align-items: center;
+      display: flex;
+      height: 100vh;
+    }
+
+    #cursor {
+      visibility: hidden;
+    }
+
+    #logo {
+      color: black;
+    }
+
+    #menu span {
+      background: black;
+    }
+  </style>
+
+  <div id="transition"></div>
+
   <nav>
     <div id="logo">simple tea</div>
     <div id="menu">
@@ -43,17 +66,13 @@
     </div>
   </nav>
   <!-- End of NOTE: -->
-  <style>
-    .test{
-      display: flex;
-      height: 100vh;
-      align-items: center;
-    }
-  </style>
+
+  <div id="overlay"></div>
+  <div id="cursor"></div>
 
   <!-- Main -->
   <main class="test">
-    <div id='collection-component-1600210346467'></div>
+    <div class="items" id='collection-component-1600210346467'></div>
   </main>
 
   <!-- JavaScript -->
