@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Tea Website</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <!-- Add a11y changes (i.e. screen readers, alts, aria, etc.) -->
+  </header>
+
+  <!-- Navbar -->
+  <!-- NOTE: Following industry guidelines, this is usually how you'd
+             write a typical element. For style points, you can 
+             follow this.-->
+
+  <style>
+    .item{
+      align-items: center;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+    }
+
+    #cursor{
+      visibility: hidden;
+    }
+  </style>
+
+  <nav>
+    <div id="logo">simple tea</div>
+    <div id="menu">
+      <span></span>
+      <span></span>
+    </div>
+    <div id="menu-nav">
+      <ul>
+        <li><a href="../index.html">About</a></li>
+        <li><a href="../corpgifttea.html">Tea</a></li>
+        <li><a href="../customlabel.html">Custom Label</a></li>
+        <li><a href="../objectsofdesire.html">Objects of Desire</a></li>
+        <li><a href="../contact-us.html">Contact Us</a></li>
+        <li><a class="active" href="../shop.html">Shop</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- End of NOTE: -->
+
+  <div id="overlay"></div>
+  <div id="cursor"></div>
+
+  <!-- Main -->
+  <main class="item">
+    <div class="wps-buy-button" id='5610026041499' data-id='5610026041499'></div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="../js/main.js"></script>
+  <script src="../js/shop.js"></script>
+</body>
+
+</html>
