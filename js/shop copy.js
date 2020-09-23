@@ -54,28 +54,14 @@
                 "options": (varId == 'all'),
                 "price": true,
                 "description": false,
-                "buttonWithQuantity": true,
-                "button": false,
+                "buttonWithQuantity": false,
                 "quantity": false,
               },
               "styles": {
-                "product": {
-                  "@media (min-width: 601px)": {
-                    "max-width": "calc(25% - 20px)",
-                    "margin-left": "20px",
-                    "margin-bottom": "50px"
-                  }
-                },
                 "button": {
-                  ":hover": {
-                    "background-color": "#5c5c5c"
-                  },
-                  "background-color": "#000000",
-                  ":focus": {
-                    "background-color": "#000000"
-                  },
-                  "padding-left": "55px",
-                  "padding-right": "55px"
+                  "@media (min-width: 601px)": {
+                    "width": "10px"
+                  }
                 }
               }
             },
@@ -84,7 +70,6 @@
                 "button": true
               },
               "styles": {
-
                 "footer": {
                   "background-color": "#ffffff"
                 }
@@ -123,7 +108,7 @@
                 "toggle": {
                   "background-color": "#000000",
                   ":hover": {
-                    "background-color": "#5c5c5c"
+                    "background-color": "#000000"
                   },
                   ":focus": {
                     "background-color": "#000000"
@@ -132,10 +117,6 @@
               }
             }
           }
-        });
-        $(".shopItem").css({
-          "align-items": "center",
-          "justify-content": "center"
         });
       });
     });

@@ -21,34 +21,41 @@
     <!-- Add a11y changes (i.e. screen readers, alts, aria, etc.) -->
   </header>
 
-  <!-- Navbar -->
-  <!-- NOTE: Following industry guidelines, this is usually how you'd
-             write a typical element. For style points, you can 
-             follow this.-->
 
   <style>
-    .test {
-      align-items: center;
-      display: flex;
-      height: 100vh;
-      justify-content: space-evenly;
+    .shopWrapper {
+      display: grid;
+      gap: 1em;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 0 10vw 0 20vw;
+      padding: 15vh 0;
     }
 
-    #cursor {
-      visibility: hidden;
-    }
-
-    #logo {
+    .shopItem {
+      background-color: lightgray;
       color: black;
+      display: flex;
+      flex-direction: column;
     }
 
-    #menu span {
-      background: black;
+    .shopItem>img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    .shopItem>div {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+    }
+
+    #cursor{
+      visibility: hidden;
     }
   </style>
 
-  <div id="transition"></div>
-
+  <!-- Navbar -->
   <nav>
     <div id="logo">simple tea</div>
     <div id="menu">
@@ -68,14 +75,37 @@
   </nav>
   <!-- End of NOTE: -->
 
+
+  <!-- <div id="transition"></div> -->
   <div id="overlay"></div>
   <div id="cursor"></div>
 
   <!-- Main -->
-  <main class="test">
-    <div class="wps-buy-button" id='5610026041499' data-id='5610026041499'></div>
-    <div class="wps-buy-button" id='5610004086939' data-id='5610004086939'></div>
-    <div class="wps-buy-button" id='5635993403547' data-id='5635993403547'></div>
+  <main class="shopWrapper">
+    <a href="/products/bulb.html" class=shopItem>
+      <img src="/assets/shop/lightbulb.jpg" alt="">
+      <div class="wps-buy-button" id='5610026041499' data-id='5610026041499'></div>
+    </a>
+    <a href="/products/tshirt.html" class=shopItem>
+      <img src="/assets/shop/testshirt.jpg" alt="">
+      <div class="wps-buy-button" id='5610004086939' data-id='5610004086939'></div>
+    </a>
+    <a href="/products/dongdingtea.html" class=shopItem>
+      <img src="/assets/shop/tea.jpg" alt="">
+      <div class="wps-buy-button" id='5635993403547' data-id='5635993403547'></div>
+    </a>
+    <a href="/products/bulb.html" class=shopItem>
+      <img src="/assets/shop/lightbulb.jpg" alt="">
+    </a>
+    <a href="/products/bulb.html" class=shopItem>
+      <img src="/assets/shop/lightbulb.jpg" alt="">
+    </a>
+    <a href="/products/bulb.html" class=shopItem>
+      <img src="/assets/shop/lightbulb.jpg" alt="">
+    </a>
+    <a href="/products/bulb.html" class=shopItem>
+      <img src="/assets/shop/lightbulb.jpg" alt="">
+    </a>
   </main>
 
   <!-- JavaScript -->

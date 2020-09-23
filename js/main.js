@@ -9,8 +9,14 @@ $(document).ready(function () {
   let navOpen = false;
   let logoMid = logo.offset().top + logo.height() / 2;
   let missionTop = $(document).height();
+  let transitionPresent = false;
   if ($('#transition').length) {
+    transitionPresent = true;
     missionTop = $('#transition').offset().top;
+  } else {
+    transitionPresent = false;
+    menu.css('background', 'black');
+    logo.css('color', 'black');
   }
 
   //Set overlay height to document height.
@@ -27,7 +33,7 @@ $(document).ready(function () {
   $(window).bind('scroll', function () {
     logoMid = $('#logo').offset().top + $('#logo').height() / 2;
 
-    if (logoMid < missionTop) {
+    if (logoMid < missionTop && transitionPresent) {
       if (!navOpen) {
         menu.css('background', 'white');
         logo.css('color', 'white');
@@ -53,7 +59,7 @@ $(document).ready(function () {
     } else {
       $('#overlay').toggleClass('open');
 
-      if (logoMid < missionTop) {
+      if (logoMid < missionTop && transitionPresent) {
         menu.css('background', 'white');
         logo.css('color', 'white');
       } else {
@@ -136,7 +142,7 @@ $(document).ready(function () {
   });
 
   // Cursor size changes
-  $('#menu, #menu-nav ul li a, #logo, #scroll, a').hover(function () {
+  $('#menu, #menu-nav ul li a, #logo, #scroll, a, .shopItem').hover(function () {
     expandMouse();
 
   }, function () {
