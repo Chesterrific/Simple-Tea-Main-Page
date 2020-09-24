@@ -120,51 +120,54 @@ $(document).ready(function () {
   }
 
   /* ----------------Cursor JS---------------- */
-  let cursor = document.getElementById('cursor');
+  if ($('#cursor').length) {
+    let cursor = document.getElementById('cursor');
 
-  let x = 0;
-  let y = 0;
-  let yscroll = 0;
 
-  let radius = 30;
+    let x = 0;
+    let y = 0;
+    let yscroll = 0;
 
-  // Cursor follow
-  document.addEventListener('mousemove', function (mousePos) {
-    x = mousePos.clientX;
-    y = mousePos.clientY;
-    yscroll = $(document).scrollTop();
-    cursor.style.left = x + 'px';
-    cursor.style.top = (y + yscroll) + 'px';
-  });
+    let radius = 30;
 
-  document.addEventListener('scroll', function () {
-    yscroll = $(document).scrollTop();
-    cursor.style.top = (y + yscroll) + 'px';
-  });
-
-  $('.items').hover(function (mousePos) {
-    console.log(mousePos.clientX);
-  });
-
-  // Cursor size changes
-  $('#menu, #menu-nav ul li a, #logo, #scroll, a, .shopItem').hover(function () {
-    expandMouse();
-
-  }, function () {
-    resetMouseSize();
-  });
-
-  function expandMouse() {
-    $('#cursor').css({
-      'height': '100px',
-      'width': '100px'
+    // Cursor follow
+    document.addEventListener('mousemove', function (mousePos) {
+      x = mousePos.clientX;
+      y = mousePos.clientY;
+      yscroll = $(document).scrollTop();
+      cursor.style.left = x + 'px';
+      cursor.style.top = (y + yscroll) + 'px';
     });
-  }
 
-  function resetMouseSize() {
-    $('#cursor').css({
-      'height': radius + 'px',
-      'width': radius + 'px'
+    document.addEventListener('scroll', function () {
+      yscroll = $(document).scrollTop();
+      cursor.style.top = (y + yscroll) + 'px';
     });
+
+    $('.items').hover(function (mousePos) {
+      console.log(mousePos.clientX);
+    });
+
+    // Cursor size changes
+    $('#menu, #menu-nav ul li a, #logo, #scroll, a, .shopItem').hover(function () {
+      expandMouse();
+
+    }, function () {
+      resetMouseSize();
+    });
+
+    function expandMouse() {
+      $('#cursor').css({
+        'height': '100px',
+        'width': '100px'
+      });
+    }
+
+    function resetMouseSize() {
+      $('#cursor').css({
+        'height': radius + 'px',
+        'width': radius + 'px'
+      });
+    }
   }
 });
