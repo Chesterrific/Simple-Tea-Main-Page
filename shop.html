@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Simple Tea Website</title>
+  <title>Simple Tea</title>
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
   <link
@@ -20,77 +20,6 @@
   <header>
     <!-- Add a11y changes (i.e. screen readers, alts, aria, etc.) -->
   </header>
-
-
-  <style>
-    /* Top BG */
-    #shopPage {
-      background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("assets/backgrounds/SimpleTeaShop.jpg");
-      background-position: center;
-      background-size: cover;
-      height: 100vh;
-    }
-
-    /* Shop Nav Items Style */
-    #shop-nav {
-      justify-content: center;
-      display: flex;
-      font-size: 2em;
-      padding-top: 10vh;
-      position: relative;
-    }
-
-    #shop-nav>ul {
-      display: flex;
-      list-style-type: none;
-    }
-
-    #shop-nav>ul>li>a {
-      color: black;
-      margin: 0 1em 0 1em;
-      text-decoration: none;
-      display: block;
-    }
-
-    /* Shop Style */
-    .shopWrapper {
-      display: grid;
-      gap: 10em;
-      grid-template-rows: auto;
-      padding: 10vh 10vw 20vh 20vw;
-    }
-
-    .shopRow {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .shopProducts {
-      display: grid;
-      gap: 1em;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 500px;
-    }
-
-    .shopItem {
-      background-color: lightgray;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .shopItem>img {
-      flex: 1;
-      object-fit: cover;
-      height: auto;
-      width: 100%;
-    }
-
-    .shopItem>div {
-      display: flex;
-      flex-direction: column;
-      margin: 10px;
-    }
-  </style>
 
   <!-- Navbar -->
   <nav>
@@ -110,90 +39,41 @@
       </ul>
     </div>
   </nav>
-  <!-- End of NOTE: -->
-
 
   <section id="welcome">
     <div id="shopPage"></div>
-    <div id="customLabelTeaWelcome" class="welcomeText">
-      <span>Shop</span>
+    <div id="shopWelcome" class="welcomeText">
+      <span>shop</span>
     </div>
     <span id="scroll">Scroll ></span>
   </section>
 
-  <div id="transition"></div>
+  <div id="cursor"></div>
   <div id="overlay"></div>
 
-  <nav id="shop-nav">
+
+  <!-- <nav id="shop-nav">
     <ul>
       <li><a href="">Featured</a></li>
-      <li><a class="tea" href="">Loose Leaf Tea</a></li>
-      <li><a class="bags" href="">Teabags</a></li>
-      <li><a class="ware" href="">Teaware</a></li>
+      <li><a class="tea" href="loose-leaf-tea.html">Loose Leaf Tea</a></li>
+      <li><a class="ware" href="gifts-teaware.html">Gifts & Teaware</a></li>
     </ul>
-  </nav>
+  </nav> -->
 
   <!-- Main -->
-  <main class="shopWrapper">
-    <div class="shopRow">
-      <h1>Featured</h1>
-      <div class="shopProducts">
-        <a href="products/bulb.html" class=shopItem>
-          <img src="assets/shop/lightbulb.jpg" alt="">
-          <div class="wps-buy-button" id='5610026041499' data-id='5610026041499'></div>
-        </a>
-        <a href="products/tshirt.html" class=shopItem>
-          <img src="assets/shop/testshirt.jpg" alt="">
-          <div class="wps-buy-button" id='5610004086939' data-id='5610004086939'></div>
-        </a>
-        <a href="products/dongdingtea.html" class=shopItem>
-          <img src="assets/shop/tea.jpg" alt="">
-          <div class="wps-buy-button" id='5635993403547' data-id='5635993403547'></div>
-        </a>
-        <a href="products/bulb.html" class=shopItem>
-          <img src="assets/shop/teabag1.jpg" alt="">
-          <div class="wps-buy-button" id='5645097140379' data-id='5645097140379'></div>
-        </a>
-        <a href="products/bulb.html" class=shopItem>
-          <img src="assets/shop/teabag2.jpg" alt="">
-          <div class="wps-buy-button" id='5645104808091' data-id='5645104808091'></div>
-        </a>
-      </div>
-    </div>
-    <div class="shopRow">
-      <h1>Loose Leaf Tea</h1>
-      <div class="shopProducts">
-        <a href="products/bulb.html" class=shopItem>
-          <img src="assets/shop/lightbulb.jpg" alt="">
-        </a>
-        <a href="products/bulb.html" class=shopItem>
-          <img src="assets/shop/lightbulb.jpg" alt="">
-        </a>
-      </div>
-    </div>
-    <div class="shopRow">
-      <h1>Teabags</h1>
-      <div class="shopProducts">
-        <a href="products/bulb.html" class=shopItem>
-          <img src="assets/shop/lightbulb.jpg" alt="">
-        </a>
-        <a href="products/bulb.html" class=shopItem>
-          <img src="assets/shop/lightbulb.jpg" alt="">
-        </a>
-      </div>
-    </div>
-    <div class="shopRow">
-      <h1>Teaware</h1>
-      <div class="shopProducts">
-        <a href="products/bulb.html" class=shopItem>
-          <img src="assets/shop/lightbulb.jpg" alt="">
-        </a>
-        <a href="products/bulb.html" class=shopItem>
-          <img src="assets/shop/lightbulb.jpg" alt="">
-        </a>
-      </div>
-    </div>
+  <main id="main-shop-links" class="second">
+    <a id="featured" href="">
+      <h1>featured</h1>
+    </a>
+    <a id="loose-leaf-tea" href="loose-leaf-tea.html">
+      <h1>loose leaf tea</h1>
+    </a>
+    <a id="gifts-teaware" href="gifts-teaware.html">
+      <h1>gifts & teaware</h1>
+    </a>
   </main>
+
+  <div id="transition"></div>
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>

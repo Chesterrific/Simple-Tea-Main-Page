@@ -80,14 +80,20 @@
               }
             },
             "cart": {
-              "contents": {
-                "button": true
-              },
               "styles": {
-
-                "footer": {
-                  "background-color": "#ffffff"
+                "button": {
+                  ":hover": {
+                    "background-color": "#5c5c5c"
+                  },
+                  "background-color": "#000000",
+                  ":focus": {
+                    "background-color": "#000000"
+                  }
                 }
+              },
+              "text": {
+                "total": "Subtotal",
+                "button": "Checkout"
               }
             },
             "modalProduct": {
