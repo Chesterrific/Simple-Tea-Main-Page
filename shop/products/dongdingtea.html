@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Tea</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+</head>
+
+<style>
+  /* Main Shopify Item Wrapper */
+  .shopify-buy__product {
+    display: grid;
+    gap: 5em;
+    grid-template-areas: "image title title""image description description""price description description""buybtn description description";
+
+  }
+
+  /* Image and Carousel Wrapper */
+  .shopify-buy__product-img-wrapper {
+    grid-area: image;
+  }
+
+  /* Image  */
+  .shopify-buy__product__variant-img {
+    max-width: 500px;
+  }
+
+
+  /* Prodcut Title */
+  .shopify-buy__product__title {
+    grid-area: title;
+  }
+
+  /* Description */
+  .shopify-buy__product-description {
+    grid-area: description;
+  }
+
+  /* Price */
+  .shopify-buy__product__price {
+    grid-area: price;
+  }
+
+  /* Buy Button */
+  .shopify-buy__btn-and-quantity {
+    grid-area: buybtn;
+  }
+</style>
+
+<body>
+  <header>
+    <!-- Add a11y changes (i.e. screen readers, alts, aria, etc.) -->
+  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <div id="logo">simple tea</div>
+    <div id="menu">
+      <span></span>
+      <span></span>
+    </div>
+    <div id="menu-nav">
+      <ul>
+        <li><a href="../../index.html">About</a></li>
+        <li><a href="../../corpgifttea.html">Tea</a></li>
+        <li><a href="../../customlabel.html">Custom Label</a></li>
+        <li><a href="../../objectsofdesire.html">Objects of Desire</a></li>
+        <li><a href="../../contact-us.html">Contact Us</a></li>
+        <li><a href="../shop.html">Shop</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- End of NOTE: -->
+
+  <div id="overlay"></div>
+
+  <nav id="shop-nav">
+    <hr>
+    <ul>
+      <li><a class="active" href="dongdingtea.html">Featured</a></li>
+      <li><a href="../loose-leaf-tea.html">Loose Leaf Tea</a></li>
+      <li><a href="../gifts-teaware.html">Gifts & Teaware</a></li>
+    </ul>
+    <hr>
+  </nav>
+
+  <!-- Main -->
+  <main class="product">
+    <div id='product-component-1601330567010'></div>
+  </main>
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'freelancefriends.myshopify.com',
+          storefrontAccessToken: '5ab91a7af0d45b7464beb1d27dd8a2b6',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('product', {
+            id: '5635993403547',
+            node: document.getElementById('product-component-1601330567010'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+              "product": {
+                "iframe": false,
+                "layout": "vertical",
+                "contents": {
+                  "img": true,
+                  "imgWithCarousel": false,
+                  "button": false,
+                  "buttonWithQuantity": true,
+                  "description": true
+                },
+                "width": "100%",
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "productSet": {
+                "styles": {
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
+                    }
+                  }
+                }
+              },
+              "modalProduct": {
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "button": false,
+                  "buttonWithQuantity": true
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
+                    }
+                  },
+                  "button": {
+                    ":hover": {
+                      "background-color": "#5c5c5c"
+                    },
+                    "background-color": "#000000",
+                    ":focus": {
+                      "background-color": "#000000"
+                    },
+                    "padding-left": "55px",
+                    "padding-right": "55px"
+                  }
+                },
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "cart": {
+                "styles": {
+                  "button": {
+                    ":hover": {
+                      "background-color": "#5c5c5c"
+                    },
+                    "background-color": "#000000",
+                    ":focus": {
+                      "background-color": "#000000"
+                    }
+                  }
+                },
+                "text": {
+                  "total": "Subtotal",
+                  "button": "Checkout"
+                }
+              },
+              "toggle": {
+                "styles": {
+                  "toggle": {
+                    "background-color": "#000000",
+                    ":hover": {
+                      "background-color": "#5c5c5c"
+                    },
+                    ":focus": {
+                      "background-color": "#000000"
+                    }
+                  }
+                }
+              }
+            },
+          });
+        });
+      }
+    })();
+  /*]]>*/
+  </script>
+
+  <!-- JavaScript -->
+  <script src="../../js/main.js"></script>
+</body>
+
+</html>

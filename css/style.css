@@ -968,11 +968,16 @@ body {
 
 #shop-nav>ul>li {
   height: 100%;
+  text-align: center;
 }
 
 #shop-nav>ul>li>a {
   color: black;
   text-decoration: none;
+}
+
+#shop-nav>ul>li>.active {
+  text-decoration: underline;
 }
 
 /* Shop Category Style */
@@ -1023,4 +1028,10 @@ body {
   display: flex;
   flex-direction: column;
   margin: 10px;
+}
+
+/* Individual Shop Items */
+
+.product {
+  padding: 5vh 10vw 20vh 20vw;
 }
