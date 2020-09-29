@@ -12,15 +12,20 @@
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../../css/style.css">
+
+  <!--  -->
+  <!-- <link href="http://sdks.shopifycdn.com/buy-button/latest/buybutton.css" rel="stylesheet" type="text/css" /> -->
+  <!--  -->
+
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
 </head>
 
-<style>
+<!-- <style>
   /* Main Shopify Item Wrapper */
   .shopify-buy__product {
     display: grid;
-    gap: 5em;
+    grid-column-gap: 5em;
     grid-template-areas: "image title title""image description description""price description description""buybtn description description";
 
   }
@@ -35,10 +40,10 @@
     max-width: 500px;
   }
 
-
   /* Prodcut Title */
   .shopify-buy__product__title {
     grid-area: title;
+    border-bottom: solid black 2px;
   }
 
   /* Description */
@@ -55,7 +60,7 @@
   .shopify-buy__btn-and-quantity {
     grid-area: buybtn;
   }
-</style>
+</style> -->
 
 <body>
   <header>
@@ -98,6 +103,7 @@
   <main class="product">
     <div id='product-component-1601330567010'></div>
   </main>
+
   <script type="text/javascript">
     /*<![CDATA[*/
     (function () {
@@ -123,6 +129,27 @@
           domain: 'freelancefriends.myshopify.com',
           storefrontAccessToken: '5ab91a7af0d45b7464beb1d27dd8a2b6',
         });
+
+        var buttonTemplate = '<div class="{{data.classes.product.buttonWrapper}}" data-element="product.buttonWrapper"><button {{#data.buttonDisabled}}disabled{{/data.buttonDisabled}} class="{{data.classes.product.button}} {{data.buttonClass}}" data-element="product.button">{{data.buttonText}}</button></div>'
+
+        var quantityTemplate = '<div class="{{data.classes.product.quantity}} {{data.quantityClass}}" data-element="product.quantity">' +
+          '{{#data.contents.quantityDecrement}}' +
+          '<button class="{{data.classes.product.quantityButton}} {{data.classes.product.quantityDecrement}}" type="button" data-element="product.quantityDecrement"><span>-</span><span class="visuallyhidden">Decrement</span></button>' +
+          '{{/data.contents.quantityDecrement}}' +
+          '{{#data.contents.quantityInput}}' +
+          '<input class="{{data.classes.product.quantityInput}}" type="number" min="0" aria-label="Quantity" value="{{data.selectedQuantity}}" data-element="product.quantityInput">' +
+          '{{/data.contents.quantityInput}}' +
+          '{{#data.contents.quantityIncrement}}' +
+          '<button class="{{data.classes.product.quantityButton}} {{data.classes.product.quantityIncrement}}" type="button" data-element="product.quantityIncrement"><span>+</span><span class="visuallyhidden">Increment</span></button>' +
+          '{{/data.contents.quantityIncrement}}' +
+          '</div>'
+
+        var imgTemplate = '<div>' +
+          '{{#data.currentImage.srcLarge}}<div class="{{data.classes.product.imgWrapper}}" data-element="product.imgWrapper"><img alt="{{data.currentImage.altText}}" data-element="product.img" class="{{data.classes.product.img}}" src="{{data.currentImage.srcLarge}}" />' +
+          '<div class="{{data.classes.product.buttonWithQuantity}}" data-element="product.buttonWithQuantity"> ' + quantityTemplate + buttonTemplate + '</div>' +
+          '</div>{{/data.currentImage.srcLarge}}' +
+          '</div>'
+
         ShopifyBuy.UI.onReady(client).then(function (ui) {
           ui.createComponent('product', {
             id: '5635993403547',
@@ -130,44 +157,24 @@
             moneyFormat: '%24%7B%7Bamount%7D%7D',
             options: {
               "product": {
-                "iframe": false,
-                "layout": "vertical",
+                "layout": "horizontal",
                 "contents": {
                   "img": true,
                   "imgWithCarousel": false,
                   "button": false,
-                  "buttonWithQuantity": true,
-                  "description": true
+                  "buttonWithQuantity": false,
+                  "price": false,
+                  "description": true,
+                  "picWithPrice": true
                 },
-                "width": "100%",
                 "text": {
                   "button": "Add to cart"
-                }
-              },
-              "productSet": {
-                "styles": {
-                  "products": {
-                    "@media (min-width: 601px)": {
-                      "margin-left": "-20px"
-                    }
-                  }
-                }
-              },
-              "modalProduct": {
-                "contents": {
-                  "img": false,
-                  "imgWithCarousel": true,
-                  "button": false,
-                  "buttonWithQuantity": true
+                },
+                "templates": {
+                  "img": imgTemplate
                 },
                 "styles": {
-                  "product": {
-                    "@media (min-width: 601px)": {
-                      "max-width": "100%",
-                      "margin-left": "0px",
-                      "margin-bottom": "0px"
-                    }
-                  },
+                  "display": "flex",
                   "button": {
                     ":hover": {
                       "background-color": "#5c5c5c"
@@ -176,12 +183,24 @@
                     ":focus": {
                       "background-color": "#000000"
                     },
-                    "padding-left": "55px",
-                    "padding-right": "55px"
+                  },
+                  "title": {
+                    "font-size": "40px"
+                  },
+                  "img": {
+                    // "padding": "4em"
+                    // "padding-top": "200px"
+                  },
+                  "imgWrapper": {
+                    "display": "flex",
+                    "flex-direction": "column",
+                    "buttonWithQuantity": {
+                      "margin": "auto !important",
+                      "display": "flex",
+                      "align-items": "center",
+                      "justify-content": "center"
+                    }
                   }
-                },
-                "text": {
-                  "button": "Add to cart"
                 }
               },
               "cart": {
