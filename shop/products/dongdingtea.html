@@ -99,6 +99,46 @@
     <hr>
   </nav>
 
+  <style>
+    /* ----------------Image & Button Styling---------------- */
+    /* Image */
+    .shopify-buy__product {
+      display: grid;
+      
+      gap: 2em;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-image {
+      align-items: center;
+      border-right: 2px solid black;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Button */
+    /* Input Element Styling */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    .shopify-buy__btn-and-quantity {
+      display: flex;
+      margin-top: 1em;
+    }
+
+    .shopify-buy__quantity {
+      text-align: right;
+      width: 50px;
+    }
+  </style>
+
   <!-- Main -->
   <main class="product">
     <div id='product-component-1601330567010'></div>
@@ -130,7 +170,8 @@
           storefrontAccessToken: '5ab91a7af0d45b7464beb1d27dd8a2b6',
         });
 
-        var buttonTemplate = '<div class="{{data.classes.product.buttonWrapper}}" data-element="product.buttonWrapper"><button {{#data.buttonDisabled}}disabled{{/data.buttonDisabled}} class="{{data.classes.product.button}} {{data.buttonClass}}" data-element="product.button">{{data.buttonText}}</button></div>'
+        // Default Shopify Templates
+        var buttonTemplate = '<div class="{{data.classes.product.buttonWrapper}}" data-element="product.buttonWrapper"><button {{#data.buttonDisabled}}disabled{{/data.buttonDisabled}} class="{{data.classes.product.button}} {{data.buttonClass}}" data-element="product.button">{{data.buttonText}}</button></div>';
 
         var quantityTemplate = '<div class="{{data.classes.product.quantity}} {{data.quantityClass}}" data-element="product.quantity">' +
           '{{#data.contents.quantityDecrement}}' +
@@ -142,13 +183,42 @@
           '{{#data.contents.quantityIncrement}}' +
           '<button class="{{data.classes.product.quantityButton}} {{data.classes.product.quantityIncrement}}" type="button" data-element="product.quantityIncrement"><span>+</span><span class="visuallyhidden">Increment</span></button>' +
           '{{/data.contents.quantityIncrement}}' +
-          '</div>'
+          '</div>';
 
-        var imgTemplate = '<div>' +
-          '{{#data.currentImage.srcLarge}}<div class="{{data.classes.product.imgWrapper}}" data-element="product.imgWrapper"><img alt="{{data.currentImage.altText}}" data-element="product.img" class="{{data.classes.product.img}}" src="{{data.currentImage.srcLarge}}" />' +
-          '<div class="{{data.classes.product.buttonWithQuantity}}" data-element="product.buttonWithQuantity"> ' + quantityTemplate + buttonTemplate + '</div>' +
-          '</div>{{/data.currentImage.srcLarge}}' +
-          '</div>'
+        var buttonWithQuantity = '<div class="{{data.classes.product.buttonWithQuantity}}" data-element="product.buttonWithQuantity">' + quantityTemplate
+          + buttonTemplate + '</div>';
+
+        var description = '<div class="{{data.classes.product.description}}" data-element="product.description">{{{data.descriptionHtml}}}</div>';
+
+        var price = '<div class="{{data.classes.product.prices}}" data-element="product.prices">' +
+          '{{#data.selectedVariant}}' +
+          '<span class="visuallyhidden">{{data.priceAccessibilityLabel}}&nbsp;</span>' +
+          '<span class="{{data.classes.product.price}} {{data.priceClass}}" data-element="product.price">{{data.formattedPrice}}</span>' +
+          '{{#data.hasCompareAtPrice}}' +
+          '<span class="visuallyhidden">{{data.compareAtPriceAccessibilityLabel}}&nbsp;</span>' +
+          '<span class="{{data.classes.product.compareAt}}" data-element="product.compareAt">{{data.formattedCompareAtPrice}}</span>' +
+          '{{/data.hasCompareAtPrice}}' +
+          '{{#data.showUnitPrice}}' +
+          '<div class="{{data.classes.product.unitPrice}}" data-element="product.unitPrice">' +
+          '  <span class="visuallyhidden">{{data.text.unitPriceAccessibilityLabel}}</span>' +
+          '  {{data.formattedUnitPrice}}<span aria-hidden="true">/</span><span class="visuallyhidden">&nbsp;{{data.text.unitPriceAccessibilitySeparator}}&nbsp;</span>{{data.formattedUnitPriceBaseUnit}}' +
+          '</div>' +
+          '{{/data.showUnitPrice}}' +
+          '{{/data.selectedVariant}}' +
+          '</div>';
+
+        var title = '<h1 class="{{data.classes.product.title}}" data-element="product.title">{{data.title}}</h1>';
+
+        var image = '{{#data.currentImage.srcLarge}}<div class="{{data.classes.product.imgWrapper}}" data-element="product.imgWrapper"><img alt="{{data.currentImage.altText}}" data-element="product.img" class="{{data.classes.product.img}}" src="{{data.currentImage.srcLarge}}" /></div>{{/data.currentImage.srcLarge}}';
+
+        // Custom Templates
+        var descriptionTemplate = '<div class="product-details">' +
+          description +
+          '</div>';
+
+        var imgTemplate = '<div class="product-image">' +
+          image + title + price + buttonWithQuantity +
+          '</div>';
 
         ShopifyBuy.UI.onReady(client).then(function (ui) {
           ui.createComponent('product', {
@@ -157,51 +227,24 @@
             moneyFormat: '%24%7B%7Bamount%7D%7D',
             options: {
               "product": {
+                "iframe": false,
                 "layout": "horizontal",
                 "contents": {
                   "img": true,
+                  "description": true,
+                  "title": false,
                   "imgWithCarousel": false,
                   "button": false,
                   "buttonWithQuantity": false,
-                  "price": false,
-                  "description": true,
-                  "picWithPrice": true
+                  "price": false
                 },
                 "text": {
                   "button": "Add to cart"
                 },
                 "templates": {
-                  "img": imgTemplate
+                  "img": imgTemplate,
+                  "description": descriptionTemplate
                 },
-                "styles": {
-                  "display": "flex",
-                  "button": {
-                    ":hover": {
-                      "background-color": "#5c5c5c"
-                    },
-                    "background-color": "#000000",
-                    ":focus": {
-                      "background-color": "#000000"
-                    },
-                  },
-                  "title": {
-                    "font-size": "40px"
-                  },
-                  "img": {
-                    // "padding": "4em"
-                    // "padding-top": "200px"
-                  },
-                  "imgWrapper": {
-                    "display": "flex",
-                    "flex-direction": "column",
-                    "buttonWithQuantity": {
-                      "margin": "auto !important",
-                      "display": "flex",
-                      "align-items": "center",
-                      "justify-content": "center"
-                    }
-                  }
-                }
               },
               "cart": {
                 "styles": {
