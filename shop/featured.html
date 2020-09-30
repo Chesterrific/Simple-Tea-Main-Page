@@ -12,55 +12,9 @@
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../../css/style.css">
-
-  <!--  -->
-  <!-- <link href="http://sdks.shopifycdn.com/buy-button/latest/buybutton.css" rel="stylesheet" type="text/css" /> -->
-  <!--  -->
-
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
 </head>
-
-<!-- <style>
-  /* Main Shopify Item Wrapper */
-  .shopify-buy__product {
-    display: grid;
-    grid-column-gap: 5em;
-    grid-template-areas: "image title title""image description description""price description description""buybtn description description";
-
-  }
-
-  /* Image and Carousel Wrapper */
-  .shopify-buy__product-img-wrapper {
-    grid-area: image;
-  }
-
-  /* Image  */
-  .shopify-buy__product__variant-img {
-    max-width: 500px;
-  }
-
-  /* Prodcut Title */
-  .shopify-buy__product__title {
-    grid-area: title;
-    border-bottom: solid black 2px;
-  }
-
-  /* Description */
-  .shopify-buy__product-description {
-    grid-area: description;
-  }
-
-  /* Price */
-  .shopify-buy__product__price {
-    grid-area: price;
-  }
-
-  /* Buy Button */
-  .shopify-buy__btn-and-quantity {
-    grid-area: buybtn;
-  }
-</style> -->
 
 <body>
   <header>
@@ -76,12 +30,12 @@
     </div>
     <div id="menu-nav">
       <ul>
-        <li><a href="../../index.html">About</a></li>
-        <li><a href="../../corpgifttea.html">Tea</a></li>
-        <li><a href="../../customlabel.html">Custom Label</a></li>
-        <li><a href="../../objectsofdesire.html">Objects of Desire</a></li>
-        <li><a href="../../contact-us.html">Contact Us</a></li>
-        <li><a href="../shop.html">Shop</a></li>
+        <li><a href="../index.html">About</a></li>
+        <li><a href="../corpgifttea.html">Tea</a></li>
+        <li><a href="../customlabel.html">Custom Label</a></li>
+        <li><a href="../objectsofdesire.html">Objects of Desire</a></li>
+        <li><a href="../contact-us.html">Contact Us</a></li>
+        <li><a href="shop.html">Shop</a></li>
       </ul>
     </div>
   </nav>
@@ -92,16 +46,16 @@
   <nav id="shop-nav">
     <hr>
     <ul>
-      <li><a href="../featured.html">Featured</a></li>
-      <li><a href="../loose-leaf-tea.html">Loose Leaf Tea</a></li>
-      <li><a href="../gifts-teaware.html">Gifts & Teaware</a></li>
+      <li><a class="active" href="featured.html">Featured</a></li>
+      <li><a href="loose-leaf-tea.html">Loose Leaf Tea</a></li>
+      <li><a href="gifts-teaware.html">Gifts & Teaware</a></li>
     </ul>
     <hr>
   </nav>
 
   <!-- Main -->
   <main class="product">
-    <div id='product-component-1601330567010'></div>
+    <div id='collection-component-1601334891509'></div>
   </main>
 
   <script type="text/javascript">
@@ -130,29 +84,33 @@
           storefrontAccessToken: '5ab91a7af0d45b7464beb1d27dd8a2b6',
         });
 
+       
         ShopifyBuy.UI.onReady(client).then(function (ui) {
-          ui.createComponent('product', {
-            id: '5635993403547',
-            node: document.getElementById('product-component-1601330567010'),
+          ui.createComponent('collection', {
+            id: '225097842843',
+            node: document.getElementById('collection-component-1601334891509'),
             moneyFormat: '%24%7B%7Bamount%7D%7D',
             options: {
               "product": {
-                "iframe": false,
                 "contents": {
                   "img": true,
                   "description": true,
                   "title": false,
-                  "imgWithCarousel": false,
-                  "button": false,
-                  "buttonWithQuantity": false,
-                  "price": false
-                },
-                "text": {
-                  "button": "Add to cart"
+                  "price": false,
+                  "button": false
                 },
                 "templates": {
                   "img": imgTemplate,
                   "description": descriptionTemplate
+                },
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "productSet": {
+                "iframe": false,
+                "contents": {
+                  "pagination": false
                 }
               },
               "cart": {
@@ -190,12 +148,12 @@
         });
       }
     })();
-  /*]]>*/
+/*]]>*/
   </script>
 
   <!-- JavaScript -->
-  <script src="../../js/main.js"></script>
-  <script src="../../js/shopify-templates.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/shopify-templates.js"></script>
 </body>
 
 </html>

@@ -894,7 +894,7 @@ body {
 
 /* ----------------Shop Styling---------------- */
 
-/* Main Shop Style */
+/* Main Shop Page Style */
 
 #main-shop-links {
   display: grid;
@@ -953,7 +953,9 @@ body {
   background-image: linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("../assets/shop/teaware.jpg");
 }
 
-/* Shop Nav Items Style */
+/* ----------------Category Pages Styling---------------- */
+
+/* Nav Items Style */
 
 #shop-nav {
   font-size: 2em;
@@ -980,7 +982,7 @@ body {
   text-decoration: underline;
 }
 
-/* Shop Category Style */
+/* Category Pages */
 
 .shopWrapper {
   display: grid;
@@ -1030,8 +1032,47 @@ body {
   margin: 10px;
 }
 
-/* Individual Shop Items */
+/* ----------------Individual Product Pages Styling---------------- */
 
 .product {
   padding: 5vh 5vw 10vh 15vw;
+}
+
+.shopify-buy__product {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.product-image {
+  align-items: center;
+  border-right: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Price Element */
+.shopify-buy__product__price{
+  font-size: 2em;
+}
+
+/* Input Element Styling */
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.shopify-buy__btn-and-quantity {
+  display: flex;
+  margin-top: 1em;
+}
+
+.shopify-buy__quantity {
+  text-align: center;
+  width: 50px;
 }
