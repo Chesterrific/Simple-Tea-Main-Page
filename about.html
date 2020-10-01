@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Tea</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <!-- Add a11y changes (i.e. screen readers, alts, aria, etc.) -->
+  </header>
+
+  <!-- Navbar -->
+  <!-- NOTE: Following industry guidelines, this is usually how you'd
+             write a typical element. For style points, you can 
+             follow this.-->
+  <nav>
+    <div id="logo">simple tea</div>
+    <div id="menu">
+      <span></span>
+      <span></span>
+    </div>
+    <div id="menu-nav">
+      <ul>
+        <li><a href="index.html">Tea Shop</a></li>
+        <li><a href="customlabel.html">Custom Label</a></li>
+        <li><a href="objectsofdesire.html">Objects of Desire</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- End of NOTE: -->
+  <div id="overlay"></div>
+  <div id="cursor"></div>
+
+  <!-- Main -->
+  <main>
+    <section id="welcome">
+      <div id="mainPage"></div>
+      <div id="aboutWelcome" class="welcomeText">
+        <span>keeping things relaxed, simple, and real</span>
+      </div>
+      <span id="scroll">Scroll ></span>
+    </section>
+
+    <section id="transition" class="mission">
+      <div id="aboutMissionText" class="missionTextContainer">
+        <h2 class="aboutText">Simple tea is a tea and lifestyle company for people who want to add effortless
+          grace, elegance, and
+          creativity to their everyday living.</h2>
+        <aside class="aboutText lightText">
+          <p>Our products are carefully sourced and personally curated and made with thoughtfulness and quality that
+            provide a meaningful experience.</p>
+          <p>Simple Tea is based in the San Francisco Bay Area.</p>
+        </aside>
+      </div>
+      <div class="missionImagesContainer">
+        <img id="aboutMissionImage" src="assets/content/about/about-1.jpg" alt="">
+      </div>
+    </section>
+
+    <section class="showcase second">
+      <h2 class="showcaseText">We work with an extensive network of trustful partners. Specialty food stores, Online
+        grocery stores, Gift shops, Advertising specialty marketers (ASI), Corporate gift websites, Event planners...
+      </h2>
+
+      <div id="aboutShowcaseImages" class="showcaseImagesContainer">
+        <img id="aboutShowcaseItem1" src="assets/content/about/about-2.jpg" alt="image1">
+        <img id="aboutShowcaseItem2" src="assets/content/about/about-3.jpg" alt="image2">
+        <img id="aboutShowcaseItem3" src="assets/content/about/about-4.jpg" alt="image3">
+        <img id="aboutShowcaseItem4" src="assets/content/about/about-5.jpg" alt="image4">
+      </div>
+
+      <div id="aboutShowcaseSlideshow" class="showcaseImagesContainer slideshow">
+        <div><img id="aboutSlideshowItem1" src="assets/content/about/about-5.jpg" alt="image1"></div>
+        <div><img id="aboutSlideshowItem2" src="assets/content/about/about-3.jpg" alt="image2"></div>
+        <div><img id="aboutSlideshowItem3" src="assets/content/about/about-4.jpg" alt="image3"></div>
+        <div><img id="aboutSlideshowItem4" src="assets/content/about/about-2.jpg" alt="image4"></div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

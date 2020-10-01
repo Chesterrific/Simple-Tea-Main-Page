@@ -22,9 +22,6 @@
   </header>
 
   <!-- Navbar -->
-  <!-- NOTE: Following industry guidelines, this is usually how you'd
-             write a typical element. For style points, you can 
-             follow this.-->
   <nav>
     <div id="logo">simple tea</div>
     <div id="menu">
@@ -33,66 +30,40 @@
     </div>
     <div id="menu-nav">
       <ul>
-        <li><a class="active" href="index.html">About</a></li>
-        <li><a href="corpgifttea.html">Tea</a></li>
+        <li><a class="active" href="index.html">Tea Shop</a></li>
         <li><a href="customlabel.html">Custom Label</a></li>
         <li><a href="objectsofdesire.html">Objects of Desire</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact-us.html">Contact Us</a></li>
-        <li><a href="shop/shop.html">Shop</a></li>
       </ul>
     </div>
   </nav>
-  <!-- End of NOTE: -->
-  <div id="overlay"></div>
+
+  <section id="welcome">
+    <div id="shopPage"></div>
+    <div id="shopWelcome" class="welcomeText">
+      <span>really good tea</span>
+    </div>
+    <span id="scroll">Scroll ></span>
+  </section>
+
   <div id="cursor"></div>
-
+  <div id="overlay"></div>
+  
+  <div id="transition"></div>
   <!-- Main -->
-  <main>
-    <section id="welcome">
-      <div id="mainPage"></div>
-      <div id="aboutWelcome" class="welcomeText">
-        <span>keeping things relaxed, simple, and real</span>
-      </div>
-      <span id="scroll">Scroll ></span>
-    </section>
-
-    <section id="transition" class="mission">
-      <div id="aboutMissionText" class="missionTextContainer">
-        <h2 class="aboutText">Simple tea is a tea and lifestyle company for people who want to add effortless
-          grace, elegance, and
-          creativity to their everyday living.</h2>
-        <aside class="aboutText lightText">
-          <p>Our products are carefully sourced and personally curated and made with thoughtfulness and quality that
-            provide a meaningful experience.</p>
-          <p>Simple Tea is based in the San Francisco Bay Area.</p>
-        </aside>
-      </div>
-      <div class="missionImagesContainer">
-        <img id="aboutMissionImage" src="assets/content/about/about-1.jpg" alt="">
-      </div>
-    </section>
-
-    <section class="showcase second">
-      <h2 class="showcaseText">We work with an extensive network of trustful partners. Specialty food stores, Online
-        grocery stores, Gift shops, Advertising specialty marketers (ASI), Corporate gift websites, Event planners...
-      </h2>
-
-      <div id="aboutShowcaseImages" class="showcaseImagesContainer">
-        <img id="aboutShowcaseItem1" src="assets/content/about/about-2.jpg" alt="image1">
-        <img id="aboutShowcaseItem2" src="assets/content/about/about-3.jpg" alt="image2">
-        <img id="aboutShowcaseItem3" src="assets/content/about/about-4.jpg" alt="image3">
-        <img id="aboutShowcaseItem4" src="assets/content/about/about-5.jpg" alt="image4">
-      </div>
-
-      <div id="aboutShowcaseSlideshow" class="showcaseImagesContainer slideshow">
-        <div><img id="aboutSlideshowItem1" src="assets/content/about/about-5.jpg" alt="image1"></div>
-        <div><img id="aboutSlideshowItem2" src="assets/content/about/about-3.jpg" alt="image2"></div>
-        <div><img id="aboutSlideshowItem3" src="assets/content/about/about-4.jpg" alt="image3"></div>
-        <div><img id="aboutSlideshowItem4" src="assets/content/about/about-2.jpg" alt="image4"></div>
-      </div>
-
-    </section>
+  <main id="main-shop-links" class="second">
+    <a id="featured" href="shop/featured.html">
+      <h1>featured</h1>
+    </a>
+    <a id="loose-leaf-tea" href="shop/loose-leaf-tea.html">
+      <h1>loose leaf tea</h1>
+    </a>
+    <a id="gifts-teaware" href="shop/gifts-teaware.html">
+      <h1>gifts & teaware</h1>
+    </a>
   </main>
+
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>
