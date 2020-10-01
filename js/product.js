@@ -1,4 +1,3 @@
-/*<![CDATA[*/
 (function () {
   var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
   if (window.ShopifyBuy) {
@@ -45,38 +44,26 @@
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
             "product": {
+              "iframe": false,
               "variantId": varId,
               "contents": {
-                "img": false,
+                "img": true,
+                "description": true,
                 "imgWithCarousel": false,
-                "title": true,
+                "title": false,
                 "variantTitle": false,
                 "options": (varId == 'all'),
-                "price": true,
-                "description": false,
-                "buttonWithQuantity": true,
+                "price": false,
+                "buttonWithQuantity": false,
                 "button": false,
                 "quantity": false,
               },
-              "styles": {
-                "product": {
-                  "@media (min-width: 601px)": {
-                    "max-width": "calc(25% - 20px)",
-                    "margin-left": "20px",
-                    "margin-bottom": "50px"
-                  }
-                },
-                "button": {
-                  ":hover": {
-                    "background-color": "#5c5c5c"
-                  },
-                  "background-color": "#000000",
-                  ":focus": {
-                    "background-color": "#000000"
-                  },
-                  "padding-left": "55px",
-                  "padding-right": "55px"
-                }
+              "templates": {
+                "img": imgTemplate,
+                "description": descriptionTemplate
+              },
+              "text": {
+                "button": "Add to cart"
               }
             },
             "cart": {
@@ -111,12 +98,7 @@
             }
           }
         });
-        $(".shopItem").css({
-          "align-items": "center",
-          "justify-content": "center"
-        });
       });
     });
   }
 })();
-/*]]>*/
