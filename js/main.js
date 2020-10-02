@@ -149,7 +149,7 @@ $(document).ready(function () {
     });
 
     // Cursor size changes
-    $('#menu, nav ul li a, #logo, #scroll, #main-shop-links a').hover(function () {
+    $('#menu, nav ul li a, #logo, #scroll, #main-shop-links a, a').hover(function () {
       expandMouse();
 
     }, function () {

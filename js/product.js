@@ -48,7 +48,7 @@
               "variantId": varId,
               "contents": {
                 "img": true,
-                "description": true,
+                "description": false,
                 "imgWithCarousel": false,
                 "title": false,
                 "variantTitle": false,
@@ -59,8 +59,7 @@
                 "quantity": false,
               },
               "templates": {
-                "img": imgTemplate,
-                "description": descriptionTemplate
+                "img": productTemplate
               },
               "text": {
                 "button": "Add to cart"

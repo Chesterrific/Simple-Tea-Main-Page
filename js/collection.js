@@ -32,6 +32,11 @@
         productId = jQuery(this).attr("data-id");
         varId = jQuery(this).attr("data-var");
 
+        var collectionTemplate = '<div class="collectionItem">' +
+        '<a href=./products/' + productId + '.html>' + image + '</a>' + 
+        h2title + price + buttonWithQuantity +
+        '</div>';
+
         if (varId) {
           elementId = productId + "-" + varId;
         } else {
@@ -45,38 +50,22 @@
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
             "product": {
+              "iframe": false,
               "variantId": varId,
               "contents": {
-                "img": false,
+                "img": true,
                 "imgWithCarousel": false,
-                "title": true,
+                "title": false,
                 "variantTitle": false,
                 "options": (varId == 'all'),
-                "price": true,
+                "price": false,
                 "description": false,
-                "buttonWithQuantity": true,
+                "buttonWithQuantity": false,
                 "button": false,
                 "quantity": false,
               },
-              "styles": {
-                "product": {
-                  "@media (min-width: 601px)": {
-                    "max-width": "calc(25% - 20px)",
-                    "margin-left": "20px",
-                    "margin-bottom": "50px"
-                  }
-                },
-                "button": {
-                  ":hover": {
-                    "background-color": "#5c5c5c"
-                  },
-                  "background-color": "#000000",
-                  ":focus": {
-                    "background-color": "#000000"
-                  },
-                  "padding-left": "55px",
-                  "padding-right": "55px"
-                }
+              "templates": {
+                "img" : collectionTemplate
               }
             },
             "cart": {
@@ -110,10 +99,6 @@
               }
             }
           }
-        });
-        $(".shopItem").css({
-          "align-items": "center",
-          "justify-content": "center"
         });
       });
     });

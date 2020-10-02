@@ -37,6 +37,8 @@ var price = '<div class="{{data.classes.product.prices}}" data-element="product.
 
 var title = '<h1 class="{{data.classes.product.title}}" data-element="product.title">{{data.title}}</h1>';
 
+var h2title = '<h2 class="{{data.classes.product.title}}" data-element="product.title">{{data.title}}</h2>';
+
 var image = '{{#data.currentImage.srcLarge}}<div class="{{data.classes.product.imgWrapper}}" data-element="product.imgWrapper"><img alt="{{data.currentImage.altText}}" data-element="product.img" class="{{data.classes.product.img}}" src="{{data.currentImage.srcLarge}}" /></div>{{/data.currentImage.srcLarge}}';
 
 // Custom Templates
@@ -46,4 +48,8 @@ var descriptionTemplate = '<div class="product-details">' +
 
 var imgTemplate = '<div class="product-image">' +
   image + title + price + buttonWithQuantity +
+  '</div>';
+
+var productTemplate = '<div class=productWrapper>' +
+  imgTemplate + descriptionTemplate +
   '</div>';
