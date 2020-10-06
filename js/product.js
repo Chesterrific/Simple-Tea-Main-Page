@@ -1,3 +1,5 @@
+
+/*<![CDATA[*/
 (function () {
   var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
   if (window.ShopifyBuy) {
@@ -17,7 +19,6 @@
     script.onload = ShopifyBuyInit;
   }
   function ShopifyBuyInit() {
-
     var client = ShopifyBuy.buildClient({
       domain: 'freelancefriends.myshopify.com',
       storefrontAccessToken: '5ab91a7af0d45b7464beb1d27dd8a2b6',
@@ -25,45 +26,29 @@
 
     ShopifyBuy.UI.onReady(client).then(function (ui) {
 
-      jQuery(".wps-buy-button").each(function () {
+      jQuery(".product").each(function () {
 
-        elementId = '';
-        productId = jQuery(this).attr("data-id");
-        varId = jQuery(this).attr("data-var");
-
-        if (varId) {
-          elementId = productId + "-" + varId;
-        } else {
-          elementId = productId;
-        }
+        var elementId = this.id;
 
         ui.createComponent('product', {
-          id: [parseInt(productId)],
-          variantId: parseInt(varId),
+          id: [parseInt(elementId)],
           node: document.getElementById(elementId),
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
             "product": {
               "iframe": false,
-              "variantId": varId,
+              "layout": "horizontal",
               "contents": {
-                "img": true,
-                "description": false,
-                "imgWithCarousel": false,
-                "title": false,
-                "variantTitle": false,
-                "options": (varId == 'all'),
-                "price": false,
-                "buttonWithQuantity": false,
+                "img": false,
+                "imgWithCarousel": true,
                 "button": false,
-                "quantity": false,
+                "buttonWithQuantity": true,
+                "description": true
               },
-              "templates": {
-                "img": productTemplate
-              },
+              "width": "80%",
               "text": {
                 "button": "Add to cart"
-              }
+              },
             },
             "cart": {
               "styles": {
@@ -95,9 +80,10 @@
                 }
               }
             }
-          }
+          },
         });
       });
     });
   }
 })();
+/*]]>*/

@@ -32,6 +32,8 @@
         productId = jQuery(this).attr("data-id");
         varId = jQuery(this).attr("data-var");
 
+
+        // Custom Templates
         var collectionTemplate = '<div class="collectionItem">' +
         '<a href=./products/' + productId + '.html>' + image + '</a>' + 
         h2title + price + buttonWithQuantity +
@@ -57,7 +59,7 @@
                 "imgWithCarousel": false,
                 "title": false,
                 "variantTitle": false,
-                "options": (varId == 'all'),
+                "options": false,
                 "price": false,
                 "description": false,
                 "buttonWithQuantity": false,

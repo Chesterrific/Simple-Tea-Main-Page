@@ -12,9 +12,37 @@
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <link href="http://sdks.shopifycdn.com/buy-button/latest/buybutton.css" rel="stylesheet" type="text/css" />
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
 </head>
+
+<style>
+  .shopify-buy__product {
+    width: 100%;
+  }
+
+  .shopify-buy__btn {
+    background-color: black;
+  }
+
+  .shopify-buy__btn:hover {
+    background-color: #5c5c5c;
+  }
+
+  .shopify-buy__product__variant-img {
+    width: 90%;
+  }
+
+  .shopify-buy__product-img-wrapper {
+    padding-right: 15px;
+    border-right: solid black 2px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+</style>
 
 <body>
   <header>
@@ -53,7 +81,7 @@
   </nav>
 
   <!-- Main -->
-  <main class="product">
+  <main class="productWrapper">
     <div id='collection-component-1601334891509'></div>
   </main>
 
@@ -83,7 +111,7 @@
           storefrontAccessToken: '5ab91a7af0d45b7464beb1d27dd8a2b6',
         });
 
-       
+
         ShopifyBuy.UI.onReady(client).then(function (ui) {
           ui.createComponent('collection', {
             id: '225097842843',
@@ -91,21 +119,19 @@
             moneyFormat: '%24%7B%7Bamount%7D%7D',
             options: {
               "product": {
+                "iframe": false,
+                "layout": "horizontal",
                 "contents": {
-                  "img": true,
-                  "description": false,
-                  "title": false,
-                  "price": false,
-                  "button": false
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "button": false,
+                  "buttonWithQuantity": true,
+                  "description": true
                 },
-                "templates": {
-                  "img": productTemplate,
-                  // "img": imgTemplate,
-                  // "description": descriptionTemplate
-                },
+                "width": "80%",
                 "text": {
                   "button": "Add to cart"
-                }
+                },
               },
               "productSet": {
                 "iframe": false,
