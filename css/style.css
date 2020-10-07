@@ -65,7 +65,7 @@ footer div {
 
 .footerLinks a {
   color: black;
-  font-size: 1em;
+  font-size: .8em;
   margin: 10px;
   text-decoration: none;
 }
@@ -918,6 +918,16 @@ footer div {
   -moz-transition: .7s ease-in-out;
   -o-transition: .7s ease-in-out;
   transition: .7s ease-in-out;
+}
+
+/* ----------------Shipping/Returns Styling---------------- */
+
+.shipping-returns{
+  padding: 15vh 20vw;
+}
+
+.contact-info h2, .contact-info p{
+  margin: 0;
 }
 
 /* ----------------Shop Styling---------------- */
