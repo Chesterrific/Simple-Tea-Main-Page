@@ -52,6 +52,12 @@
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
             "product": {
+              "events": {
+                afterRender: function(e) {
+                  console.log('done');
+                  $('head').append('<link rel="stylesheet" href="../css/shopify.css">');
+                }
+              },
               "iframe": false,
               "variantId": varId,
               "contents": {
@@ -59,7 +65,7 @@
                 "imgWithCarousel": false,
                 "title": false,
                 "variantTitle": false,
-                "options": false,
+                "options": true,
                 "price": false,
                 "description": false,
                 "buttonWithQuantity": false,

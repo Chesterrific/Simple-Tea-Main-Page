@@ -1,7 +1,7 @@
 .shopify-buy__btn {
   color: #fff;
   font-size: 15px;
-  background-color: #78b657;
+  background-color: black;
   padding: 12px 40px;
   letter-spacing: .3px;
   display: block;
@@ -19,7 +19,7 @@
 }
 .shopify-buy__btn:hover,
   .shopify-buy__btn:focus {
-    background-color: #5f9d3e;
+    background-color: #5c5c5c;
   }
 .shopify-buy__btn--parent {
   background-color: transparent;
@@ -660,7 +660,6 @@ input[type=number]::-webkit-outer-spin-button {
 
   .shopify-buy__product-img-wrapper {
     height: 100%;
-    padding-right: 30px;
   }
 
   .shopify-buy__product__variant-img {
