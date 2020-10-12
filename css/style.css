@@ -922,11 +922,11 @@ footer div {
 
 /* ----------------Shipping/Returns Styling---------------- */
 
-.shipping-returns{
+.shipping-returns {
   padding: 15vh 20vw;
 }
 
-.contact-info h2, .contact-info p{
+.contact-info h2, .contact-info p {
   margin: 0;
 }
 
@@ -971,37 +971,38 @@ footer div {
 }
 
 #featured {
-  background-image: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/shop/feature.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/shop/feature.jpg");
   background-position: center;
   background-size: cover;
 }
 
 #featured:hover {
-  background-image: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/shop/feature.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/shop/feature.jpg");
 }
 
 #loose-leaf-tea {
-  background-image: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/shop/tealeaves.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/shop/tealeaves.jpg");
   background-position: center;
   background-size: cover;
 }
 
 #loose-leaf-tea:hover {
-  background-image: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/shop/tealeaves.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/shop/tealeaves.jpg");
 }
 
 #teaware {
-  background-image: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/shop/teaware.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("../assets/shop/teaware.jpg");
   background-position: center;
   background-size: cover;
 }
 
 #teaware:hover {
-  background-image: linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("../assets/shop/teaware.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/shop/teaware.jpg");
 }
 
 /* Category Text */
-.title-text{
+
+.title-text {
   font-size: 3em;
   position: relative;
 }
@@ -1011,15 +1012,16 @@ footer div {
   right: 20%;
 }
 
-#loose-leaf-tea-text{
+#loose-leaf-tea-text {
   top: 40%;
   right: 30%;
 }
 
-#teaware-text{
+#teaware-text {
   top: 40%;
   left: 20%;
 }
+
 /* ----------------Category Pages Styling---------------- */
 
 /* Nav Items Style */
