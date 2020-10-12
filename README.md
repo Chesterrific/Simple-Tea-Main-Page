@@ -1,2 +1,4 @@
 # Simple-Tea-Main-Page
-Main page of Simple Tea Website
+Development repo for the Main page of Simple Tea Website
+
+http://simpletea.com/
