@@ -1053,14 +1053,30 @@ footer div {
 
 /* Category Pages */
 
+#promo {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  color: white;
+  height: 4vh;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
 .pageWrapper {
   padding: 0 10vw 20vh 20vw;
 }
 
 #category-description {
   font-size: 1.2em;
-  padding: 2.5vh 5vw 7.5vh 5vw;
+  padding: 0 10vw 2.5vh 10vw;
   text-align: center;
+}
+
+#separator {
+  margin-bottom: 5vh;
 }
 
 .shopProducts {
