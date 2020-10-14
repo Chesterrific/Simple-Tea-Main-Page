@@ -1101,5 +1101,6 @@ footer div {
 /* ----------------Individual Product Pages Styling---------------- */
 
 .productWrapper {
+  height: 100%;
   padding: 5vh 5vw 10vh 15vw;
 }

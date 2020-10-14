@@ -29,10 +29,7 @@
 
   .shopify-buy__product-img-wrapper {
     border-right: solid #8d827a 1px;
-    display: flex;
-    flex-direction: column;
     height: 100vh;
-    justify-content: center;
   }
 
   .shopify-buy__product__actual-price {
@@ -42,7 +39,12 @@
   }
 
   .shopify-buy__product__title {
-    font-size: 35px;
+    font-size: 31px;
+  }
+
+  .shopify-buy__product-description {
+    border-left: solid #8d827a 1px;
+    font-size: 13px
   }
 </style>
 
@@ -70,6 +72,7 @@
   </nav>
 
   <div id="overlay"></div>
+  <div class="vl"></div>
 
   <nav id="shop-nav">
     <hr>
@@ -80,6 +83,7 @@
     </ul>
     <hr>
   </nav>
+
 
   <!-- Main -->
   <main class="productWrapper">
