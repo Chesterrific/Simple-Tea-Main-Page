@@ -26,18 +26,21 @@
 
     ShopifyBuy.UI.onReady(client).then(function (ui) {
 
+      var numOfItems = $('.collectionItemWrapper').length;
+      var count = 0;
+
       jQuery(".wps-buy-button").each(function () {
 
         elementId = '';
         productId = jQuery(this).attr("data-id");
         varId = jQuery(this).attr("data-var");
 
-
         // Custom Templates
         var collectionTemplate = '<div class="collectionItem">' +
-        '<a href=./products/' + productId + '.html>' + image + '</a>' + 
-        h2title + price + buttonWithQuantity +
-        '</div>';
+          '<a href=./products/' + productId + '.html>' + image + '</a>' +
+          '<a href=./products/' + productId + '.html>' + h2title + '</a>' +
+          price + buttonWithQuantity +
+          '</div>';
 
         if (varId) {
           elementId = productId + "-" + varId;
@@ -53,9 +56,15 @@
           options: {
             "product": {
               "events": {
-                afterRender: function(e) {
-                  console.log('done');
-                  $('head').append('<link rel="stylesheet" href="../css/shopify.css">');
+                afterInit: function (e) {
+                  console.log('item rendered');
+                  count++;
+                  console.log(count);
+                  if (count == numOfItems) {
+                    $('head').append('<link rel="stylesheet" href="../css/shopify.css">');
+                    console.log('done');
+                    count = 0;
+                  }
                 }
               },
               "iframe": false,
@@ -73,7 +82,7 @@
                 "quantity": false,
               },
               "templates": {
-                "img" : collectionTemplate
+                "img": collectionTemplate
               }
             },
             "cart": {
@@ -109,6 +118,7 @@
           }
         });
       });
+
     });
   }
 })();

@@ -1055,7 +1055,7 @@ footer div {
 
 #promo {
   align-items: center;
-  background-color: black;
+  background-color: #56615a;
   display: flex;
   color: white;
   height: 4vh;
@@ -1070,9 +1070,28 @@ footer div {
 }
 
 #category-description {
-  font-size: 1.2em;
-  padding: 0 10vw 2.5vh 10vw;
+  padding: 0 7.5vw 2.5vh 7.5vw;
+}
+
+#category-description h1 {
   text-align: center;
+  color: #00263e;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 40px 0 0;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+#category-description p {
+  font-family: "Domine";
+  letter-spacing: 0;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 #separator {
@@ -1083,7 +1102,7 @@ footer div {
   display: grid;
   gap: 2em 4em;
   grid-auto-rows: 500px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .collectionItemWrapper img {
@@ -1096,6 +1115,14 @@ footer div {
   align-items: center;
   display: flex;
   flex-direction: column;
+}
+
+.collectionItem a {
+  text-decoration: none;
+}
+
+.collectionItem a:hover {
+  text-decoration: underline;
 }
 
 /* ----------------Individual Product Pages Styling---------------- */
