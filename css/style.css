@@ -79,7 +79,7 @@ footer div {
   font-size: 1.6em;
   margin: 40px;
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
@@ -92,7 +92,7 @@ footer div {
   right: 40px;
   top: 40px;
   width: 30px;
-  z-index: 3;
+  z-index: 4;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -166,7 +166,7 @@ footer div {
   position: fixed;
   right: -100%;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   -webkit-transition: .4s ease-in-out;
   -moz-transition: .4s ease-in-out;
   -o-transition: .4s ease-in-out;
@@ -207,7 +207,7 @@ footer div {
     font-size: 2.6em;
     margin: 30px 55px;
     position: fixed;
-    z-index: 3;
+    z-index: 4;
   }
   #menu {
     cursor: pointer;
@@ -216,7 +216,7 @@ footer div {
     right: 90px;
     top: 70px;
     width: 30px;
-    z-index: 3;
+    z-index: 4;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -235,7 +235,7 @@ footer div {
     position: fixed;
     right: -50%;
     width: 50%;
-    z-index: 2;
+    z-index: 3;
     -webkit-transition: .5s ease-in-out;
     -moz-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
@@ -264,7 +264,7 @@ footer div {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   visibility: hidden;
-  z-index: 1;
+  z-index: 2;
 }
 
 #overlay.open {
@@ -961,23 +961,27 @@ footer div {
   border: black solid 5px;
   display: flex;
   color: white;
+  font-family: "Lato", sans-serif;
   justify-content: center;
   min-height: 45vh;
   text-decoration: none;
 }
 
-#main-shop-links>a>h1 {
-  font-weight: 300;
+.title-text {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 #featured {
-  background-image: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/shop/feature.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("../assets/shop/feature.jpg");
   background-position: center;
   background-size: cover;
 }
 
 #featured:hover {
-  background-image: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/shop/feature.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/shop/feature.jpg");
 }
 
 #loose-leaf-tea {
@@ -1000,14 +1004,7 @@ footer div {
   background-image: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/shop/teaware.jpg");
 }
 
-/* Category Text */
-
-.title-text {
-  font-size: 3em;
-  position: relative;
-}
-
-#featured-text {
+/* #featured-text {
   top: 40%;
   right: 20%;
 }
@@ -1020,21 +1017,44 @@ footer div {
 #teaware-text {
   top: 40%;
   left: 20%;
-}
+} */
 
 /* ----------------Category Pages Styling---------------- */
 
 /* Nav Items Style */
 
+#promo {
+  align-items: center;
+  background-color: #56615a;
+  color: white;
+  display: flex;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  height: 4vh;
+  justify-content: center;
+  letter-spacing: 2px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
 #shop-nav {
-  font-size: 2em;
-  padding: 10vh 10vw 0vh 20vw;
+  background-color: white;
+  border-bottom: solid 1px black;
+  height: 75px;
+  padding: 10vh 0vw 0vh 0vw;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
 }
 
 #shop-nav>ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   list-style-type: none;
+  padding: 2.5vh 0 0 0;
 }
 
 #shop-nav>ul>li {
@@ -1043,30 +1063,23 @@ footer div {
 }
 
 #shop-nav>ul>li>a {
-  color: black;
+  color: #77726E;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 #shop-nav>ul>li>.active {
-  text-decoration: underline;
+  color: #00263e;
+  font-weight: bold;
 }
 
 /* Category Pages */
 
-#promo {
-  align-items: center;
-  background-color: #56615a;
-  display: flex;
-  color: white;
-  height: 4vh;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-}
-
 .pageWrapper {
-  padding: 0 10vw 20vh 20vw;
+  padding: 150px 10vw 20vh 10vw;
 }
 
 #category-description {
@@ -1129,5 +1142,5 @@ footer div {
 
 .productWrapper {
   height: 100%;
-  padding: 5vh 5vw 10vh 15vw;
+  padding: 175px 5vw 10vh 15vw;
 }

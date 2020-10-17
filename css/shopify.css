@@ -1,9 +1,9 @@
 :root {
   --shop-title-font-family: "Domine";
   --shop-title-font-color: #00263e;
-  --shop-price-font-family: brandon-grotesque, sans-serif;
+  --shop-price-font-family: "Lato", sans-serif;
   --shop-price-font-color: #9a7847;
-  --shop-desc-header-font-family: brandon-grotesque, sans-serif;
+  --shop-desc-header-font-family: "Lato", sans-serif;
   --shop-desc-font-family: "Domine";
   --shop-paragraph-font-color: #8d827a;
 }
