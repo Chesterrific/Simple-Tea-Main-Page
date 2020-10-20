@@ -1241,7 +1241,8 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .shopify-buy-frame--product {
-  display: block
+  display: flex;
+  justify-content: center;
 }
 
 .shopify-buy-frame--product.shopify-buy__layout-horizontal {
