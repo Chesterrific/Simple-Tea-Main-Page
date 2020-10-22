@@ -1021,7 +1021,7 @@ footer div {
   color: white;
   display: flex;
   font-family: "Lato", sans-serif;
-  font-size: 14px;
+  font-size: 10px;
   height: 4vh;
   justify-content: center;
   letter-spacing: 2px;
@@ -1029,6 +1029,12 @@ footer div {
   top: 0;
   width: 100vw;
   z-index: 1;
+}
+
+@media only screen and (min-width: 500px) {
+  #promo {
+    font-size: 14px;
+  }
 }
 
 #shop-nav {
@@ -1048,7 +1054,7 @@ footer div {
   list-style-type: none;
   margin: 0 auto;
   padding: 5vh 0 0 0;
-  width: 70%;
+  width: 100%;
 }
 
 #shop-nav>ul>li {
@@ -1058,11 +1064,20 @@ footer div {
 
 #shop-nav>ul>li>a {
   color: #77726E;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media only screen and (min-width: 660px) {
+  #shop-nav>ul>li>a {
+    font-size: 14px;
+  }
+  #shop-nav>ul{
+    width: 70%;
+  }
 }
 
 #shop-nav>ul>li>.active {
