@@ -980,7 +980,6 @@ footer div {
   }
 }
 
-
 #main-shop-links>a {
   align-items: center;
   border: black solid 5px;
@@ -1106,7 +1105,7 @@ footer div {
 /* Category Pages */
 
 .pageWrapper {
-  padding: 17.5vh 10vw 20vh 10vw;
+  padding: 17.5vh 2.5vw 20vh 2.5vw;
 }
 
 #category-description {
@@ -1142,7 +1141,25 @@ footer div {
   display: grid;
   gap: 2em 4em;
   grid-auto-rows: 500px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media only screen and (min-width: 750px) {
+  .pageWrapper {
+    padding: 17.5vh 5vw 20vh 5vw;
+  }
+  .shopProducts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .pageWrapper {
+    padding: 17.5vh 10vw 20vh 10vw;
+  }
+  .shopProducts {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .collectionItemWrapper img {
@@ -1168,7 +1185,7 @@ footer div {
 /* ----------------Individual Product Pages Styling---------------- */
 
 .productWrapper {
-  height: 100%;
+  height: auto;
 }
 
 @media only screen and (min-width: 1000px) {

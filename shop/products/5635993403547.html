@@ -22,42 +22,42 @@
 </head>
 
 <style>
-  .shopify-buy__product {
+  .shopify-buy__product__variant-img {
     width: 100%;
   }
 
-  .shopify-buy__product__variant-img {
-    width: 90%;
-  }
+  @media only screen and (min-width: 1000px) {
+    .shopify-buy__product {
+      padding-top: 0;
+      text-align: left;
+    }
 
-  .shopify-buy__product-img-wrapper {
-    border-right: solid #8d827a 1px;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-  }
+    .shopify-buy__product__variant-img {
+      width: 90%;
+    }
 
-  .shopify-buy__product__actual-price {
-    color: #9a7847;
-    font-size: 1.5em;
-    font-weight: 700;
-  }
+    .shopify-buy__product-img-wrapper {
+      border-right: solid #8d827a 1px;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+    }
 
-  .shopify-buy__product__title {
-    font-size: 31px;
-  }
+    .shopify-buy__product__actual-price {
+      color: #9a7847;
+      font-size: 1.5em;
+      font-weight: 700;
+    }
 
-  .shopify-buy__product-description {
-    border-left: solid #8d827a 1px;
-    font-size: 13px
-  }
+    .shopify-buy__product__title {
+      font-size: 35px;
+    }
 
-  #logo {
-    margin: 50px 0 !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    z-index: 2 !important;
+    .shopify-buy__product-description {
+      border-left: solid #8d827a 1px;
+      font-size: 13px
+    }
   }
 </style>
 
@@ -68,7 +68,7 @@
 
   <!-- Navbar -->
   <nav>
-    <div id="logo">simple tea</div>
+    <div id="logo" class="centered">simple tea</div>
     <div id="menu">
       <span></span>
       <span></span>

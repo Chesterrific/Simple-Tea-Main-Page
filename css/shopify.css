@@ -1170,20 +1170,20 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .shopify-buy__collection-products {
-  margin-left: -15px;
+  /* margin-left: -15px; */
   text-align: center
 }
 
 @media(min-width: 601px) {
   .shopify-buy__collection-products {
-    margin-left: -20px
+    /* margin-left: -20px */
   }
 }
 
 .shopify-buy__product {
   min-width: 240px;
   width: auto;
-  margin-left: 15px;
+  /* margin-left: 15px; */
   display: inline-block;
   vertical-align: top
 }
