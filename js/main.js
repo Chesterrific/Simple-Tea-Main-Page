@@ -45,10 +45,11 @@ $(document).ready(function () {
   });
 
   // Hamburger menu toggle open/close
-  $('#menu').click(function () {
-    $(this).toggleClass('open');
+  $('#menu, #overlay').click(function () {
+    $('#menu').toggleClass('open');
     $('#menu-nav').toggleClass('open');
 
+    
     // Toggle navOpen, first click makes it true.
     navOpen = !navOpen;
 

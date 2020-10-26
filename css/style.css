@@ -96,8 +96,8 @@ footer div {
 #menu {
   height: 25px;
   position: fixed;
-  right: 40px;
-  top: 40px;
+  right: 30px;
+  top: 50px;
   width: 30px;
   z-index: 4;
   -webkit-transform: rotate(0deg);
@@ -1064,7 +1064,7 @@ footer div {
 
 #shop-nav>ul>li>a {
   color: #77726E;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 500;
   letter-spacing: 2px;
   text-decoration: none;
