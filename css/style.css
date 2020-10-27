@@ -13,7 +13,7 @@ body {
   display: none;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   #cursor {
     border: 2px solid #bfbfbf;
     border-radius: 50%;
@@ -799,10 +799,9 @@ footer div {
   .mobile {
     display: flex;
   }
-  #objMissionSlideshow{
+  #objMissionSlideshow {
     padding-bottom: 15vh;
   }
-
   #objMissionSlideshow img {
     width: 80%;
   }
@@ -949,6 +948,40 @@ footer div {
 
 /* ----------------Shop Styling---------------- */
 
+/* Promo banner */
+
+#promo {
+  align-items: center;
+  background-color: #56615a;
+  color: white;
+  display: flex;
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  height: 4vh;
+  justify-content: center;
+  letter-spacing: 2px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.desk-hidden {
+  display: block;
+}
+
+@media only screen and (min-width: 500px) {
+  #promo {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .desk-hidden {
+    display: none !important;
+  }
+}
+
 /* Main Shop Page Style */
 
 #shopWrapper {
@@ -1042,28 +1075,6 @@ footer div {
 /* ----------------Category Pages Styling---------------- */
 
 /* Nav Items Style */
-
-#promo {
-  align-items: center;
-  background-color: #56615a;
-  color: white;
-  display: flex;
-  font-family: "Lato", sans-serif;
-  font-size: 10px;
-  height: 4vh;
-  justify-content: center;
-  letter-spacing: 2px;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 1;
-}
-
-@media only screen and (min-width: 500px) {
-  #promo {
-    font-size: 14px;
-  }
-}
 
 #shop-nav {
   background-color: white;
