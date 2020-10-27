@@ -7,7 +7,7 @@ $(document).ready(function () {
   let menu = $('#menu span');
 
   let navOpen = false;
-  let logoMid = logo.offset().top + logo.height() / 2;
+  let menuMid = menu.offset().top + menu.height() / 2;
   let missionTop = $(document).height();
   let transitionPresent = false;
   if ($('#transition').length) {
@@ -31,9 +31,9 @@ $(document).ready(function () {
   });
 
   $(window).bind('scroll', function () {
-    logoMid = $('#logo').offset().top + $('#logo').height() / 2;
+    menuMid = menu.offset().top + menu.height() / 2;
 
-    if (logoMid < missionTop && transitionPresent) {
+    if (menuMid < missionTop && transitionPresent) {
       if (!navOpen) {
         menu.css('background', 'white');
         logo.css('color', 'white');
@@ -60,7 +60,7 @@ $(document).ready(function () {
     } else {
       $('#overlay').toggleClass('open');
 
-      if (logoMid < missionTop && transitionPresent) {
+      if (menuMid < missionTop && transitionPresent) {
         menu.css('background', 'white');
         logo.css('color', 'white');
       } else {

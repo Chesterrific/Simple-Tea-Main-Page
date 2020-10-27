@@ -78,8 +78,9 @@ footer div {
   color: white;
   font-size: 1.6em;
   margin: 40px;
-  position: fixed;
-  z-index: 4;
+  position: absolute;
+  text-decoration: none;
+  z-index: 2;
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
@@ -87,8 +88,9 @@ footer div {
 }
 
 .centered {
-  margin: 5.5vh 0 !important;
   left: 50% !important;
+  margin: 5.5vh 0 !important;
+  position: fixed !important;
   transform: translateX(-50%) !important;
   z-index: 2 !important;
 }
@@ -490,6 +492,10 @@ footer div {
   }
 }
 
+#shopWelcome {
+  font-family: 'Domine';
+}
+
 /* ----------------Mission Styling---------------- */
 
 .mission {
@@ -793,6 +799,10 @@ footer div {
   .mobile {
     display: flex;
   }
+  #objMissionSlideshow{
+    padding-bottom: 15vh;
+  }
+
   #objMissionSlideshow img {
     width: 80%;
   }
@@ -944,6 +954,7 @@ footer div {
 #shopWrapper {
   height: auto;
   margin-bottom: 10vh;
+  min-height: 80vh;
 }
 
 #shopFlavorText {
