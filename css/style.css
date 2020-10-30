@@ -1161,8 +1161,8 @@ footer div {
 
 .shopProducts {
   display: grid;
-  gap: 2em 4em;
-  grid-auto-rows: 500px;
+  gap: 1em;
+  grid-auto-rows: 650px;
   grid-template-columns: repeat(1, 1fr);
 }
 
