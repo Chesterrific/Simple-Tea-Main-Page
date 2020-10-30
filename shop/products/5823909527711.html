@@ -11,6 +11,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/shopify.css">
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -18,29 +22,43 @@
 </head>
 
 <style>
-  .shopify-buy__product {
+  .shopify-buy__product__variant-img {
     width: 100%;
   }
 
-  .shopify-buy__btn {
-    background-color: black;
-  }
+  @media only screen and (min-width: 1000px) {
+    .shopify-buy__product {
+      padding-top: 0;
+      text-align: left;
+      width: 100%;
+    }
 
-  .shopify-buy__btn:hover {
-    background-color: #5c5c5c;
-  }
+    .shopify-buy__product__variant-img {
+      width: 90%;
+    }
 
-  .shopify-buy__product__variant-img {
-    width: 90%;
-  }
+    .shopify-buy__product-img-wrapper {
+      border-right: solid #8d827a 1px;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+    }
 
-  .shopify-buy__product-img-wrapper {
-    padding-right: 15px;
-    border-right: solid black 2px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    .shopify-buy__product__actual-price {
+      color: #9a7847;
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+
+    .shopify-buy__product__title {
+      font-size: 35px;
+    }
+
+    .shopify-buy__product-description {
+      border-left: solid #8d827a 1px;
+      font-size: 13px
+    }
   }
 </style>
 
@@ -51,7 +69,7 @@
 
   <!-- Navbar -->
   <nav>
-    <a id="logo" href="./index.html">simple tea</a>
+    <a id="logo" class="centered"  href="../../index.html">simple tea</a>
     <div id="menu">
       <span></span>
       <span></span>
@@ -70,23 +88,35 @@
   <div id="overlay"></div>
 
   <nav id="shop-nav">
-    <hr>
     <ul>
       <li><a href="../featured.html">Featured</a></li>
       <li><a href="../tea.html">Tea</a></li>
       <li><a href="../gifts-teaware.html">Gifts & Teaware</a></li>
     </ul>
-    <hr>
   </nav>
+
+  <div id="promo">FREE DOMESTIC SHIPPING ON ORDERS $50 AND OVER.</div>
 
   <!-- Main -->
   <main class="productWrapper">
-    <div id='5669702434971' class="product"></div>
+    <div id='5823909527711' class="product"></div>
   </main>
 
-  <script type="text/javascript">
+  <footer>
+    <div>
+      <ul class="footerLinks">
+        <li><a href="../../shipping-returns.html" target="_blank">Shipping & Returns</a></li>
+        <li>|</li>
+        <li><a href="https://www.facebook.com/simpletea" target="_blank">Facebook</a></li>
+        <li>|</li>
+        <li><a href="https://www.instagram.com/simpletea2020/" target="_blank">Instagram</a></li>
+        <li>|</li>
+        <li><a href="https://twitter.com/SimpleTea4" target="_blank">Twitter</a></li>
+      </ul>
+    </div>
+    <div>Simple Tea &copy2020. All Rights Reserved</div>
+  </footer>
 
-  </script>
   <!-- JavaScript -->
   <script src="../../js/main.js"></script>
   <script src="../../js/product.js"></script>

@@ -20,8 +20,8 @@
   function ShopifyBuyInit() {
 
     var client = ShopifyBuy.buildClient({
-      domain: 'freelancefriends.myshopify.com',
-      storefrontAccessToken: '5ab91a7af0d45b7464beb1d27dd8a2b6',
+      domain: 'simpleteastore.myshopify.com',
+      storefrontAccessToken: 'bdd594431e6175c61f40d0a13f82d6ba',
     });
 
     ShopifyBuy.UI.onReady(client).then(function (ui) {
