@@ -215,7 +215,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .shopify-buy__option-select__select {
-  font-size: inherit;
+  font-size: 12px;
   padding: 7px 10px;
   padding-right: 32px;
   border: 0;
@@ -223,6 +223,12 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   background: transparent;
   -webkit-appearance: none;
   -moz-appearance: none
+}
+
+@media only screen and (min-width: 750px) {
+  .shopify-buy__option-select__select {
+    font-size: inherit;
+  }
 }
 
 .shopify-buy__option-select__select::-ms-expand {
@@ -372,9 +378,16 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .shopify-buy__quantity {
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-radius: 3px;
+  display: none;
+}
+
+@media only screen and (min-width: 750px) {
+  .shopify-buy__quantity {
+    display: block;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-radius: 3px;
+  }
 }
 
 .shopify-buy__quantity, .shopify-buy__quantity-increment, .shopify-buy__quantity-decrement {
@@ -602,9 +615,15 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   line-height: 1.4;
   color: var(--shop-title-font-color);
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   font-family: var(--shop-title-font-family);
+}
+
+@media only screen and (min-width: 750px) {
+  .shopify-buy__product__title {
+    font-size: 18px;
+  }
 }
 
 .shopify-buy__product__compare-price {
@@ -708,6 +727,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     -webkit-transform: translateY(-200px);
   }
 }
+
 /* 
 @media (min-width: 500px) {
   html, body.is-active {
@@ -1073,6 +1093,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .shopify-buy__quantity-container {
+  display: block;
   margin-left: 80px;
   margin-right: 100px;
   height: 26px;
@@ -1181,11 +1202,16 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .shopify-buy__product {
-  min-width: 240px;
   width: auto;
   /* margin-left: 15px; */
   display: inline-block;
   vertical-align: top
+}
+
+@media only screen and (min-width: 750px) {
+  .shopify-buy__product {
+    min-width: 240px;
+  }
 }
 
 .shopify-buy__product+.shopify-buy__product {

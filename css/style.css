@@ -1162,8 +1162,27 @@ footer div {
 .shopProducts {
   display: grid;
   gap: 1em;
-  grid-auto-rows: 650px;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.collectionItem {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.collectionItemWrapper img {
+  object-fit: cover;
+  height: 150px;
+  max-width: 100%;
+}
+
+.collectionItem a {
+  text-decoration: none;
+}
+
+.collectionItem a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 750px) {
@@ -1172,6 +1191,9 @@ footer div {
   }
   .shopProducts {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .collectionItemWrapper img {
+    height: 200px;
   }
 }
 
@@ -1182,26 +1204,9 @@ footer div {
   .shopProducts {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-.collectionItemWrapper img {
-  object-fit: cover;
-  height: 200px;
-  max-width: 100%;
-}
-
-.collectionItem {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.collectionItem a {
-  text-decoration: none;
-}
-
-.collectionItem a:hover {
-  text-decoration: underline;
+  .collectionItemWrapper img {
+    height: 200px;
+  }
 }
 
 /* ----------------Individual Product Pages Styling---------------- */
