@@ -987,7 +987,7 @@ footer div {
 #shopWrapper {
   height: auto;
   margin-bottom: 10vh;
-  min-height: 80vh;
+  min-height: 85vh;
 }
 
 #shopFlavorText {
@@ -1017,8 +1017,8 @@ footer div {
 
 @media only screen and (min-width: 750px) {
   #main-shop-links {
-    gap: 5em;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5em;
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 50vh;
     padding: 0 10vw;
   }
@@ -1062,6 +1062,16 @@ footer div {
   background-image: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/shop/tealeaves.jpg");
 }
 
+#tea-bags {
+  background-image: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/shop/tea-bags.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#tea-bags:hover {
+  background-image: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/shop/tea-bags.jpg");
+}
+
 #teaware {
   background-image: linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("../assets/shop/teaware.jpg");
   background-position: center;
@@ -1089,7 +1099,7 @@ footer div {
 
 #shop-nav>ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   list-style-type: none;
   margin: 0 auto;
   padding: 5vh 0 0 0;
@@ -1097,7 +1107,10 @@ footer div {
 }
 
 #shop-nav>ul>li {
+  align-items: center;
+  display: flex;
   height: 100%;
+  justify-content: center;
   text-align: center;
 }
 
@@ -1110,14 +1123,19 @@ footer div {
   text-transform: uppercase;
 }
 
-@media only screen and (min-width: 660px) {
+@media only screen and (min-width: 1000px) {
+  #shop-nav>ul {
+    width: 65%;
+  }
   #shop-nav>ul>li>a {
     font-size: 14px;
   }
-  #shop-nav>ul {
-    width: 70%;
-  }
 }
+/* @media only screen and (min-width: px) {
+  #shop-nav>ul {
+    width: 60%;
+  }
+} */
 
 #shop-nav>ul>li>.active {
   color: #00263e;
