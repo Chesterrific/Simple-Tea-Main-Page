@@ -1131,11 +1131,6 @@ footer div {
     font-size: 14px;
   }
 }
-/* @media only screen and (min-width: px) {
-  #shop-nav>ul {
-    width: 60%;
-  }
-} */
 
 #shop-nav>ul>li>.active {
   color: #00263e;
@@ -1201,6 +1196,10 @@ footer div {
 
 .collectionItem a:hover {
   text-decoration: underline;
+}
+
+.collectionItem .product-title-link {
+  min-height: 70px;
 }
 
 @media only screen and (min-width: 750px) {

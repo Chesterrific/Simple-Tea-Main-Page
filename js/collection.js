@@ -38,7 +38,7 @@
         // Custom Templates
         var collectionTemplate = '<div class="collectionItem">' +
           '<a href=./products/' + productId + '.html>' + image + '</a>' +
-          '<a href=./products/' + productId + '.html>' + h2title + '</a>' +
+          '<a class="product-title-link" href=./products/' + productId + '.html>' + h2title + '</a>' +
           price + buttonWithQuantity +
           '</div>';
 
