@@ -1218,6 +1218,9 @@ footer div {
   .pageWrapper {
     padding: 17.5vh 10vw 20vh 10vw;
   }
+  #teaBagsProducts {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .shopProducts {
     grid-template-columns: repeat(3, 1fr);
   }
