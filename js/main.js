@@ -49,7 +49,7 @@ $(document).ready(function () {
     $('#menu').toggleClass('open');
     $('#menu-nav').toggleClass('open');
 
-    
+
     // Toggle navOpen, first click makes it true.
     navOpen = !navOpen;
 
@@ -72,6 +72,11 @@ $(document).ready(function () {
 
   /* ----------------Showcase JS---------------- */
   let timeBetweenImages = 4500;
+  let slow = 600;
+
+  // Background Slideshow
+  var bgImages = new Array('../assets/backgrounds/customlabelteabg.jpg', '../assets/backgrounds/objbg.jpg', '../assets/backgrounds/Simple Tea Tea offering.jpg', '../assets/backgrounds/SimpleTeaShop.jpg');
+  var nextimage = 0;
 
   // If there's an element with class slideshow on the page.
   if ($('.slideshow').length) {
@@ -82,7 +87,6 @@ $(document).ready(function () {
 
   function startShow(slideShow) {
     let imgCounter = slideShow.children().length - 1;
-    let slow = 600;
 
     // Fade in initial image.
     slideShow.children().eq(imgCounter).css('opacity', '1');
@@ -106,6 +110,44 @@ $(document).ready(function () {
       }
 
       slideShow.children().eq(imgCounter).css('opacity', '1');
+    }
+  }
+
+  //  If there's an element with class bgslideshow on the page.
+  if ($('.bgslideshow').length) {
+    doSlideshow();
+  }
+
+  function doSlideshow() {
+    let imgCounter = bgImages.length - 1;
+
+    $('#shopPage')
+      .css('opacity', 1);
+
+    setInterval(function () {
+      // Fade out image.
+      $('#shopPage')
+        .css('opacity', 0);
+      imgCounter++;
+
+      //Set timeout before fading next image in.
+      setTimeout(function () {
+        fadeImageIn();
+      }, slow);
+
+      // Time before current image fades out. i.e. how long current image stays on screen.
+    }, timeBetweenImages);
+
+    function fadeImageIn() {
+      if (nextimage >= bgImages.length) {
+        nextimage = 0;
+      }
+
+      $('#shopPage')
+        .css({
+          'background-image': ' linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)) ,url("' + bgImages[nextimage++] + '")',
+          'opacity': 1
+        })
     }
   }
 
