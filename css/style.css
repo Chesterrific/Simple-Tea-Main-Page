@@ -323,14 +323,27 @@ footer div {
 }
 
 #shopPage {
-  background-image: linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("../assets/backgrounds/SimpleTeaShop.jpg");
-  background-position: center;
-  background-size: cover;
+  /* background-image: linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("../assets/backgrounds/SimpleTeaShop.jpg"); */
+  /* background-position: center; */
+  /* background-size: cover; */
   height: 100vh;
-  opacity: 0;
+  width: 100vw;
   -moz-transition: .7s ease-in-out;
   -o-transition: .7s ease-in-out;
   transition: .7s ease-in-out;
+}
+
+#shopPage>div {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+#shopPage>div>img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: .7;
 }
 
 /* Welcome text positioning */

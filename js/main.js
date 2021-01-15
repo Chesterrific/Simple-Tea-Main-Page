@@ -113,43 +113,43 @@ $(document).ready(function () {
     }
   }
 
-  //  If there's an element with class bgslideshow on the page.
-  if ($('.bgslideshow').length) {
-    doSlideshow();
-  }
+  // //  If there's an element with class bgslideshow on the page.
+  // if ($('.bgslideshow').length) {
+  //   doSlideshow();
+  // }
 
-  function doSlideshow() {
-    let imgCounter = bgImages.length - 1;
+  // function doSlideshow() {
+  //   let imgCounter = bgImages.length - 1;
 
-    $('#shopPage')
-      .css('opacity', 1);
+  //   $('#shopPage')
+  //     .css('opacity', 1);
 
-    setInterval(function () {
-      // Fade out image.
-      $('#shopPage')
-        .css('opacity', 0);
-      imgCounter++;
+  //   setInterval(function () {
+  //     // Fade out image.
+  //     $('#shopPage')
+  //       .css('opacity', 0);
+  //     imgCounter++;
 
-      //Set timeout before fading next image in.
-      setTimeout(function () {
-        fadeImageIn();
-      }, slow);
+  //     //Set timeout before fading next image in.
+  //     setTimeout(function () {
+  //       fadeImageIn();
+  //     }, slow);
 
-      // Time before current image fades out. i.e. how long current image stays on screen.
-    }, timeBetweenImages);
+  //     // Time before current image fades out. i.e. how long current image stays on screen.
+  //   }, timeBetweenImages);
 
-    function fadeImageIn() {
-      if (nextimage >= bgImages.length) {
-        nextimage = 0;
-      }
+  //   function fadeImageIn() {
+  //     if (nextimage >= bgImages.length) {
+  //       nextimage = 0;
+  //     }
 
-      $('#shopPage')
-        .css({
-          'background-image': ' linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)) ,url("' + bgImages[nextimage++] + '")',
-          'opacity': 1
-        })
-    }
-  }
+  //     $('#shopPage')
+  //       .css({
+  //         'background-image': ' linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)) ,url("' + bgImages[nextimage++] + '")',
+  //         'opacity': 1
+  //       })
+  //   }
+  // }
 
   /* ----------------Scroll JS---------------- */
   let scrollSpeed = 750;
