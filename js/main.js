@@ -71,12 +71,8 @@ $(document).ready(function () {
   });
 
   /* ----------------Showcase JS---------------- */
-  let timeBetweenImages = 4500;
-  let slow = 600;
-
-  // Background Slideshow
-  var bgImages = new Array('./assets/backgrounds/customlabelteabg.jpg', './assets/backgrounds/objbg.jpg', './assets/backgrounds/Simple Tea Tea offering.jpg', './assets/backgrounds/SimpleTeaShop.jpg');
-  var nextimage = 0;
+  let timeBetweenImages = 4000;
+  let slow = 100;
 
   // If there's an element with class slideshow on the page.
   if ($('.slideshow').length) {
