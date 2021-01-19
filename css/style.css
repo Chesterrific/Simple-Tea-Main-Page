@@ -377,6 +377,10 @@ footer div {
     transform: translateX(-50%);
     width: 80%;
   }
+  /* Shop */
+  #shopWelcome {
+    top: 50%;
+  }
   /* About */
   #aboutWelcome {
     font-weight: 200;
@@ -952,9 +956,9 @@ footer div {
   flex-direction: column;
   opacity: 0;
   position: absolute;
-  -moz-transition: 1.5s ease-in-out;
-  -o-transition: 1.5s ease-in-out;
-  transition: 1.5s ease-in-out;
+  -moz-transition: 2.25s ease-in-out;
+  -o-transition: 2.25s ease-in-out;
+  transition: 2.25s ease-in-out;
 }
 
 /* ----------------Shipping/Returns Styling---------------- */

@@ -71,7 +71,7 @@ $(document).ready(function () {
   });
 
   /* ----------------Showcase JS---------------- */
-  let timeBetweenImages = 4000;
+  let timeBetweenImages = 4500;
   let slow = 100;
 
   // If there's an element with class slideshow on the page.
