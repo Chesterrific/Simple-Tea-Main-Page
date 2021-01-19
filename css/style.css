@@ -956,9 +956,9 @@ footer div {
   flex-direction: column;
   opacity: 0;
   position: absolute;
-  -moz-transition: 2.25s ease-in-out;
-  -o-transition: 2.25s ease-in-out;
-  transition: 2.25s ease-in-out;
+  -moz-transition: 3s ease-in-out;
+  -o-transition: 3s ease-in-out;
+  transition: 3s ease-in-out;
 }
 
 /* ----------------Shipping/Returns Styling---------------- */
